@@ -1,0 +1,11 @@
+devcontainer
+Dockerfile
+repo
+musl
+toolchain[s]
+Justfile
+Trivy
+Buildx
+sudo
+passwordless
+zsh

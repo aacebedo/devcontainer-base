@@ -1,0 +1,48 @@
+[settings]
+experimental = true
+
+[[env]]
+_.path = "./node_modules/.bin"
+
+[tools.node]
+version = "22.21.1"
+[tools.markdownlint-cli2]
+version = "0.20.0"
+[tools.editorconfig-checker]
+version = "3.4.0"
+[tools.hadolint]
+version = "2.12.0"
+[tools.jujutsu]
+version = "0.33.0"
+[tools.just]
+version = "1.42.4"
+[tools.neovim]
+version = "0.11.5"
+[tools.trivy]
+version = "0.67.2"
+[tools.vale]
+version = "3.13.0"
+[tools.yamllint]
+version = "1.37.1"
+[tools.uv]
+version = "latest"
+[tools.python]
+version = "3.12"
+[tools.taplo]
+version = "0.10.0"
+[tools.podman]
+version = "latest"
+
+[hooks]
+postinstall = '''
+if [ "$MISE_TOOL_NAME" = "node" ]; then
+  echo "Node.js $MISE_TOOL_VERSION installed, installing node based dependencies..."
+  npm install
+fi
+'''
+
+[tasks.clean]
+run = [
+  "rm -rf .vale/.vale-config .vale/Google",
+  "rm -rf package-lock.json node_modules",
+]

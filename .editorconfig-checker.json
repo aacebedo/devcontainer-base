@@ -1,0 +1,26 @@
+{
+	"Version": "v3.4.0",
+	"Verbose": false,
+	"Format": "",
+	"Debug": false,
+	"IgnoreDefaults": false,
+	"SpacesAfterTabs": true,
+	"NoColor": false,
+	"Exclude": [
+		"CHANGELOG\\.md",
+		"renovate\\.json",
+		"\\.mergify\\.yaml",
+		".vale/Google/*",
+		"node_modules/*"
+	],
+	"AllowedContentTypes": [],
+	"PassedFiles": [],
+	"Disable": {
+		"EndOfLine": false,
+		"Indentation": false,
+		"InsertFinalNewline": false,
+		"TrimTrailingWhitespace": false,
+		"IndentSize": false,
+		"MaxLineLength": false
+	}
+}
