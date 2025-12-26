@@ -9,7 +9,6 @@ on:
       - main
 jobs:
   release:
-    needs: prepare
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -31,9 +30,11 @@ jobs:
         with:
           persist-credentials: false
           token: ${{ steps.generate-token.outputs.token }}
-      - uses: jdx/mise-action@v3
+      - name: Setup mise
+        uses: jdx/mise-action@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          cache: false
       - name: Configure git
         run: |
           git config --global --add safe.directory '*'
