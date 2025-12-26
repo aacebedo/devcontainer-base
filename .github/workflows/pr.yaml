@@ -10,7 +10,6 @@ on:
 
 jobs:
   lint-build-test:
-    needs: prepare
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -21,6 +20,7 @@ jobs:
       - uses: jdx/mise-action@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          cache: false
       - name: Configure git
         run: |
           git config --global --add safe.directory '*'
