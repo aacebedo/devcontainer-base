@@ -27,7 +27,7 @@ version = "1.37.1"
 [tools.uv]
 version = "0.9.18"
 [tools.python]
-version = "3.12"
+version = "3.14.2"
 [tools.taplo]
 version = "0.10.0"
 [tools.podman]
