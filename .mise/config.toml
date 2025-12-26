@@ -15,7 +15,7 @@ version = "2.14.0"
 [tools.jujutsu]
 version = "0.33.0"
 [tools.just]
-version = "1.42.4"
+version = "1.45.0"
 [tools.neovim]
 version = "0.11.5"
 [tools.trivy]
