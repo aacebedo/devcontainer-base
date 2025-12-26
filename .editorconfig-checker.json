@@ -11,7 +11,7 @@
 		"renovate\\.json",
 		"\\.mergify\\.yaml",
 		".vale/Google/*",
-		"node_modules/*"
+		".mise/node_modules/*"
 	],
 	"AllowedContentTypes": [],
 	"PassedFiles": [],

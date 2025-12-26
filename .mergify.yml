@@ -1,0 +1,17 @@
+---
+queue_rules:
+  - merge_method: merge
+    name: default
+    autoqueue: true
+    branch_protection_injection_mode: merge
+    merge_conditions:
+      - and:
+          - label = reviewed
+          - check-success = lint-build-test
+merge_protections:
+  - name: Merge only if reviewed
+    description: Merge only if the PR has been reviewed
+    if:
+      - base = main
+    success_conditions:
+      - label = reviewed

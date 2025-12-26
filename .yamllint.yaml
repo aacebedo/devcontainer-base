@@ -1,7 +1,7 @@
 ---
 ignore: |
   .vale/Google
-  node_modules/
+  .mise/node_modules/
 
 rules:
   line-length:

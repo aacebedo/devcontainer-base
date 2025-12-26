@@ -2,7 +2,7 @@
 experimental = true
 
 [[env]]
-_.path = "./node_modules/.bin"
+_.path = ".mise/node_modules/.bin"
 
 [tools.node]
 version = "22.21.1"
@@ -25,24 +25,30 @@ version = "3.13.0"
 [tools.yamllint]
 version = "1.37.1"
 [tools.uv]
-version = "latest"
+version = "0.9.18"
 [tools.python]
 version = "3.12"
 [tools.taplo]
 version = "0.10.0"
 [tools.podman]
-version = "latest"
+version = "5.7.1"
+[tools.pre-commit]
+version = "4.5.1"
 
 [hooks]
 postinstall = '''
 if [ "$MISE_TOOL_NAME" = "node" ]; then
   echo "Node.js $MISE_TOOL_VERSION installed, installing node based dependencies..."
-  npm install
+  export PATH=${HOME}/.local/share/mise/installs/node/$MISE_TOOL_VERSION/bin:$PATH
+  npm install --no-package-lock --prefix .mise
 fi
 '''
 
+[tasks.setup]
+run = ["mise install"]
+
 [tasks.clean]
 run = [
-  "rm -rf .vale/.vale-config .vale/Google",
-  "rm -rf package-lock.json node_modules",
+  "mise uninstall --all",
+  "rm -rf .vale/.vale-config .vale/Google .mise/node_modules",
 ]

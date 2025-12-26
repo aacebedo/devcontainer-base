@@ -19,7 +19,7 @@ lint:
     pre-commit run --all-files
 
 build:
-    docker build -t {{ docker_tag }} \
+    podman build -t {{ docker_tag }} \
     --label "org.opencontainers.image.source={{ repo_url }}" \
     --label "org.opencontainers.image.description=Development container base" \
     --label "org.opencontainers.image.licenses=MIT" \
@@ -28,13 +28,13 @@ build:
 
 test: build
     #!/usr/bin/env sh
-    docker run --rm {{ docker_tag }}
+    podman run --rm {{ docker_tag }}
 
 security-scan: build
     #!/usr/bin/env bash
     set -euxo pipefail
     TEMP_DIR=$(mktemp -d)
-    docker save {{ docker_tag }} | gzip > "$TEMP_DIR/image.tar.gz"
+    podman save {{ docker_tag }} | gzip > "$TEMP_DIR/image.tar.gz"
     trivy image --input "$TEMP_DIR/image.tar.gz" --format sarif \
       --skip-version-check --output /tmp/trivy-results.sarif
     rm -rf "$TEMP_DIR"

@@ -33,8 +33,19 @@ repos:
     hooks:
       - id: vale sync
         name: Vale sync
-        entry: bash -c 'test -d .vale/Google || vale sync'
+        entry: |
+          bash -c '
+          lock=.vale/.sync.lock
+          [ -d .vale/Google ] && exit 0
+          mkdir -p .vale
+          (flock -n 200 || exit 0) 200>"$lock"
+          rm -rf .vale/Google 2>/dev/null || true
+          vale sync
+          rm -f "$lock"
+          '
         language: system
+        pass_filenames: false
+        always_run: true
 
   - repo: https://github.com/errata-ai/vale
     rev: v3.13.0
