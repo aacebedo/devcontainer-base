@@ -11,7 +11,7 @@ version = "0.20.0"
 [tools.editorconfig-checker]
 version = "3.6.0"
 [tools.hadolint]
-version = "2.12.0"
+version = "2.14.0"
 [tools.jujutsu]
 version = "0.33.0"
 [tools.just]
