@@ -1,54 +1,72 @@
 [settings]
 experimental = true
+npm.package_manager = "pnpm"
 
-[[env]]
-_.path = ".mise/node_modules/.bin"
+[env]
+_.source = { path = ".mise/set_node_path_var.sh" }
 
 [tools.node]
-version = "24.12.0"
+version = "latest"
+
+[tools.pnpm]
+version = "latest"
+
 [tools.markdownlint-cli2]
 version = "0.20.0"
+
 [tools.editorconfig-checker]
 version = "3.6.0"
+
 [tools.hadolint]
 version = "2.14.0"
+
 [tools.jujutsu]
 version = "0.33.0"
+
 [tools.just]
 version = "1.45.0"
+
 [tools.neovim]
 version = "0.11.5"
+
 [tools.trivy]
 version = "0.68.2"
+
 [tools.vale]
 version = "3.13.0"
+
 [tools.yamllint]
 version = "1.37.1"
-[tools.uv]
-version = "0.9.18"
-[tools.python]
-version = "3.14.2"
+
 [tools.taplo]
 version = "0.10.0"
+
 [tools.podman]
 version = "5.7.1"
-[tools.pre-commit]
+
+[tools."pipx:pre-commit"]
 version = "4.5.1"
 
-[hooks]
-postinstall = '''
-if [ "$MISE_TOOL_NAME" = "node" ]; then
-  echo "Node.js $MISE_TOOL_VERSION installed, installing node based dependencies..."
-  export PATH=${HOME}/.local/share/mise/installs/node/$MISE_TOOL_VERSION/bin:$PATH
-  npm install --no-package-lock --prefix .mise
-fi
-'''
+[tools."npm:@prantlf/jsonlint"]
+version = "16.0.0"
 
-[tasks.setup]
-run = ["mise install"]
+[tools."npm:renovate"]
+version = "42.66.8"
 
-[tasks.clean]
-run = [
-  "mise uninstall --all",
-  "rm -rf .vale/.vale-config .vale/Google .mise/node_modules",
-]
+[tools."npm:semantic-release"]
+version = "25.0.2"
+
+[tools."npm:@semantic-release-plus/docker"]
+version = "3.1.3"
+
+[tools."npm:@semantic-release/changelog"]
+version = "6.0.3"
+
+[tools."npm:@semantic-release/exec"]
+version = "7.1.0"
+
+[tools."npm:@semantic-release/git"]
+version = "10.0.1"
+
+[tools.shfmt]
+version = "3.12.0"
