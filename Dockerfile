@@ -18,6 +18,19 @@ RUN wget --progress=dot:giga -O /tmp/mise \
 
 FROM alpine:${ALPINE_VERSION} AS final
 
+# renovate: datasource=github-releases depName=jdx/mise extractVersion=^v(?<version>.*)$
+ARG MISE_VERSION=2025.12.12
+# renovate: datasource=github-releases depName=golang/go extractVersion=^go(?<version>.*)$
+ARG GO_VERSION=1.23.2
+# renovate: datasource=github-tags depName=astral-sh/uv extractVersion=^(?<version>.*)$
+ARG UV_VERSION=0.9.18
+# renovate: datasource=node-version
+ARG NODE_VERSION=24.12.0
+# renovate: datasource=npm depName=pnpm extractVersion=^(?<version>.*)$
+ARG PNPM_VERSION=10.26.2
+# renovate: datasource=github-releases depName=jqlang/jq extractVersion=^jq-(?<version>.*)$
+ARG JQ_VERSION=1.8.1
+
 ARG USERNAME=devcontaineruser
 ARG USERUID=1000
 ARG USERGID=1000
@@ -51,6 +64,14 @@ RUN addgroup -g "$USERGID" "$USERNAME" && \
 WORKDIR /home/${USERNAME}
 
 USER ${USERNAME}
+
+RUN MISE_GLOBAL_CONFIG_FILE=/etc/mise/config.toml \
+		mise use -g \
+			node@${NODE_VERSION} \
+			pnpm@${PNPM_VERSION} \
+			uv@${UV_VERSION} \
+			go@${GO_VERSION} \
+			jq@${JQ_VERSION}
 
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 CMD [ "sh", "-c", "command -v sh" ]
