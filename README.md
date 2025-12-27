@@ -61,7 +61,7 @@ Multi-stage build:
 
 User `devcontaineruser` sources mise via `/etc/zsh/zprofile`, making all installed tools immediately available.
 
-## Pre-commit Hooks
+## Pre-commit hooks
 
 Install hooks locally:
 

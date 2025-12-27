@@ -41,3 +41,6 @@ security-scan: build
 
 release: lint test security-scan
     semantic-release
+
+clean:
+    rm -rf .vale/.vale-config .vale/Google
