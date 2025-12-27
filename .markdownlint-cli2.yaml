@@ -1,5 +1,7 @@
 ---
 # markdownlint-cli2 configuration
+ignores:
+  - CHANGELOG.md
 config:
   default: true
   MD013:
