@@ -25,7 +25,7 @@ version = "3.13.0"
 [tools.yamllint]
 version = "1.37.1"
 [tools.uv]
-version = "0.9.18"
+version = "0.9.21"
 [tools.python]
 version = "3.14.2"
 [tools.taplo]
