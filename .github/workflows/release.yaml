@@ -42,6 +42,7 @@ jobs:
           mise --no-config use -g pnpm@10.26.2
           mise --no-config use -g uv@0.9.18
           mise --no-config use -g jq@latest
+          mise install
       - name: Configure git
         run: |
           git config --global --add safe.directory '*'

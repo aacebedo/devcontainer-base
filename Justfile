@@ -27,7 +27,6 @@ build:
     --label "org.opencontainers.image.vendor={{ repo_owner }}" .
 
 test: build
-    #!/usr/bin/env sh
     podman run --rm {{ docker_tag }}
 
 security-scan: build
@@ -40,6 +39,8 @@ security-scan: build
     rm -rf "$TEMP_DIR"
 
 release: lint test security-scan
+    echo $PATH
+    sudo ln -sf /usr/bin/podman /usr/local/bin/docker
     semantic-release
 
 clean:
