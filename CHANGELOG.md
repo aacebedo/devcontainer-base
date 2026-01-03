@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/aacebedo/devcontainer-base/compare/v1.0.0...v1.1.0) (2026-01-03)
+
+
+### Bug Fixes
+
+* fix release workflow ([fd8ba43](https://github.com/aacebedo/devcontainer-base/commit/fd8ba431d78df1836cfe4c9f1777796cacb0c84a))
+
+
+### Features
+
+* add docker image release ([b6fb75e](https://github.com/aacebedo/devcontainer-base/commit/b6fb75e0de1c3e5de49c7a075f93b7e348f701f2))
+* reworked node package management ([a33da5c](https://github.com/aacebedo/devcontainer-base/commit/a33da5cf43d0cee668566e6a0414d7baf513123e))
+
 # 1.0.0 (2025-12-26)
 
 
