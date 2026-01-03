@@ -33,8 +33,15 @@ jobs:
       - name: Setup mise
         uses: jdx/mise-action@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          cache: false
+          install: false
+          working_directory: /
+          env: false
+      - name: Install base dependencies
+        run: |
+          mise --no-config use -g node@24.12.0
+          mise --no-config use -g pnpm@10.26.2
+          mise --no-config use -g uv@0.9.18
+          mise --no-config use -g jq@latest
       - name: Configure git
         run: |
           git config --global --add safe.directory '*'
