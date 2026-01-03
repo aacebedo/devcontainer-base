@@ -23,7 +23,7 @@ ARG MISE_VERSION=2025.12.13
 # renovate: datasource=github-releases depName=golang/go extractVersion=^go(?<version>.*)$
 ARG GO_VERSION=1.23.2
 # renovate: datasource=github-tags depName=astral-sh/uv extractVersion=^(?<version>.*)$
-ARG UV_VERSION=0.9.18
+ARG UV_VERSION=0.9.21
 # renovate: datasource=node-version
 ARG NODE_VERSION=25.2.1
 
