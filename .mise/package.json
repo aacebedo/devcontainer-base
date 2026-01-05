@@ -1,7 +1,7 @@
 {
 	"type": "module",
 	"dependencies": {
-		"@prantlf/jsonlint": "16.0.0",
+		"@prantlf/jsonlint": "16.1.0",
 		"semantic-release-plus": "20.0.0",
 		"@semantic-release-plus/docker": "3.1.3",
 		"@semantic-release/changelog": "6.0.3",
