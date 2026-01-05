@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/aacebedo/devcontainer-base/compare/v1.1.1...v1.1.2) (2026-01-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @prantlf/jsonlint to v17 ([177fe34](https://github.com/aacebedo/devcontainer-base/commit/177fe3468bc7136ae50c2c7b3c9a20f05854ae89))
+
 ## [1.1.1](https://github.com/aacebedo/devcontainer-base/compare/v1.1.0...v1.1.1) (2026-01-05)
 
 
