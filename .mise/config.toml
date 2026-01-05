@@ -24,7 +24,7 @@ version = "2.14.0"
 version = "0.33.0"
 
 [tools.just]
-version = "1.45.0"
+version = "1.46.0"
 
 [tools.neovim]
 version = "0.11.5"
