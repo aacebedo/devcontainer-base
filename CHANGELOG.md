@@ -1,3 +1,17 @@
+# [1.2.0](https://github.com/aacebedo/devcontainer-base/compare/v1.1.2...v1.2.0) (2026-01-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency renovate to v42.71.4 ([b683607](https://github.com/aacebedo/devcontainer-base/commit/b68360784e1278a41e47d9432234d0a8b6402839))
+
+
+### Features
+
+* add shell directive to dockerfile ([d0ee36f](https://github.com/aacebedo/devcontainer-base/commit/d0ee36f98b5e755137c28f20b785f3bb23cb8e7b))
+* add shellcheck to mise ([c0e3211](https://github.com/aacebedo/devcontainer-base/commit/c0e32111c1bff14297fc5e06d0e2e4ecedca0d85))
+* fix username variable ([0c029c2](https://github.com/aacebedo/devcontainer-base/commit/0c029c2fa204cd511948cce253664c4c08a0dbfb))
+
 ## [1.1.2](https://github.com/aacebedo/devcontainer-base/compare/v1.1.1...v1.1.2) (2026-01-05)
 
 
