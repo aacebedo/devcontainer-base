@@ -78,5 +78,7 @@ RUN MISE_NODE_MIRROR_URL="https://unofficial-builds.nodejs.org/download/release/
 			uv@${UV_VERSION} \
 			go@${GO_VERSION}
 
+SHELL ["/bin/zsh"]
+
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 CMD [ "sh", "-c", "command -v zsh" ]
