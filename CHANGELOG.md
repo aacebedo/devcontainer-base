@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/aacebedo/devcontainer-base/compare/v1.2.0...v1.2.1) (2026-01-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency renovate to v42.74.7 ([d8db9e4](https://github.com/aacebedo/devcontainer-base/commit/d8db9e4819a23cc9d46ebb29cc6b03df2499d269))
+
 # [1.2.0](https://github.com/aacebedo/devcontainer-base/compare/v1.1.2...v1.2.0) (2026-01-06)
 
 
