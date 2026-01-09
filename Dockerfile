@@ -3,7 +3,7 @@ ARG ALPINE_VERSION=3.23
 FROM alpine:${ALPINE_VERSION} AS builder
 
 # renovate: datasource=github-releases depName=jdx/mise extractVersion=^v(?<version>.*)$
-ARG MISE_VERSION=2025.12.13
+ARG MISE_VERSION=2026.1.1
 
 # Install base packages (including runtime environments)
 # hadolint ignore=DL3018
@@ -19,7 +19,7 @@ RUN wget --progress=dot:giga -O /tmp/mise \
 FROM alpine:${ALPINE_VERSION} AS final
 
 # renovate: datasource=github-releases depName=jdx/mise extractVersion=^v(?<version>.*)$
-ARG MISE_VERSION=2025.12.13
+ARG MISE_VERSION=2026.1.1
 # renovate: datasource=github-releases depName=golang/go extractVersion=^go(?<version>.*)$
 ARG GO_VERSION=1.23.2
 # renovate: datasource=github-tags depName=astral-sh/uv extractVersion=^(?<version>.*)$
