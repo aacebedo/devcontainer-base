@@ -36,7 +36,7 @@ version = "0.68.2"
 version = "3.13.0"
 
 [tools.yamllint]
-version = "1.37.1"
+version = "1.38.0"
 
 [tools.taplo]
 version = "0.10.0"
