@@ -5,11 +5,14 @@ npm.package_manager = "pnpm"
 [env]
 _.source = { path = ".mise/set_node_path_var.sh" }
 
+[tools.uv]
+version = "0.9.26"
+
 [tools.node]
-version = "latest"
+version = "25.3.0"
 
 [tools.pnpm]
-version = "latest"
+version = "10.28.0"
 
 [tools.markdownlint-cli2]
 version = "0.20.0"
@@ -73,3 +76,10 @@ version = "3.12.0"
 
 [tools.shellcheck]
 version = "0.11.0"
+
+[hooks]
+preinstall = '''
+export MISE_NO_ENV=1
+export MISE_NO_HOOKS=1
+mise install node pnpm uv
+'''
