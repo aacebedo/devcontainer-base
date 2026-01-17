@@ -1,3 +1,13 @@
+# [1.3.0](https://github.com/aacebedo/devcontainer-base/compare/v1.2.2...v1.3.0) (2026-01-17)
+
+
+### Features
+
+* cleanup dockerfile ([1df231b](https://github.com/aacebedo/devcontainer-base/commit/1df231b58d29c86821fe1062e05ed11207f1e16a))
+* make renovate merge minor and patch ([b4e8f85](https://github.com/aacebedo/devcontainer-base/commit/b4e8f85653ffdc6c511c4b3e3ad69518dfb64039))
+* remove useless package.json ([48df0a2](https://github.com/aacebedo/devcontainer-base/commit/48df0a20c4cd8ef6abc9f7417a3b094c4acd57d0))
+* use no_env and no_hooks to preinstall base tools ([7cff19c](https://github.com/aacebedo/devcontainer-base/commit/7cff19cd2feb90ddb630da0b53f4cff2b859e620))
+
 ## [1.2.2](https://github.com/aacebedo/devcontainer-base/compare/v1.2.1...v1.2.2) (2026-01-14)
 
 
