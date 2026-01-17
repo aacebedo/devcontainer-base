@@ -10,6 +10,19 @@
 	"baseBranchPatterns": [
 		"main"
 	],
+	"packageRules": [
+		{
+			"matchUpdateTypes": [
+				"minor",
+				"patch"
+			],
+			"matchPackagePatterns": [
+				"*"
+			],
+			"automerge": true,
+			"automergeType": "pr"
+		}
+	],
 	"customManagers": [
 		{
 			"customType": "regex",
