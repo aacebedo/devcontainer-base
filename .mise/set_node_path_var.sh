@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 NODE_PATH_VALUE=$(
 	export MISE_NO_ENV=1 MISE_NO_HOOKS=1
