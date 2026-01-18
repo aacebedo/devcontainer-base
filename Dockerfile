@@ -30,19 +30,17 @@ ENV DEVCONTAINER_USERNAME=devcontaineruser \
 RUN apk update && \
 		apk upgrade && \
 		apk add --no-cache \
-		bash \
 		build-base \
 		libc6-compat \
 		libcap-setcap \
 		libgcc \
 		libstdc++ \
+		gcompat \
 		sudo \
 		zsh \
-		python3 \
+		git \
 		gpg-agent \
 		gpg \
-		zsh \
-		gcompat \
 		ca-certificates \
 		&& update-ca-certificates
 
