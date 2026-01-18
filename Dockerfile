@@ -38,6 +38,7 @@ RUN apk update && \
 		libstdc++ \
 		sudo \
 		zsh \
+		git \
 		python3 \
 		gpg-agent \
 		gpg \
