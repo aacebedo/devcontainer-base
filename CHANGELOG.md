@@ -1,3 +1,11 @@
+## [1.3.1](https://github.com/aacebedo/devcontainer-base/compare/v1.3.0...v1.3.1) (2026-01-18)
+
+
+### Bug Fixes
+
+* fix alpine version and mise experimental flag ([ec4ad5e](https://github.com/aacebedo/devcontainer-base/commit/ec4ad5e58fbae61f38e5d1767a1f91a0c8a4592b))
+* fix node version ([107a347](https://github.com/aacebedo/devcontainer-base/commit/107a347edf0b13564fd105d79bddeb8fa99403c6))
+
 # [1.3.0](https://github.com/aacebedo/devcontainer-base/compare/v1.2.2...v1.3.0) (2026-01-17)
 
 
