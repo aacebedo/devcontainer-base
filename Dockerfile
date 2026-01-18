@@ -9,8 +9,8 @@ ARG MISE_VERSION=2026.1.3
 # Install base packages (including runtime environments)
 # hadolint ignore=DL3018
 RUN apk update && \
-apk add --no-cache \
-wget
+		apk add --no-cache \
+			wget
 
 # Install mise
 RUN wget --progress=dot:giga -O /tmp/mise \
@@ -30,18 +30,19 @@ ENV DEVCONTAINER_USERNAME=devcontaineruser \
 RUN apk update && \
 		apk upgrade && \
 		apk add --no-cache \
-		build-base \
-		libc6-compat \
-		libcap-setcap \
-		libgcc \
-		libstdc++ \
-		gcompat \
-		sudo \
-		zsh \
-		git \
-		gpg-agent \
-		gpg \
-		ca-certificates \
+			bash \
+			build-base \
+			libc6-compat \
+			libcap-setcap \
+			libgcc \
+			libstdc++ \
+			gcompat \
+			sudo \
+			zsh \
+			git \
+			gpg-agent \
+			gpg \
+			ca-certificates \
 		&& update-ca-certificates
 
 COPY --from=builder --chmod=0755 /tmp/mise /usr/local/bin/mise
