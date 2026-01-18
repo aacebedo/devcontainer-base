@@ -1,3 +1,16 @@
+# [1.4.0](https://github.com/aacebedo/devcontainer-base/compare/v1.3.1...v1.4.0) (2026-01-18)
+
+
+### Bug Fixes
+
+* fix jq package ([fddd422](https://github.com/aacebedo/devcontainer-base/commit/fddd422a9bdb604707d5b6cc7799ebb163346e5f))
+* fix packages ([032e738](https://github.com/aacebedo/devcontainer-base/commit/032e73895733a0d6034a7dba287d720242ae4d62))
+
+
+### Features
+
+* improve the node_path script ([f5010f8](https://github.com/aacebedo/devcontainer-base/commit/f5010f8dfec53f63de9c36ecbc18b46977566c8f))
+
 ## [1.3.1](https://github.com/aacebedo/devcontainer-base/compare/v1.3.0...v1.3.1) (2026-01-18)
 
 
