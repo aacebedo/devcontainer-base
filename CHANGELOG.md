@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/aacebedo/devcontainer-base/compare/v1.4.0...v1.4.1) (2026-01-18)
+
+
+### Bug Fixes
+
+* small cleanups  ([a8178ef](https://github.com/aacebedo/devcontainer-base/commit/a8178ef63787c04bc4a330816e2a08b749af4861))
+
 # [1.4.0](https://github.com/aacebedo/devcontainer-base/compare/v1.3.1...v1.4.0) (2026-01-18)
 
 
