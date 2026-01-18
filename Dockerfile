@@ -1,3 +1,4 @@
+# renovate: datasource=docker depName=alpine versioning=docker
 ARG ALPINE_VERSION=3.23
 
 FROM alpine:${ALPINE_VERSION} AS builder
@@ -21,7 +22,8 @@ FROM alpine:${ALPINE_VERSION} AS final
 ENV DEVCONTAINER_USERNAME=devcontaineruser \
 		DEVCONTAINER_UID=1000 \
 		DEVCONTAINER_GID=1000 \
-		MISE_ALL_COMPILE=false
+		MISE_ALL_COMPILE=false \
+		MISE_EXPERIMENTAL=1
 
 # Install base packages (including runtime environments)
 # hadolint ignore=DL3018
