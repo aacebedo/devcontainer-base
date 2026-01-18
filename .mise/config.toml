@@ -3,7 +3,7 @@ experimental = true
 npm.package_manager = "pnpm"
 
 [env]
-_.source = { path = ".mise/set_node_path_var.sh" }
+_.source = [".mise/set_node_path_var.sh"]
 
 [tools.uv]
 version = "0.9.26"
