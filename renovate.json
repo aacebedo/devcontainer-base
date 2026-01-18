@@ -16,11 +16,11 @@
 				"minor",
 				"patch"
 			],
-			"matchPackagePatterns": [
-				"*"
-			],
 			"automerge": true,
-			"automergeType": "pr"
+			"automergeType": "pr",
+			"matchPackageNames": [
+				"*"
+			]
 		}
 	],
 	"customManagers": [
