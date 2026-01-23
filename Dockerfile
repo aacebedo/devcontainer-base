@@ -31,6 +31,9 @@ RUN apk update && \
 		apk upgrade && \
 		apk add --no-cache \
 			bash \
+			gosu \
+			curl \
+			wget \
 			neovim \
 			build-base \
 			libc6-compat \
