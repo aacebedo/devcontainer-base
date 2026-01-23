@@ -1,3 +1,11 @@
+# [1.5.0](https://github.com/aacebedo/devcontainer-base/compare/v1.4.1...v1.5.0) (2026-01-23)
+
+
+### Features
+
+* clean github actions with new mise version ([0ca6eb0](https://github.com/aacebedo/devcontainer-base/commit/0ca6eb09f21e3be4dd915b486ea5af116da83cc9))
+* disable update for minor version changes ([e40671e](https://github.com/aacebedo/devcontainer-base/commit/e40671ede562545e3746031a47dfaaffb45e9455))
+
 ## [1.4.1](https://github.com/aacebedo/devcontainer-base/compare/v1.4.0...v1.4.1) (2026-01-18)
 
 
