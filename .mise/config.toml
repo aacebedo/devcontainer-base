@@ -5,80 +5,31 @@ npm.package_manager = "pnpm"
 [env]
 _.source = [".mise/set_node_path_var.sh"]
 
-[tools.uv]
-version = "0.9.26"
-
-[tools.node]
-version = "24.13.0"
-
-[tools.pnpm]
-version = "10.28.1"
-
-[tools.markdownlint-cli2]
-version = "0.20.0"
-
-[tools.editorconfig-checker]
-version = "3.6.0"
-
-[tools.hadolint]
-version = "2.14.0"
-
-[tools.jq]
-version = "1.8.1"
-
-[tools.jujutsu]
-version = "0.33.0"
-
-[tools.just]
-version = "1.46.0"
-
-[tools.neovim]
-version = "0.11.5"
-
-[tools.trivy]
-version = "0.68.2"
-
-[tools.vale]
-version = "3.13.0"
-
-[tools.yamllint]
-version = "1.38.0"
-
-[tools.taplo]
-version = "0.10.0"
-
-[tools.podman]
-version = "5.7.1"
-
-[tools."pipx:pre-commit"]
-version = "4.5.1"
-
-[tools."npm:@prantlf/jsonlint"]
-version = "17.0.1"
-
-[tools."npm:renovate"]
-version = "42.92.2"
-
-[tools."npm:semantic-release"]
-version = "25.0.2"
-
-[tools."npm:@semantic-release-plus/docker"]
-version = "3.1.3"
-
-[tools."npm:@semantic-release/changelog"]
-version = "6.0.3"
-
-[tools."npm:@semantic-release/exec"]
-version = "7.1.0"
-
-[tools."npm:@semantic-release/git"]
-version = "10.0.1"
-
-[tools.shfmt]
-version = "3.12.0"
-
-[tools.shellcheck]
-version = "0.11.0"
+[tools]
+uv = "0.9.26"
+node = "24.13.0"
+pnpm = "10.28.1"
+markdownlint-cli2 = "0.20.0"
+editorconfig-checker = "3.6.0"
+hadolint = "2.14.0"
+jq = "1.8.1"
+jujutsu = "0.33.0"
+just = "1.46.0"
+trivy = "0.68.2"
+vale = "3.13.0"
+yamllint = "1.38.0"
+taplo = "0.10.0"
+"pipx:pre-commit" = "4.5.1"
+"npm:@prantlf/jsonlint" = "17.0.1"
+"npm:renovate" = "42.92.2"
+"npm:semantic-release" = "25.0.2"
+"npm:@semantic-release-plus/docker" = "3.1.3"
+"npm:@semantic-release/changelog" = "6.0.3"
+"npm:@semantic-release/exec" = "7.1.0"
+"npm:@semantic-release/git" = "10.0.1"
+shfmt = "3.12.0"
+shellcheck = "0.11.0"
+podman = "5.7.1"
 
 [hooks]
 preinstall = '''
