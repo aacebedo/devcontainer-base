@@ -57,7 +57,7 @@ version = "4.5.1"
 version = "17.0.1"
 
 [tools."npm:renovate"]
-version = "42.86.1"
+version = "42.92.2"
 
 [tools."npm:semantic-release"]
 version = "25.0.2"
