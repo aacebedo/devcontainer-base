@@ -31,6 +31,7 @@ RUN apk update && \
 		apk upgrade && \
 		apk add --no-cache \
 			bash \
+			neovim \
 			build-base \
 			libc6-compat \
 			libcap-setcap \
