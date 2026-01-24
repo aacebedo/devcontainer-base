@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  lint-build-test:
+  pr-checks:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -27,12 +27,10 @@ jobs:
       - name: Lint
         run: |
           just lint
-      - name: Build
-        run: |
-          just build
       - name: Test
         run: |
           just test
       - name: Run security scan
         run: |
           just security-scan
+
