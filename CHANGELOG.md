@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/aacebedo/devcontainer-base/compare/v1.5.0...v1.6.0) (2026-01-24)
+
+
+### Features
+
+* refactor pr and mise config file ([328bddf](https://github.com/aacebedo/devcontainer-base/commit/328bddfd62b002afba68ca17e8f690b2e82deb85))
+
 # [1.5.0](https://github.com/aacebedo/devcontainer-base/compare/v1.4.1...v1.5.0) (2026-01-23)
 
 
