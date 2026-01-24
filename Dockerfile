@@ -50,6 +50,7 @@ RUN apk update && \
 		&& update-ca-certificates
 
 COPY --from=builder --chmod=0755 /tmp/mise /usr/local/bin/mise
+COPY --chmod=0755 gosu-wrapper.sh /usr/local/bin/gosu-wrapper.sh
 
 # Create/configure non-root user
 # hadolint ignore=SC2016
