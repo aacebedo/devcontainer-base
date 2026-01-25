@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/aacebedo/devcontainer-base/compare/v1.6.0...v1.6.1) (2026-01-25)
+
+
+### Bug Fixes
+
+* remove gosu ([fd0cef8](https://github.com/aacebedo/devcontainer-base/commit/fd0cef80f21d49b8630bbb363f0ade4046ee8c1e))
+
 # [1.6.0](https://github.com/aacebedo/devcontainer-base/compare/v1.5.0...v1.6.0) (2026-01-24)
 
 
