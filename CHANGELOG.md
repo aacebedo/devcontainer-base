@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/aacebedo/devcontainer-base/compare/v1.6.1...v1.6.2) (2026-02-01)
+
+
+### Bug Fixes
+
+* **deps:** trigger release for dependency updates ([bf2aa79](https://github.com/aacebedo/devcontainer-base/commit/bf2aa7989e021e82af00d75ffee295a62c90b9e0))
+
 ## [1.6.1](https://github.com/aacebedo/devcontainer-base/compare/v1.6.0...v1.6.1) (2026-01-25)
 
 
