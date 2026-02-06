@@ -23,7 +23,9 @@ ENV DEVCONTAINER_USERNAME=devcontaineruser \
 		DEVCONTAINER_UID=1000 \
 		DEVCONTAINER_GID=1000 \
 		MISE_ALL_COMPILE=false \
-		MISE_EXPERIMENTAL=1
+		MISE_EXPERIMENTAL=1 \
+		LANG="en_US.UTF-8" \
+		LC_ALL="en_US.UTF-8"
 
 # Install base packages (including runtime environments)
 # hadolint ignore=DL3018
@@ -45,6 +47,7 @@ RUN apk update && \
 			git \
 			gpg-agent \
 			gpg \
+			alpine-zsh-config \
 			ca-certificates \
 		&& update-ca-certificates
 
