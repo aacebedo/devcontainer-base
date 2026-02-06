@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/aacebedo/devcontainer-base/compare/v1.6.2...v1.7.0) (2026-02-06)
+
+
+### Features
+
+* add zshrc default package and fix LOCAL env vars ([7fb82be](https://github.com/aacebedo/devcontainer-base/commit/7fb82bef9d6aa62cb100d7ef861d34befbf5b00c))
+
 ## [1.6.2](https://github.com/aacebedo/devcontainer-base/compare/v1.6.1...v1.6.2) (2026-02-01)
 
 
