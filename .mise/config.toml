@@ -8,7 +8,7 @@ _.source = [".mise/set_node_path_var.sh"]
 [tools]
 uv = "0.9.26"
 node = "24.13.0"
-pnpm = "10.28.1"
+pnpm = "10.29.2"
 markdownlint-cli2 = "0.20.0"
 editorconfig-checker = "3.6.0"
 hadolint = "2.14.0"
