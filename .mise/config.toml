@@ -6,7 +6,7 @@ npm.package_manager = "pnpm"
 _.source = [".mise/set_node_path_var.sh"]
 
 [tools]
-uv = "0.9.26"
+uv = "0.10.0"
 node = "24.13.0"
 pnpm = "10.29.2"
 markdownlint-cli2 = "0.20.0"
