@@ -68,11 +68,6 @@ repos:
         language: system
         files: '(^|/).?renovate(?:rc)?(?:\.json5?)?$'
 
-  - repo: https://github.com/instrumentl/pre-commit-just
-    rev: v0.1
-    hooks:
-      - id: format-justfile
-
   - repo: https://github.com/DavidAnson/markdownlint-cli2
     rev: v0.21.0
     hooks:

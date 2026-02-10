@@ -20,8 +20,8 @@
   to install node packages in another tool.
 - Renovate drives version bumps in all files using comments (`# renovate: datasource=...`); keep
   those hints intact when editing and add when some are missing.
-- Workflows expect `just` targets named `lint`, `build`, `test`, `security-scan`, and `release`. Preserve those entry
-  points (even if the Justfile is generated elsewhere) so automation does not break.
+- Workflows expect `mise` targets named `lint`, `build`, `test`, `security-scan`, and `release`. Preserve those entry
+  points so automation does not break.
 
 ## GitHub Actions
 
@@ -30,4 +30,4 @@
 
 ## Local development
 
-- Always run `mise install` before executing any `just` target locally to ensure tooling is installed.
+- Always run `mise install` before executing any `mise` tasks locally to ensure tooling is installed.
