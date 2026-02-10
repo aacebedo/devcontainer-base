@@ -3,7 +3,7 @@ experimental = true
 npm.package_manager = "pnpm"
 
 [env]
-_.source = [".mise/set_node_path_var.sh"]
+_.source = { path = ".mise/set_node_path_var.sh", tools = true }
 
 [tools]
 uv = "0.10.0"
@@ -30,10 +30,3 @@ taplo = "0.10.0"
 shfmt = "3.12.0"
 shellcheck = "0.11.0"
 podman = "5.7.1"
-
-[hooks]
-preinstall = '''
-export MISE_NO_ENV=1
-export MISE_NO_HOOKS=1
-mise install node pnpm uv jq
-'''
