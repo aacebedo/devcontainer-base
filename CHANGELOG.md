@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/aacebedo/devcontainer-base/compare/v1.7.0...v1.8.0) (2026-02-10)
+
+
+### Features
+
+* update mise and cleanup mise config ([f4a1e65](https://github.com/aacebedo/devcontainer-base/commit/f4a1e6597680c04ff5a473d1b93a767dbd4b4f96))
+
 # [1.7.0](https://github.com/aacebedo/devcontainer-base/compare/v1.6.2...v1.7.0) (2026-02-06)
 
 
