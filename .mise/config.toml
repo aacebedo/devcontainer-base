@@ -7,7 +7,7 @@ _.source = { path = ".mise/set_node_path_var.sh", tools = true }
 
 [tools]
 uv = "0.10.0"
-node = "24.13.0"
+node = "24.14.0"
 pnpm = "10.30.1"
 markdownlint-cli2 = "0.21.0"
 editorconfig-checker = "3.6.0"
