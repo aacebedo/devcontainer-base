@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/aacebedo/devcontainer-base/compare/v1.8.0...v1.9.0) (2026-02-26)
+
+
+### Features
+
+* remove just ([5435583](https://github.com/aacebedo/devcontainer-base/commit/5435583e6049f71d6478888627a110c30b4ea816))
+
 # [1.8.0](https://github.com/aacebedo/devcontainer-base/compare/v1.7.0...v1.8.0) (2026-02-10)
 
 
