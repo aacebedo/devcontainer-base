@@ -26,11 +26,11 @@ jobs:
           git config --global user.name "${{ github.actor }}"
       - name: Lint
         run: |
-          just lint
+          mise lint
       - name: Test
         run: |
-          just test
+          mise test
       - name: Run security scan
         run: |
-          just security-scan
+          mise security-scan
 

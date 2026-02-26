@@ -12,9 +12,6 @@ max_line_length = 120
 [*.{yaml,yml}]
 indent_style = space
 
-[Justfile]
-indent_style = space
-
 [*.md]
 indent_style = space
 

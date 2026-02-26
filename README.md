@@ -36,20 +36,20 @@ mise install
 #### Build the image
 
 ```bash
-just build
+mise build
 ```
 
 #### Run tests
 
 ```bash
-just test
+mise test
 ```
 
 #### Run all quality checks
 
 ```bash
-just lint
-just security-scan
+mise lint
+mise security-scan
 ```
 
 ## Image structure
