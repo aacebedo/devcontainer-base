@@ -3,7 +3,6 @@ Dockerfile
 repo
 musl
 toolchain[s]
-Justfile
 Trivy
 Buildx
 sudo
