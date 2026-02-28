@@ -4,6 +4,7 @@ npm.package_manager = "pnpm"
 
 [env]
 _.source = { path = ".mise/set_node_path_var.sh", tools = true }
+GITHUB_TOKEN = { required = true, redact = false }
 
 [tools]
 uv = "0.10.0"

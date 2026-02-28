@@ -67,7 +67,4 @@ WORKDIR /home/${DEVCONTAINER_USERNAME}
 
 USER ${DEVCONTAINER_USERNAME}
 
-SHELL ["/bin/zsh"]
-
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-CMD [ "sh", "-c", "command -v zsh" ]
+CMD ["/bin/zsh", "--login"]
