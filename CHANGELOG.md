@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/aacebedo/devcontainer-base/compare/v1.9.0...v1.10.0) (2026-02-28)
+
+
+### Features
+
+* update mise to 2026.2.23 ([a1ccfb5](https://github.com/aacebedo/devcontainer-base/commit/a1ccfb5293b85e10bf4a2dd77cf0c1b3897c96f9))
+
 # [1.9.0](https://github.com/aacebedo/devcontainer-base/compare/v1.8.0...v1.9.0) (2026-02-26)
 
 
