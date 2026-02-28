@@ -44,6 +44,7 @@ rm -rf "$TEMP_DIR"
 [release]
 description = "Lint, test, security-scan, then publish a release"
 depends = ["lint", "test", "security-scan"]
+env = { GITHUB_TOKEN = { required = true, redact = true } }
 run = """
 #!/usr/bin/env sh
 set -eu
