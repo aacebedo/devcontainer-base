@@ -1,3 +1,12 @@
+## [1.10.1](https://github.com/aacebedo/devcontainer-base/compare/v1.10.0...v1.10.1) (2026-02-28)
+
+
+### Bug Fixes
+
+* add env var reqs ([b870a42](https://github.com/aacebedo/devcontainer-base/commit/b870a42f0753e4b101b6bb738ec4f25dfede2861))
+* small fixes on dockerfile ([94ffa17](https://github.com/aacebedo/devcontainer-base/commit/94ffa179e341e104760aa70d86e7ec79a0c96e6f))
+* small scripts fixes ([b5cfede](https://github.com/aacebedo/devcontainer-base/commit/b5cfede993857d3a8f2157c692d18514c9ce6abf))
+
 # [1.10.0](https://github.com/aacebedo/devcontainer-base/compare/v1.9.0...v1.10.0) (2026-02-28)
 
 
