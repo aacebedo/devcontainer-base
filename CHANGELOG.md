@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/aacebedo/devcontainer-base/compare/v1.10.1...v1.11.0) (2026-03-14)
+
+
+### Features
+
+* update broken trivy version ([e2431db](https://github.com/aacebedo/devcontainer-base/commit/e2431db4ed7652445d1b0688139a99983d90868c))
+
 ## [1.10.1](https://github.com/aacebedo/devcontainer-base/compare/v1.10.0...v1.10.1) (2026-02-28)
 
 
