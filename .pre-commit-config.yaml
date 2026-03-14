@@ -48,7 +48,7 @@ repos:
         always_run: true
 
   - repo: https://github.com/errata-ai/vale
-    rev: v3.13.0
+    rev: v3.14.0
     hooks:
       - id: vale
 
