@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/aacebedo/devcontainer-base/compare/v1.11.0...v1.12.0) (2026-03-14)
+
+
+### Features
+
+* change commit type for deps update ([9497951](https://github.com/aacebedo/devcontainer-base/commit/9497951b880b0c308319b921b99b80969129a0b1))
+
 # [1.11.0](https://github.com/aacebedo/devcontainer-base/compare/v1.10.1...v1.11.0) (2026-03-14)
 
 
