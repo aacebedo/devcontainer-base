@@ -31,7 +31,7 @@ jobs:
           persist-credentials: false
           token: ${{ steps.generate-token.outputs.token }}
       - name: Setup mise
-        uses: jdx/mise-action@v3
+        uses: jdx/mise-action@v4
       - name: Configure git
         run: |
           git config --global --add safe.directory '*'
