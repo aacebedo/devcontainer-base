@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/aacebedo/devcontainer-base/compare/v1.12.0...v1.12.1) (2026-03-21)
+
+
+### Bug Fixes
+
+* update mise to 2026.3.10 ([8358ea6](https://github.com/aacebedo/devcontainer-base/commit/8358ea6939db2b0e3eb90f78588f27013c17352c))
+
 # [1.12.0](https://github.com/aacebedo/devcontainer-base/compare/v1.11.0...v1.12.0) (2026-03-14)
 
 
