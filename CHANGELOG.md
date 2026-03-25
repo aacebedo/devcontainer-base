@@ -1,3 +1,11 @@
+## [1.12.2](https://github.com/aacebedo/devcontainer-base/compare/v1.12.1...v1.12.2) (2026-03-25)
+
+
+### Bug Fixes
+
+* activate renovate semantic commits support ([fcbc9ba](https://github.com/aacebedo/devcontainer-base/commit/fcbc9ba3a1b4c24a09be5364833e894faefe8202))
+* update mise ([9d05111](https://github.com/aacebedo/devcontainer-base/commit/9d0511166c48231be6dad06e1085aee554984b91))
+
 ## [1.12.1](https://github.com/aacebedo/devcontainer-base/compare/v1.12.0...v1.12.1) (2026-03-21)
 
 
