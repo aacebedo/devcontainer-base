@@ -7,7 +7,7 @@ _.source = { path = ".mise/set_node_path_var.sh", tools = true }
 MISE_GITHUB_TOKEN = { required = true, redact = true }
 
 [tools]
-uv = "0.10.0"
+uv = "0.11.1"
 node = "24.14.0"
 pnpm = "10.32.1"
 markdownlint-cli2 = "0.22.0"
