@@ -10,7 +10,7 @@ MISE_GITHUB_TOKEN = { required = true, redact = true }
 uv = "0.10.0"
 node = "24.14.0"
 pnpm = "10.32.1"
-markdownlint-cli2 = "0.21.0"
+markdownlint-cli2 = "0.22.0"
 editorconfig-checker = "3.6.0"
 hadolint = "2.14.0"
 jq = "1.8.1"
