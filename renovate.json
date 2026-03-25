@@ -2,12 +2,13 @@
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"extends": [
 		"config:recommended",
+		":semanticCommits",
 		":enablePreCommit",
 		"schedule:automergeDaily",
-		":dependencyDashboard"
+		":dependencyDashboard",
+		":semanticCommitTypeAll(fix)"
 	],
 	"configMigration": true,
-	"semanticCommitType": "fix",
 	"baseBranchPatterns": [
 		"main"
 	],
