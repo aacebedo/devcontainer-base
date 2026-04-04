@@ -1,3 +1,10 @@
+## [1.12.3](https://github.com/aacebedo/devcontainer-base/compare/v1.12.2...v1.12.3) (2026-04-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency jdx/mise to v2026.4.3 ([d9b4e0f](https://github.com/aacebedo/devcontainer-base/commit/d9b4e0ff7cc4fa97e26a3e05cee81c98d4636e1c))
+
 ## [1.12.2](https://github.com/aacebedo/devcontainer-base/compare/v1.12.1...v1.12.2) (2026-03-25)
 
 
