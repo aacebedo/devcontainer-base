@@ -1,3 +1,10 @@
+## [1.12.4](https://github.com/aacebedo/devcontainer-base/compare/v1.12.3...v1.12.4) (2026-04-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency npm:renovate to v43.110.14 ([9390377](https://github.com/aacebedo/devcontainer-base/commit/9390377a789db17aebae89087f809cfde66a5502))
+
 ## [1.12.3](https://github.com/aacebedo/devcontainer-base/compare/v1.12.2...v1.12.3) (2026-04-04)
 
 
