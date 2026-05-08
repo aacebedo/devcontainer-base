@@ -72,12 +72,12 @@ repos:
     rev: v0.22.0
     hooks:
       - id: markdownlint-cli2
-
-  - repo: https://github.com/ComPWA/taplo-pre-commit
-    rev: v0.9.3
-    hooks:
-      - id: taplo-format
-      - id: taplo-lint
+# Disable taplo until they fixed their bug
+#  - repo: https://github.com/ComPWA/taplo-pre-commit
+#    rev: v0.9.3
+#    hooks:
+#      - id: taplo-format
+#      - id: taplo-lint
 
   - repo: https://github.com/koalaman/shellcheck-precommit
     rev: v0.11.0
