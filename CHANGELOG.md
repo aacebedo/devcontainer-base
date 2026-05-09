@@ -1,3 +1,10 @@
+## [1.12.5](https://github.com/aacebedo/devcontainer-base/compare/v1.12.4...v1.12.5) (2026-05-09)
+
+
+### Bug Fixes
+
+* **tools:** disable taplo until it is fixed ([7f21e30](https://github.com/aacebedo/devcontainer-base/commit/7f21e301bc1a2925459af6a3c57d9070f98f9a97))
+
 ## [1.12.4](https://github.com/aacebedo/devcontainer-base/compare/v1.12.3...v1.12.4) (2026-04-11)
 
 
