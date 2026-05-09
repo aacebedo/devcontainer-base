@@ -1,3 +1,10 @@
+## [1.12.7](https://github.com/aacebedo/devcontainer-base/compare/v1.12.6...v1.12.7) (2026-05-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vale to v3.14.1 ([7374091](https://github.com/aacebedo/devcontainer-base/commit/73740914a69a037e243c9902484c66f079a1570e))
+
 ## [1.12.6](https://github.com/aacebedo/devcontainer-base/compare/v1.12.5...v1.12.6) (2026-05-09)
 
 
