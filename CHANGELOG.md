@@ -1,3 +1,14 @@
+## [1.12.6](https://github.com/aacebedo/devcontainer-base/compare/v1.12.5...v1.12.6) (2026-05-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency npm:renovate to v43.150.0 ([b7812db](https://github.com/aacebedo/devcontainer-base/commit/b7812db3b90ab41407cfc536ea6b6a007549d6d6))
+* **deps:** update dependency pipx:pre-commit to v4.6.0 ([83b3860](https://github.com/aacebedo/devcontainer-base/commit/83b3860f1f754c987a4005a3a2b51fc49a6e8f22))
+* **deps:** update dependency podman to v5.8.2 ([f4b9389](https://github.com/aacebedo/devcontainer-base/commit/f4b9389d23217448f79d4bd82f72c9f8ec385305))
+* **deps:** update dependency trivy to v0.70.0 ([508d6a8](https://github.com/aacebedo/devcontainer-base/commit/508d6a87be9f47d7a19a3cbc4dfece879e56db6d))
+* **deps:** update node.js to v24.15.0 ([a26455e](https://github.com/aacebedo/devcontainer-base/commit/a26455eb99a8963908b95b869c4e69e04af06d4a))
+
 ## [1.12.5](https://github.com/aacebedo/devcontainer-base/compare/v1.12.4...v1.12.5) (2026-05-09)
 
 
