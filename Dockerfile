@@ -4,7 +4,7 @@ ARG ALPINE_VERSION=3.23
 FROM alpine:${ALPINE_VERSION} AS builder
 
 # renovate: datasource=github-releases depName=jdx/mise extractVersion=^v(?<version>.*)$
-ARG MISE_VERSION=2026.4.3
+ARG MISE_VERSION=2026.5.3
 
 # Install base packages (including runtime environments)
 # hadolint ignore=DL3018
