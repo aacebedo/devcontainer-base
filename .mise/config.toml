@@ -29,7 +29,7 @@ taplo = "0.10.0"
 "npm:@semantic-release/git" = "10.0.1"
 shfmt = "3.13.0"
 shellcheck = "0.11.0"
-podman = "5.7.1"
+podman = "5.8.2"
 
 [vars]
 repo_owner = '''{{ exec(command="git remote get-url origin | awk -F'[/:]' '{print $(NF-1)}'") | trim }}'''
