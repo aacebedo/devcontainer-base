@@ -8,6 +8,8 @@ on:
     branches:
       - main
 
+permissions: {}
+
 jobs:
   pr-checks:
     runs-on: ubuntu-latest
