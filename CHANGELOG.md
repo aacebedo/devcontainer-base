@@ -1,3 +1,21 @@
+# [1.13.0](https://github.com/aacebedo/devcontainer-base/compare/v1.12.7...v1.13.0) (2026-05-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency jdx/mise to v2026.5.3 ([ad101de](https://github.com/aacebedo/devcontainer-base/commit/ad101de7d5f73faa0bbca1666f0bfa1c08a70979))
+* **deps:** update dependency jujutsu to v0.41.0 ([a8a1558](https://github.com/aacebedo/devcontainer-base/commit/a8a15583af8cacf0d9378cdf1ccada9a268c77d3))
+* **deps:** update dependency pnpm to v11 ([2b40787](https://github.com/aacebedo/devcontainer-base/commit/2b407871b668f58dd8550ffaf72c9bcaa2742385))
+* **deps:** update pre-commit hook commitizen-tools/commitizen to v4.15.1 ([1f947d0](https://github.com/aacebedo/devcontainer-base/commit/1f947d00c6ed340abde40ee9ff99e96cba9db248))
+* fix npm packages race condition ([4d54e14](https://github.com/aacebedo/devcontainer-base/commit/4d54e1440d4eb2a1faf8978d786b68e810ba955e))
+
+
+### Features
+
+* move to prek and to task files ([8abae90](https://github.com/aacebedo/devcontainer-base/commit/8abae9081f1fa9286457c597a3c553da77f65151))
+* switched to aube for npm packages ([2d9efb9](https://github.com/aacebedo/devcontainer-base/commit/2d9efb99979195535b91c85ea1b11e169533a7e1))
+* various fixes ([696feb0](https://github.com/aacebedo/devcontainer-base/commit/696feb07a16635086d148be6af7da3a56f9fa29e))
+
 ## [1.12.7](https://github.com/aacebedo/devcontainer-base/compare/v1.12.6...v1.12.7) (2026-05-09)
 
 
