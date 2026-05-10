@@ -1,3 +1,7 @@
+# Configuration file for `prek`, a git hook framework written in Rust.
+# See https://prek.j178.dev for more information.
+#:schema https://www.schemastore.org/prek.json
+#
 [[repos]]
 repo = "https://github.com/hadolint/hadolint"
 rev = "v2.14.0"
@@ -61,9 +65,7 @@ repo = "local"
 [[repos.hooks]]
 id = "jsonlint"
 name = "JSON Lint"
-entry = """
-jsonlint -M json5
-"""
+entry = "jsonlint -M json5"
 language = "system"
 files = '\\.json$'
 
@@ -73,9 +75,7 @@ repo = "local"
 [[repos.hooks]]
 id = "renovate-config-validator"
 name = "Validate Renovate Config"
-entry = """
-renovate-config-validator
-"""
+entry = "renovate-config-validator"
 language = "system"
 files = '(^|/).?renovate(?:rc)?(?:\.json5?)?$'
 
@@ -83,9 +83,10 @@ files = '(^|/).?renovate(?:rc)?(?:\.json5?)?$'
 repo = "https://github.com/DavidAnson/markdownlint-cli2"
 rev = "v0.22.0"
 hooks = [{ id = "markdownlint-cli2" }]
+
 [[repos]]
-repo = "https://github.com/koalaman/shellcheck-precommit"
-rev = "v0.11.0"
+repo = "https://github.com/shellcheck-py/shellcheck-py"
+rev = "v0.10.0.1"
 hooks = [{ id = "shellcheck" }]
 
 [[repos]]
