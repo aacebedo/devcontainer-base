@@ -4,7 +4,7 @@ ARG ALPINE_VERSION=3.23
 FROM alpine:${ALPINE_VERSION} AS builder
 
 # renovate: datasource=github-releases depName=jdx/mise extractVersion=^v(?<version>.*)$
-ARG MISE_VERSION=2026.5.3
+ARG MISE_VERSION=2026.5.4
 
 # Install base packages (including runtime environments)
 # hadolint ignore=DL3018
@@ -23,7 +23,8 @@ ENV DEVCONTAINER_USERNAME=devcontaineruser \
 		DEVCONTAINER_UID=1000 \
 		DEVCONTAINER_GID=1000 \
 		MISE_ALL_COMPILE=false \
-		MISE_EXPERIMENTAL=1 \
+		MISE_JOBS=1 \
+		MISE_LIBC=musl \
 		LANG="en_US.UTF-8" \
 		LC_ALL="en_US.UTF-8"
 
@@ -39,6 +40,7 @@ RUN apk update && \
 			build-base \
 			libc6-compat \
 			libcap-setcap \
+			openssh-client-default \
 			libgcc \
 			libstdc++ \
 			gcompat \
