@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/aacebedo/devcontainer-base/compare/v1.13.0...v1.14.0) (2026-05-10)
+
+
+### Features
+
+* apply checkov ([43e6ec3](https://github.com/aacebedo/devcontainer-base/commit/43e6ec3040ea4bd6d2afa20f4353eecacd1c07fc))
+
 # [1.13.0](https://github.com/aacebedo/devcontainer-base/compare/v1.12.7...v1.13.0) (2026-05-10)
 
 
