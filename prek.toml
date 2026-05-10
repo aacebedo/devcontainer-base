@@ -67,7 +67,7 @@ id = "jsonlint"
 name = "JSON Lint"
 entry = "jsonlint -M json5"
 language = "system"
-files = '\\.json$'
+files = '\.json$'
 
 [[repos]]
 repo = "local"
@@ -93,3 +93,11 @@ hooks = [{ id = "shellcheck" }]
 repo = "https://github.com/scop/pre-commit-shfmt"
 rev = "v3.12.0-2"
 hooks = [{ id = "shfmt" }]
+
+[[repos]]
+repo = "https://github.com/bridgecrewio/checkov.git"
+rev = "3.2.528"
+
+[[repos.hooks]]
+id = "checkov"
+files = 'Dockerfile'
