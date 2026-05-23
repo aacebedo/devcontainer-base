@@ -1,3 +1,11 @@
+## [1.14.1](https://github.com/aacebedo/devcontainer-base/compare/v1.14.0...v1.14.1) (2026-05-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency prek to v0.4.1 ([fe150d0](https://github.com/aacebedo/devcontainer-base/commit/fe150d07a89aaa2581ec580e5cdff88de20b8e26))
+* **deps:** update node.js to v24.16.0 ([1e40427](https://github.com/aacebedo/devcontainer-base/commit/1e404273f11f11ad2ce69c829d970081946969ff))
+
 # [1.14.0](https://github.com/aacebedo/devcontainer-base/compare/v1.13.0...v1.14.0) (2026-05-10)
 
 
