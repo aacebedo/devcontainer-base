@@ -1,3 +1,12 @@
+## [1.14.3](https://github.com/aacebedo/devcontainer-base/compare/v1.14.2...v1.14.3) (2026-06-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency aube to v1.17.1 ([24fd308](https://github.com/aacebedo/devcontainer-base/commit/24fd308c3e18b11509328e923ba866fc2cb827cb))
+* **deps:** update dependency editorconfig-checker to v3.7.0 ([ccc6063](https://github.com/aacebedo/devcontainer-base/commit/ccc606399fd2828f6ec2709ef1d19fa1754dd11b))
+* **deps:** update dependency npm:renovate to v43.205.3 ([f221a27](https://github.com/aacebedo/devcontainer-base/commit/f221a2714c9275a97e8e4eab48c0648b5d01a3f7))
+
 ## [1.14.2](https://github.com/aacebedo/devcontainer-base/compare/v1.14.1...v1.14.2) (2026-05-23)
 
 
