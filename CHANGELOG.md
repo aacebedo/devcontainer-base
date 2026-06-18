@@ -1,3 +1,10 @@
+## [1.14.6](https://github.com/aacebedo/devcontainer-base/compare/v1.14.5...v1.14.6) (2026-06-18)
+
+
+### Bug Fixes
+
+* **deps:** update node.js to v24.17.0 ([b0ba774](https://github.com/aacebedo/devcontainer-base/commit/b0ba774ba2e888f968a09e32925405e7bae81c2e))
+
 ## [1.14.5](https://github.com/aacebedo/devcontainer-base/compare/v1.14.4...v1.14.5) (2026-06-18)
 
 
