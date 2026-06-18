@@ -14,7 +14,7 @@ editorconfig-checker = "3.7.0"
 hadolint = "2.14.0"
 jujutsu = "0.41.0"
 jjui = "0.10.4"
-trivy = "0.70.0"
+trivy = "0.71.1"
 vale = "3.14.1"
 yamllint = "1.38.0"
 # taplo deactivated until their bug is fixed
