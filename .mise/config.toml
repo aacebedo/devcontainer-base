@@ -15,7 +15,7 @@ hadolint = "2.14.0"
 jujutsu = "0.42.0"
 jjui = "0.10.4"
 trivy = "0.71.1"
-vale = "3.14.1"
+vale = "3.15.1"
 yamllint = "1.38.0"
 # taplo deactivated until their bug is fixed
 #taplo = "0.10.0"
