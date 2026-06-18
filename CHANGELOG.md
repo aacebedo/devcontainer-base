@@ -1,3 +1,12 @@
+## [1.14.5](https://github.com/aacebedo/devcontainer-base/compare/v1.14.4...v1.14.5) (2026-06-18)
+
+
+### Bug Fixes
+
+* **deps:** update alpine docker tag to v3.24 ([38a2f52](https://github.com/aacebedo/devcontainer-base/commit/38a2f5218d3248a6d8bc52005a018acb203e1988))
+* **deps:** update dependency pipx:checkov to v3.3.1 ([5769657](https://github.com/aacebedo/devcontainer-base/commit/576965719fb719b19cbe04624f96950419171d12))
+* **deps:** update dependency vale to v3.15.1 ([2e4675f](https://github.com/aacebedo/devcontainer-base/commit/2e4675ffc4b300504968fd147bbf50357528d76e))
+
 ## [1.14.4](https://github.com/aacebedo/devcontainer-base/compare/v1.14.3...v1.14.4) (2026-06-18)
 
 
