@@ -25,7 +25,7 @@ prek = "0.4.1"
 shfmt = "3.13.0"
 shellcheck = "0.11.0"
 podman = "5.8.2"
-"pipx:checkov" = "3.2.528"
+"pipx:checkov" = "3.3.1"
 
 [tools."npm:semantic-release"]
 version = "25.0.2"
