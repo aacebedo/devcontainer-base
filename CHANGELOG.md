@@ -1,3 +1,14 @@
+## [1.14.4](https://github.com/aacebedo/devcontainer-base/compare/v1.14.3...v1.14.4) (2026-06-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency aube to v1.22.0 ([e522c7b](https://github.com/aacebedo/devcontainer-base/commit/e522c7b6b3ecc3505f5fe785cb2cea6858cc0ddb))
+* **deps:** update dependency jdx/mise to v2026.6.11 ([aac2a8f](https://github.com/aacebedo/devcontainer-base/commit/aac2a8f61c63d0f000e0f2f0c7798e3d308f2a52))
+* **deps:** update dependency jujutsu to v0.42.0 ([b2be6a5](https://github.com/aacebedo/devcontainer-base/commit/b2be6a514abf33f65a0727d89cb13839addc09c0))
+* **deps:** update dependency npm:renovate to v43.229.1 ([253ea3c](https://github.com/aacebedo/devcontainer-base/commit/253ea3c3976e4b709c497523598961c1c55c8583))
+* **deps:** update dependency trivy to v0.71.1 ([df5d9b2](https://github.com/aacebedo/devcontainer-base/commit/df5d9b21f3287f41ea566763b45e980e0eeb4168))
+
 ## [1.14.3](https://github.com/aacebedo/devcontainer-base/compare/v1.14.2...v1.14.3) (2026-06-01)
 
 
