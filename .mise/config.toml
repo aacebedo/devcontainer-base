@@ -12,10 +12,9 @@ aube = "1.22.0"
 markdownlint-cli2 = "0.22.0"
 editorconfig-checker = "3.7.0"
 hadolint = "2.14.0"
-jujutsu = "0.42.0"
-jjui = "0.10.4"
 trivy = "0.71.1"
 vale = "3.15.1"
+go = "1.26.4"
 yamllint = "1.38.0"
 # taplo deactivated until their bug is fixed
 #taplo = "0.10.0"
@@ -24,7 +23,6 @@ prek = "0.4.1"
 "npm:renovate" = "43.229.1"
 shfmt = "3.13.0"
 shellcheck = "0.11.0"
-podman = "5.8.2"
 "pipx:checkov" = "3.3.1"
 
 [tools."npm:semantic-release"]
@@ -41,3 +39,6 @@ repo_owner = '''{{ exec(command="git remote get-url origin | awk -F'[/:]' '{prin
 repo_name = '''{{ exec(command="git remote get-url origin | xargs basename -s .git") | trim }}'''
 repo_url = "https://github.com/{{vars.repo_owner}}/{{vars.repo_name}}"
 docker_tag = "ghcr.io/{{vars.repo_owner}}/{{vars.repo_name}}:latest"
+
+[hooks]
+enter = "command -v podman || { echo 'ERROR: podman not installed'; exit 1; }"
