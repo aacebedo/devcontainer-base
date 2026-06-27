@@ -8,7 +8,7 @@
 #MISE env = { REPO_OWNER = "{{vars.repo_owner}}" }
 
 set -eu
-podman build -t "$DOCKER_TAG" \
+podman build --format=docker -t "$DOCKER_TAG" \
 	--label "org.opencontainers.image.source=$REPO_URL" \
 	--label "org.opencontainers.image.description=Development container base" \
 	--label "org.opencontainers.image.licenses=MIT" \
