@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/aacebedo/devcontainer-base/compare/v1.14.6...v1.15.0) (2026-06-27)
+
+
+### Features
+
+* switch to mise bootstrap ([e6f1ec7](https://github.com/aacebedo/devcontainer-base/commit/e6f1ec7ed8966ef8ba02a51405f390b6d7f7f31e))
+
 ## [1.14.6](https://github.com/aacebedo/devcontainer-base/compare/v1.14.5...v1.14.6) (2026-06-18)
 
 
