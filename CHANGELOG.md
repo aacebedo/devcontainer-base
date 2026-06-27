@@ -1,3 +1,11 @@
+## [1.15.1](https://github.com/aacebedo/devcontainer-base/compare/v1.15.0...v1.15.1) (2026-06-27)
+
+
+### Bug Fixes
+
+* **deps:** update actions/checkout action to v7 ([b07a387](https://github.com/aacebedo/devcontainer-base/commit/b07a3871292826902c8da76d0604066c3c10bae2))
+* **deps:** update dependency npm:renovate to v43.244.4 ([0267c4b](https://github.com/aacebedo/devcontainer-base/commit/0267c4b7db56808c69a95c0f1c31e48a972904e4))
+
 # [1.15.0](https://github.com/aacebedo/devcontainer-base/compare/v1.14.6...v1.15.0) (2026-06-27)
 
 
