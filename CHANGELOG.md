@@ -1,3 +1,11 @@
+## [1.15.3](https://github.com/aacebedo/devcontainer-base/compare/v1.15.2...v1.15.3) (2026-06-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency npm:renovate to v43.245.0 ([951cc31](https://github.com/aacebedo/devcontainer-base/commit/951cc313c6bb4d971f7388675fe422ddc829b02b))
+* ensure docker build fails if script fails ([dbbda9d](https://github.com/aacebedo/devcontainer-base/commit/dbbda9d5b1e5f341a5dd99c82cab4312771897c9))
+
 ## [1.15.2](https://github.com/aacebedo/devcontainer-base/compare/v1.15.1...v1.15.2) (2026-06-27)
 
 
