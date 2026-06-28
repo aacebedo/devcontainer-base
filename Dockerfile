@@ -12,6 +12,8 @@ ENV DEVCONTAINER_USERNAME=devcontaineruser \
 		LANG="en_US.UTF-8" \
 		LC_ALL="en_US.UTF-8"
 
+SHELL ["/bin/sh", "-euxo", "pipefail", "-c"]
+
 # Install mise
 RUN <<EOF
 wget -nv -O /usr/local/bin/mise \
@@ -23,9 +25,6 @@ EOF
 COPY <<"EOF" /etc/mise/conf.d/01-bootstrap.toml
 [settings]
 experimental = true
-
-[env]
-JJUI_VERSION="0.10.6"
 
 [bootstrap.packages]
 "apk:alpine-zsh-config" = "latest"
@@ -59,9 +58,11 @@ zprofile = "activate"
 
 [tasks.bootstrap]
 run = '''
-#!/usr/bin/env bash
+#!/usr/bin/env sh
+set -euxo pipefail
+export JJUI_VERSION="0.10.6"
 wget -nv -O /tmp/jjui.zip \
-"https://github.com/idursun/jjui/releases/download/v${JJUI_VERSION}/jjui-${JJUI_VERSION}-linux-amd64.zip"
+	"https://github.com/idursun/jjui/releases/download/v${JJUI_VERSION}/jjui-${JJUI_VERSION}-linux-amd64.zip"
 unzip -o /tmp/jjui.zip -d /usr/local/bin
 mv /usr/local/bin/jjui-${JJUI_VERSION}-linux-amd64 /usr/local/bin/jjui
 chmod +x /usr/local/bin/jjui
