@@ -59,7 +59,7 @@ Multi-stage build:
 1. **builder** stage: Downloads mise binary (musl-linked)
 2. **final** stage: Installs Alpine packages, creates non-root user, configures zsh with mise activation
 
-User `devcontaineruser` sources mise via `/etc/zsh/zprofile`, making all installed tools immediately available.
+User `devcontaineruser` sources mise via `/etc/zsh/zshrc`, making all installed tools immediately available.
 
 ## Pre-commit hooks
 

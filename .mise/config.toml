@@ -40,5 +40,15 @@ repo_name = '''{{ exec(command="git remote get-url origin | xargs basename -s .g
 repo_url = "https://github.com/{{vars.repo_owner}}/{{vars.repo_name}}"
 docker_tag = "ghcr.io/{{vars.repo_owner}}/{{vars.repo_name}}:latest"
 
-[hooks]
-enter = "command -v podman || { echo 'ERROR: podman not installed'; exit 1; }"
+[bootstrap.packages]
+"apk:bash" = "latest"
+"apk:build-base" = "latest"
+"apk:ca-certificates" = "latest"
+"apk:gcompat" = "latest"
+"apk:git" = "latest"
+"apk:gpg" = "latest"
+"apk:gpg-agent" = "latest"
+"apk:libcap-setcap" = "latest"
+"apk:libgcc" = "latest"
+"apk:libstdc++" = "latest"
+"apk:podman" = "latest"

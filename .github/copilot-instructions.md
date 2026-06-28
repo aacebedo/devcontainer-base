@@ -12,7 +12,7 @@
   archive manually, while the final stage installs Alpine packages (`zsh`, `sudo`, `build-base`, etc.) that cannot be
   installed with mise.
 - User `devcontaineruser` (UID 1000) in the final image, has passwordless sudo, and sources `mise activate zsh`
-  through `/etc/zsh/zprofile`.
+  through `/etc/zsh/zshrc`.
 
 ## Tooling & dependency çanagement
 
