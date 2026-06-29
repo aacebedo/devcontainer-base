@@ -1,3 +1,16 @@
+# [1.16.0](https://github.com/aacebedo/devcontainer-base/compare/v1.15.4...v1.16.0) (2026-06-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency editorconfig-checker to v3.8.0 ([860c6ce](https://github.com/aacebedo/devcontainer-base/commit/860c6cecb168920d0c9f2958d6d5de67a56897fd))
+* **deps:** update dependency npm:renovate to v43.248.0 ([4e82907](https://github.com/aacebedo/devcontainer-base/commit/4e8290716365b6eeba6c0f821d261bb9acc1af61))
+
+
+### Features
+
+* fixed zsh execution and remove initial bootstrap ([cb99715](https://github.com/aacebedo/devcontainer-base/commit/cb997152dc5c704fd305b5e4259780457b275396))
+
 ## [1.15.4](https://github.com/aacebedo/devcontainer-base/compare/v1.15.3...v1.15.4) (2026-06-28)
 
 
