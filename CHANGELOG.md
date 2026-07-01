@@ -1,3 +1,11 @@
+## [1.16.1](https://github.com/aacebedo/devcontainer-base/compare/v1.16.0...v1.16.1) (2026-07-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency npm:renovate to v43.249.5 ([9238680](https://github.com/aacebedo/devcontainer-base/commit/9238680a4837f385e88c711ec098b6cfea0626b9))
+* **deps:** update dependency trivy to v0.72.0 ([12fec3e](https://github.com/aacebedo/devcontainer-base/commit/12fec3e7e3ffa1b027be85bb24a0f2d36ae33055))
+
 # [1.16.0](https://github.com/aacebedo/devcontainer-base/compare/v1.15.4...v1.16.0) (2026-06-29)
 
 
