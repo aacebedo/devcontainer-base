@@ -1,3 +1,11 @@
+## [1.16.2](https://github.com/aacebedo/devcontainer-base/compare/v1.16.1...v1.16.2) (2026-07-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency markdownlint-cli2 to v0.23.0 ([cd2bf76](https://github.com/aacebedo/devcontainer-base/commit/cd2bf76338f2576e8dcef1946db70484361ff8d8))
+* **deps:** update dependency npm:renovate to v43.252.1 ([db03c5e](https://github.com/aacebedo/devcontainer-base/commit/db03c5e539b044f7231d3a27d248e7949a01495f))
+
 ## [1.16.1](https://github.com/aacebedo/devcontainer-base/compare/v1.16.0...v1.16.1) (2026-07-01)
 
 
