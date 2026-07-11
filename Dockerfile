@@ -18,6 +18,10 @@ ARG JJUI_VERSION=0.10.8
 ARG RIPGREP_VERSION=15.1.0
 # renovate: datasource=github-releases depName=sharkdp/fd
 ARG FD_VERSION=10.4.2
+# renovate: datasource=github-releases depName=eza-community/eza
+ARG EZA_VERSION=0.23.5
+# renovate: datasource=github-releases depName=umlx5h/gtrash
+ARG GTRASH_VERSION=0.0.6
 
 FROM ubuntu:${UBUNTU_VERSION}
 ARG MISE_VERSION
@@ -29,27 +33,33 @@ ARG JUJUTSU_VERSION
 ARG JJUI_VERSION
 ARG RIPGREP_VERSION
 ARG FD_VERSION
+ARG EZA_VERSION
+ARG GTRASH_VERSION
 
 # Install base packages and generate locale before switching shell or setting LC_ALL,
 # so bash never starts with a locale env var that points to non-existent locale files.
 # checkov:skip=CKV2_DOCKER_1: sudo is installed as a package for the passwordless-sudo dev user, not invoked
 # hadolint ignore=DL3008
-RUN apt-get update && \
-	apt-get install -y --no-install-recommends \
-		bash \
-		ca-certificates \
-		git \
-		gpg \
-		gpg-agent \
-		locales \
-		sudo \
-		wget \
-		xz-utils \
-		zsh \
-		unzip && \
-	locale-gen en_US.UTF-8 && \
-	update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 && \
-	rm -rf /var/lib/apt/lists/*
+RUN <<EOF
+apt-get update
+apt-get install -y --no-install-recommends \
+	bash \
+	ca-certificates \
+	git \
+	gpg \
+	gpg-agent \
+	locales \
+	sudo \
+	wget \
+	xz-utils \
+	zsh \
+	ssh \
+	passwd \
+	unzip
+locale-gen en_US.UTF-8
+update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
+rm -rf /var/lib/apt/lists/*
+EOF
 
 ENV DEVCONTAINER_USERNAME=devcontaineruser \
 			DEVCONTAINER_UID=1000 \
@@ -74,6 +84,8 @@ wget -qO- "https://github.com/jj-vcs/jj/releases/download/v${JUJUTSU_VERSION}/jj
 wget -qO- "https://github.com/BurntSushi/ripgrep/releases/download/${RIPGREP_VERSION}/ripgrep-${RIPGREP_VERSION}-x86_64-unknown-linux-musl.tar.gz" | tar xzf - --strip-components=1 -C /usr/local/bin
 wget -qO- "https://github.com/sharkdp/fd/releases/download/v${FD_VERSION}/fd-v${FD_VERSION}-x86_64-unknown-linux-musl.tar.gz" | tar xzf - --strip-components=1 -C /usr/local/bin
 wget -nv -O /tmp/jjui.zip "https://github.com/idursun/jjui/releases/download/v${JJUI_VERSION}/jjui-${JJUI_VERSION}-linux-amd64.zip"
+wget -qO- "https://github.com/eza-community/eza/releases/download/v${EZA_VERSION}/eza_x86_64-unknown-linux-gnu.tar.gz" | tar xzf - -C /usr/local/bin
+wget -qO- "https://github.com/umlx5h/gtrash/releases/download/v${GTRASH_VERSION}/gtrash_Linux_x86_64.tar.gz" | tar xzf - --strip-components=1 -C /usr/local/bin
 # editorconfig-checker-enable
 unzip -o /tmp/jjui.zip -d /usr/local/bin
 rm -f /tmp/jjui.zip
@@ -96,10 +108,31 @@ echo "$DEVCONTAINER_USERNAME ALL=(ALL) NOPASSWD:ALL" > "/etc/sudoers.d/$DEVCONTA
 chmod 0440 "/etc/sudoers.d/$DEVCONTAINER_USERNAME"
 echo "$DEVCONTAINER_USERNAME:100000:65536" >> /etc/subuid
 echo "$DEVCONTAINER_USERNAME:100000:65536" >> /etc/subgid
-echo 'eval "$(mise activate zsh)"' >> /etc/zsh/zshrc
-echo 'eval "$(starship init zsh)"' >> /etc/zsh/zshrc
-echo 'eval "$(atuin init zsh)"' >> /etc/zsh/zshrc
-echo 'eval "$(zoxide init zsh)"' >> /etc/zsh/zshrc
+cat >> /etc/zsh/zshrc <<'ZSHRC'
+eval "$(mise activate zsh)"
+eval "$(starship init zsh)"
+eval "$(atuin init zsh)"
+eval "$(zoxide init zsh)"
+
+alias -- eza='eza --icons auto --git'
+alias -- j=jj
+alias -- jbc='jj b create'
+alias -- jbm='jj b move'
+alias -- jd='jj describe'
+alias -- je='jj edit'
+alias -- jf='jj git fetch'
+alias -- jl='jj log -r ::'
+alias -- jp='jj git push'
+alias -- jr='jj rebase'
+alias -- js='jj split'
+alias -- la='eza -a'
+alias -- ll='eza -l'
+alias -- lla='eza -la'
+alias -- ls=eza
+alias -- lt='eza --tree'
+alias -- lzt=lazygit
+alias -- rm='gtrash put --home-fallback'
+ZSHRC
 EOF
 
 WORKDIR /home/${DEVCONTAINER_USERNAME}
