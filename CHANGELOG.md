@@ -1,3 +1,15 @@
+# [1.17.0](https://github.com/aacebedo/devcontainer-base/compare/v1.16.4...v1.17.0) (2026-07-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency npm:renovate to v43.258.0 ([4345d46](https://github.com/aacebedo/devcontainer-base/commit/4345d46e530b014701f9dd71d55f9c70edee0d73))
+
+
+### Features
+
+* switching to ubuntu ([0fae32c](https://github.com/aacebedo/devcontainer-base/commit/0fae32c50b80b0428117bd14e971d58c13f7b00f))
+
 ## [1.16.4](https://github.com/aacebedo/devcontainer-base/compare/v1.16.3...v1.16.4) (2026-07-11)
 
 
