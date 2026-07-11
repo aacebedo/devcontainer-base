@@ -9,7 +9,7 @@ ARG STARSHIP_VERSION=1.26.0
 # renovate: datasource=github-releases depName=ajeetdsouza/zoxide
 ARG ZOXIDE_VERSION=0.10.0
 # renovate: datasource=github-releases depName=atuinsh/atuin
-ARG ATUIN_VERSION=18.16.1
+ARG ATUIN_VERSION=18.17.0
 # renovate: datasource=github-releases depName=jj-vcs/jj
 ARG JUJUTSU_VERSION=0.43.0
 # renovate: datasource=github-releases depName=idursun/jjui
