@@ -1,3 +1,11 @@
+## [1.17.1](https://github.com/aacebedo/devcontainer-base/compare/v1.17.0...v1.17.1) (2026-07-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency atuinsh/atuin to v18.17.0 ([e1cb128](https://github.com/aacebedo/devcontainer-base/commit/e1cb1282884d74a207e31093732c5c03b8a0b68e))
+* **deps:** update ubuntu docker tag to v26 ([b20988c](https://github.com/aacebedo/devcontainer-base/commit/b20988cb77d444aa39768e5a9e0f29870349c560))
+
 # [1.17.0](https://github.com/aacebedo/devcontainer-base/compare/v1.16.4...v1.17.0) (2026-07-11)
 
 
