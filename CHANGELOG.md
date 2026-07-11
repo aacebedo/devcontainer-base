@@ -1,3 +1,10 @@
+## [1.16.3](https://github.com/aacebedo/devcontainer-base/compare/v1.16.2...v1.16.3) (2026-07-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency aube to v1.26.0 ([8491cdf](https://github.com/aacebedo/devcontainer-base/commit/8491cdfdff01911c34fd583888711aa9e39682dd))
+
 ## [1.16.2](https://github.com/aacebedo/devcontainer-base/compare/v1.16.1...v1.16.2) (2026-07-06)
 
 
