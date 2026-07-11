@@ -1,3 +1,10 @@
+## [1.17.2](https://github.com/aacebedo/devcontainer-base/compare/v1.17.1...v1.17.2) (2026-07-11)
+
+
+### Bug Fixes
+
+* adding missing packages ([992a0ad](https://github.com/aacebedo/devcontainer-base/commit/992a0ad56fc476f00bd90d9e958483ea3c3d17c7))
+
 ## [1.17.1](https://github.com/aacebedo/devcontainer-base/compare/v1.17.0...v1.17.1) (2026-07-11)
 
 
