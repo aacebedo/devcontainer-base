@@ -1,6 +1,6 @@
 ## Overview
 
-- This repo builds and publishes an Alpine-based docker image that is used as a base for devcontainer; the
+- This repo builds and publishes an Ubuntu based docker image that is used as a base for devcontainer; the
   multi-stage [Dockerfile](../Dockerfile) is the “source code” and GitHub Actions wraps every workflow around that
   artifact.
 - GHCR tags follow the pattern `ghcr.io/<repo>:<sha>-<run_id>`; keep that format in sync across build,
@@ -9,7 +9,7 @@
 ## Image build
 
 - [Dockerfile](Dockerfile) has `builder` and `final` stages: the builder downloads `mise` (musl)
-  archive manually, while the final stage installs Alpine packages (`zsh`, `sudo`, `build-base`, etc.) that cannot be
+  archive manually, while the final stage installs packages (`zsh`, `sudo`, `build-base`, etc.) that cannot be
   installed with mise.
 - User `devcontaineruser` (UID 1000) in the final image, has passwordless sudo, and sources `mise activate zsh`
   through `/etc/zsh/zshrc`.
