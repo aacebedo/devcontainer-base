@@ -8,7 +8,7 @@ AUBE_TRUST_POLICY = "off"
 [tools]
 uv = "0.11.1"
 node = "24.18.0"
-aube = "1.25.1"
+aube = "1.26.0"
 markdownlint-cli2 = "0.23.0"
 editorconfig-checker = "3.8.0"
 hadolint = "2.14.0"
