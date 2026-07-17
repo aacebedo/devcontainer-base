@@ -15,7 +15,7 @@ ARG JUJUTSU_VERSION=0.43.0
 # renovate: datasource=github-releases depName=idursun/jjui
 ARG JJUI_VERSION=0.10.8
 # renovate: datasource=github-releases depName=BurntSushi/ripgrep
-ARG RIPGREP_VERSION=15.1.0
+ARG RIPGREP_VERSION=15.2.0
 # renovate: datasource=github-releases depName=sharkdp/fd
 ARG FD_VERSION=10.4.2
 # renovate: datasource=github-releases depName=eza-community/eza
