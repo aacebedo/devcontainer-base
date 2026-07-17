@@ -1,3 +1,12 @@
+## [1.17.3](https://github.com/aacebedo/devcontainer-base/compare/v1.17.2...v1.17.3) (2026-07-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency aube to v1.29.1 ([715055f](https://github.com/aacebedo/devcontainer-base/commit/715055f940b8e77e3b216936d697e0341e8fc959))
+* **deps:** update dependency burntsushi/ripgrep to v15.2.0 ([d7b1f6b](https://github.com/aacebedo/devcontainer-base/commit/d7b1f6b9ce403d9b21de5008921a6f3e8ceb0d08))
+* **deps:** update dependency npm:renovate to v43.268.3 ([1302807](https://github.com/aacebedo/devcontainer-base/commit/1302807a8ab4fb4dec5861aad4062958ac637072))
+
 ## [1.17.2](https://github.com/aacebedo/devcontainer-base/compare/v1.17.1...v1.17.2) (2026-07-11)
 
 
