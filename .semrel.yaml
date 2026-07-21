@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=https://registry.semrel.io/schemas/core/v1.json
+# semrel configuration — https://semrel.io/guide/configuration/
+
+schemaVersion: 1
+
+branches:
+  - name: main
+
+tagPrefix: "v"
+
+rules:
+  - type: feat
+    bump: minor
+  - type: fix
+    bump: patch
+  - type: perf
+    bump: patch
+  - type: revert
+    bump: patch
+
+# Plugins run in order. condition → pre-tag → release (default).
+plugins:
+  - uses: condition-github-actions
+    phase: condition
+  - uses: generator-changelog-md
+    phase: pre-tag          
+    args:
+      keep_releases: "10"
+  - uses: generator-release-notes
+  - uses: provider-github
+    args:
+      owner: aacebedo
+      repo: devcontainer-base
+      draft: false
+      prerelease: false
+  - uses: publisher-oci
+    args:
+      ref: ghcr.io/aacebedo/devcontainer-base:{version}
+      artifacts: dist/image.tar
+  - uses: publisher-oci
+    name: publisher-oci-latest
+    args:
+      ref: ghcr.io/aacebedo/devcontainer-base:latest
+      artifacts: dist/image.tar
+
+commit_changelog: false
