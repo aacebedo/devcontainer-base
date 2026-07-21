@@ -69,15 +69,15 @@ entry = "jsonlint -M json5"
 language = "system"
 files = '\.json$'
 
-[[repos]]
-repo = "local"
+# [[repos]]
+# repo = "local"
 
-[[repos.hooks]]
-id = "renovate-config-validator"
-name = "Validate Renovate Config"
-entry = "renovate-config-validator"
-language = "system"
-files = '(^|/).?renovate(?:rc)?(?:\.json5?)?$'
+# [[repos.hooks]]
+# id = "renovate-config-validator"
+# name = "Validate Renovate Config"
+# entry = "renovate-config-validator"
+# language = "system"
+# files = '(^|/).?renovate(?:rc)?(?:\.json5?)?$'
 
 [[repos]]
 repo = "https://github.com/DavidAnson/markdownlint-cli2"
@@ -101,3 +101,15 @@ rev = "3.2.528"
 [[repos.hooks]]
 id = "checkov"
 files = 'Dockerfile'
+
+[[repos]]
+repo = "local"
+
+[[repos.hooks]]
+id = "cog-check"
+name = "cog check"
+entry = "cog"
+args = ["check", "--from-latest-tag"]
+language = "system"
+pass_filenames = false
+stages = ["pre-push"]

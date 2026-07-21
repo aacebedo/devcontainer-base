@@ -24,21 +24,14 @@ prek = "0.4.1"
 shfmt = "3.13.0"
 shellcheck = "0.11.0"
 "pipx:checkov" = "3.3.1"
-
-[tools."npm:semantic-release"]
-version = "25.0.2"
-aube_args = """\
-  @semantic-release/changelog@6.0.3 \
-  @semantic-release/exec@7.1.0 \
-  @semantic-release/git@10.0.1 \
-  @semantic-release-plus/docker@3.1.3
-"""
+cocogitto = "7.0.0"
+gh = "2.97.0"
 
 [vars]
 repo_owner = '''{{ exec(command="git remote get-url origin | awk -F'[/:]' '{print $(NF-1)}'") | trim }}'''
 repo_name = '''{{ exec(command="git remote get-url origin | xargs basename -s .git") | trim }}'''
 repo_url = "https://github.com/{{vars.repo_owner}}/{{vars.repo_name}}"
-docker_tag = "ghcr.io/{{vars.repo_owner}}/{{vars.repo_name}}:latest"
+image_name = "ghcr.io/{{vars.repo_owner}}/{{vars.repo_name}}"
 
 [bootstrap.packages]
 "apt:passwd" = "latest"
