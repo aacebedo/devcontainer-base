@@ -13,7 +13,7 @@ markdownlint-cli2 = "0.23.0"
 editorconfig-checker = "3.8.0"
 hadolint = "2.14.0"
 trivy = "0.72.0"
-vale = "3.15.1"
+vale = "3.17.0"
 go = "1.26.4"
 yamllint = "1.38.0"
 # taplo deactivated until their bug is fixed
