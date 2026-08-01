@@ -1,7 +1,7 @@
 # renovate: datasource=docker depName=ubuntu versioning=docker
 ARG UBUNTU_VERSION=resolute
 # renovate: datasource=github-releases depName=jdx/mise
-ARG MISE_VERSION=2026.7.18
+ARG MISE_VERSION=2026.8.0
 # renovate: datasource=github-releases depName=helix-editor/helix versioning=calendar
 ARG HELIX_VERSION=25.07.1
 # renovate: datasource=github-releases depName=starship/starship
