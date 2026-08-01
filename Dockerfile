@@ -1,7 +1,7 @@
 # renovate: datasource=docker depName=ubuntu versioning=docker
 ARG UBUNTU_VERSION=resolute
 # renovate: datasource=github-releases depName=jdx/mise
-ARG MISE_VERSION=2026.7.0
+ARG MISE_VERSION=2026.7.18
 # renovate: datasource=github-releases depName=helix-editor/helix versioning=calendar
 ARG HELIX_VERSION=25.07.1
 # renovate: datasource=github-releases depName=starship/starship
@@ -43,31 +43,31 @@ ARG GTRASH_VERSION
 RUN <<EOF
 apt-get update
 apt-get install -y --no-install-recommends \
-	bash \
-	ca-certificates \
-	git \
-	gpg \
-	gpg-agent \
-	locales \
-	sudo \
-	wget \
-	xz-utils \
-	zsh \
-	ssh \
-	passwd \
-	unzip
+    bash \
+    ca-certificates \
+    git \
+    gpg \
+    gpg-agent \
+    locales \
+    sudo \
+    wget \
+    xz-utils \
+    zsh \
+    ssh \
+    passwd \
+    unzip
 locale-gen en_US.UTF-8
 update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
 rm -rf /var/lib/apt/lists/*
 EOF
 
 ENV DEVCONTAINER_USERNAME=devcontaineruser \
-			DEVCONTAINER_UID=1000 \
-			DEVCONTAINER_GID=1000 \
-			MISE_ALL_COMPILE=false \
-			MISE_LIBC=glibc \
-			LANG="en_US.UTF-8" \
-			LC_ALL="en_US.UTF-8"
+    DEVCONTAINER_UID=1000 \
+    DEVCONTAINER_GID=1000 \
+    MISE_ALL_COMPILE=false \
+    MISE_LIBC=glibc \
+    LANG="en_US.UTF-8" \
+    LC_ALL="en_US.UTF-8"
 
 SHELL ["/bin/bash", "-eux", "-o", "pipefail", "-c"]
 
@@ -93,7 +93,7 @@ chmod +x /usr/local/bin/jjui-${JJUI_VERSION}-linux-amd64
 mv /usr/local/bin/jjui-${JJUI_VERSION}-linux-amd64 /usr/local/bin/jjui
 
 wget -nv -O /usr/local/bin/mise \
-	"https://github.com/jdx/mise/releases/download/v${MISE_VERSION}/mise-v${MISE_VERSION}-linux-x64"
+    "https://github.com/jdx/mise/releases/download/v${MISE_VERSION}/mise-v${MISE_VERSION}-linux-x64"
 chmod +x /usr/local/bin/mise
 EOF
 
@@ -139,13 +139,14 @@ WORKDIR /home/${DEVCONTAINER_USERNAME}
 
 USER ${DEVCONTAINER_USERNAME}
 
+# editorconfig-checker-disable
 # hadolint ignore=SC2155
 ONBUILD RUN --mount=type=secret,id=MISE_GITHUB_TOKEN,uid=${DEVCONTAINER_UID} \
-						# editorconfig-checker-disable-next-line
-						--mount=type=bind,from=workspace,source=.mise/config.toml,target="/home/${DEVCONTAINER_USERNAME}/.config/mise/config.toml" \
-						export MISE_GITHUB_TOKEN="$(cat /run/secrets/MISE_GITHUB_TOKEN)" && \
-						export MISE_TRUSTED_CONFIG_PATHS="/home/${DEVCONTAINER_USERNAME}/.config/mise" && \
-						mise bootstrap
+    --mount=type=bind,from=workspace,source=.mise/config.toml,target="/home/${DEVCONTAINER_USERNAME}/.config/mise/config.toml" \
+    export MISE_GITHUB_TOKEN="$(cat /run/secrets/MISE_GITHUB_TOKEN)" && \
+    export MISE_TRUSTED_CONFIG_PATHS="/home/${DEVCONTAINER_USERNAME}/.config/mise" && \
+    mise bootstrap
+# editorconfig-checker-enable
 
 HEALTHCHECK NONE
 
