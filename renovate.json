@@ -1,45 +1,45 @@
 {
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": [
-		"config:recommended",
-		":semanticCommits",
-		":enablePreCommit",
-		"schedule:automergeDaily",
-		":dependencyDashboard",
-		":semanticCommitTypeAll(fix)"
-	],
-	"configMigration": true,
-	"baseBranchPatterns": [
-		"main"
-	],
-	"packageRules": [
-		{
-			"matchUpdateTypes": [
-				"patch"
-			],
-			"enabled": false
-		}
-	],
-	"customManagers": [
-		{
-			"customType": "regex",
-			"managerFilePatterns": [
-				"**/.mise/config.toml"
-			],
-			"matchStrings": [
-				"(?<depName>@[a-zA-Z0-9-]+(?:/[a-zA-Z0-9-]+)*)@(?<currentValue>[0-9][^\\s\\\\]*)"
-			],
-			"datasourceTemplate": "npm"
-		},
-		{
-			"customType": "regex",
-			"managerFilePatterns": [
-				"**/Dockerfile*"
-			],
-			"matchStrings": [
-				"# renovate: datasource=(?<datasource>[^\\s]+) depName=(?<depName>[^\\s]+)(?:\\s+extractVersion=(?<extractVersion>[^\\s]+))?\\s*\\n(?:ARG|ENV)\\s+[^=]+_VERSION=(?<currentValue>[^\\s]+)"
-			],
-			"datasourceTemplate": "{{datasource}}"
-		}
-	]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":semanticCommits",
+    ":enablePreCommit",
+    "schedule:automergeDaily",
+    ":dependencyDashboard",
+    ":semanticCommitTypeAll(fix)"
+  ],
+  "configMigration": true,
+  "baseBranchPatterns": [
+    "main"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "enabled": false
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "**/.mise/config.toml"
+      ],
+      "matchStrings": [
+        "(?<depName>@[a-zA-Z0-9-]+(?:/[a-zA-Z0-9-]+)*)@(?<currentValue>[0-9][^\\s\\\\]*)"
+      ],
+      "datasourceTemplate": "npm"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "**/Dockerfile*"
+      ],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>[^\\s]+) depName=(?<depName>[^\\s]+)(?:\\s+extractVersion=(?<extractVersion>[^\\s]+))?\\s*\\n(?:ARG|ENV)\\s+[^=]+_VERSION=(?<currentValue>[^\\s]+)"
+      ],
+      "datasourceTemplate": "{{datasource}}"
+    }
+  ]
 }

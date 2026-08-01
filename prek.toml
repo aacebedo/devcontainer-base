@@ -1,6 +1,6 @@
 # Configuration file for `prek`, a git hook framework written in Rust.
 # See https://prek.j178.dev for more information.
-#:schema https://www.schemastore.org/prek.json
+# :schema https://www.schemastore.org/prek.json
 #
 [[repos]]
 repo = "https://github.com/hadolint/hadolint"
@@ -38,7 +38,7 @@ repo = "local"
 
 [[repos.hooks]]
 id = "vale sync"
-name = "Vale sync"
+name = "vale sync"
 entry = """
 bash -c '
   lock=.vale/.sync.lock;
@@ -63,11 +63,11 @@ hooks = [{ id = "vale" }]
 repo = "local"
 
 [[repos.hooks]]
-id = "jsonlint"
-name = "JSON Lint"
-entry = "jsonlint -M json5"
+id = "dprint"
+name = "dprint check"
+entry = "dprint check"
 language = "system"
-files = '\.json$'
+files = '\.(json|jsonc|ya?ml|md|toml)$|^Dockerfile$|\.dockerfile$'
 
 [[repos]]
 repo = "local"
@@ -101,3 +101,15 @@ rev = "3.2.528"
 [[repos.hooks]]
 id = "checkov"
 files = 'Dockerfile'
+
+[[repos]]
+repo = "local"
+
+[[repos.hooks]]
+id = "cog-check"
+name = "cog check"
+entry = "cog"
+args = ["check", "--from-latest-tag"]
+language = "system"
+pass_filenames = false
+stages = ["pre-push"]
