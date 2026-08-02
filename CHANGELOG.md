@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.18.1](https://github.com/${REPO_OWNER}/${REPO_NAME}/compare/18229d8f8f83fe1bdad562eaae8b8cb8f78f8179..v1.18.1) - 2026-08-02
+#### Bug Fixes
+- (**deps**) update dependency vale to v3.17.0 - ([fb10342](https://github.com/${REPO_OWNER}/${REPO_NAME}/commit/fb10342267f33de5c2d5022000b43c9e761db80b)) - renovate[bot]
+- (**deps**) update dependency npm:renovate to v43.288.0 - ([8639c2e](https://github.com/${REPO_OWNER}/${REPO_NAME}/commit/8639c2e8ff18e0800704131c37e1d711b5b32812)) - renovate[bot]
+- (**deps**) update dependency jdx/mise to v2026.8.0 - ([18229d8](https://github.com/${REPO_OWNER}/${REPO_NAME}/commit/18229d8f8f83fe1bdad562eaae8b8cb8f78f8179)) - renovate[bot]
+
+- - -
+
 ## [v1.18.0](https://github.com/${REPO_OWNER}/${REPO_NAME}/compare/255fab5ee0ec4454e80d41c9dca6d68c702c0e4e..v1.18.0) - 2026-08-02
 #### Features
 - optimized CI and improved mise scripts - ([223a3c3](https://github.com/${REPO_OWNER}/${REPO_NAME}/commit/223a3c37a82c87ee922879ffdd262997c530fc21)) - Alexandre ACEBEDO
