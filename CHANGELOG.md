@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.18.8](https://github.com/aacebedo/devcontainer-base/compare/f286e5afd9554381b96a5afa58dc1c63e8621b32..v1.18.8) - 2026-08-02
+#### Bug Fixes
+- fix release creation - ([f286e5a](https://github.com/aacebedo/devcontainer-base/commit/f286e5afd9554381b96a5afa58dc1c63e8621b32)) - Alexandre ACEBEDO
+
+- - -
+
 ## [v1.18.7](https://github.com/aacebedo/devcontainer-base/compare/2cd45fd7347eaa3f5876111375a1e124367ae241..v1.18.7) - 2026-08-02
 #### Bug Fixes
 - (**deps**) update dependency uv to v0.12.1 - ([2cd45fd](https://github.com/aacebedo/devcontainer-base/commit/2cd45fd7347eaa3f5876111375a1e124367ae241)) - renovate[bot]
