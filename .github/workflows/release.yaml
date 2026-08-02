@@ -24,13 +24,6 @@ jobs:
         with:
           client-id: ${{ vars.APP_CLIENT_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
-      - name: Checkout repository
-        uses: actions/checkout@v7
-        with:
-          persist-credentials: false
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0
-          fetch-tags: true
       - name: Setup
         uses: ./.github/actions/setup
         with:

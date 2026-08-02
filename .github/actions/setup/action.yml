@@ -13,6 +13,13 @@ inputs:
 runs:
   using: composite
   steps:
+    - name: Checkout repository
+      uses: actions/checkout@v7
+      with:
+        persist-credentials: false
+        token: ${{ inputs.token }}
+        fetch-depth: 0
+        fetch-tags: true
     - name: Setup mise
       uses: jdx/mise-action@v4
       with:
