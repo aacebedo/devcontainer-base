@@ -34,7 +34,7 @@ jobs:
       - name: Setup
         uses: ./.github/actions/setup
         with:
-          actor: ${{ github.actor }}
+          repo_owner: ${{ github.repository_owner }}
           repository: ${{ github.repository }}
           token: ${{ steps.generate-token.outputs.token }}
       - name: Perform release
@@ -44,7 +44,7 @@ jobs:
           echo "sarif=/tmp/trivy-results.sarif" >> $GITHUB_OUTPUT
         env:
           GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
-          REGISTRY_USERNAME: ${{ github.actor }}
+          REGISTRY_USERNAME: ${{ github.repository_owner }}
           REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload Anchore Scan SARIF Report
         uses: github/codeql-action/upload-sarif@v4
