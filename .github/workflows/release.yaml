@@ -36,6 +36,7 @@ jobs:
         with:
           actor: ${{ github.actor }}
           repository: ${{ github.repository }}
+          token: ${{ steps.generate-token.outputs.token }}
       - name: Perform release
         id: release
         run: |
