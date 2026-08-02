@@ -28,13 +28,12 @@ jobs:
         uses: actions/checkout@v7
         with:
           persist-credentials: false
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ steps.generate-token.outputs.token }}
           fetch-depth: 0
           fetch-tags: true
       - name: Setup
         uses: ./.github/actions/setup
         with:
-          token: ${{ steps.generate-token.outputs.token }}
           actor: ${{ github.actor }}
           repository: ${{ github.repository }}
       - name: Perform release
