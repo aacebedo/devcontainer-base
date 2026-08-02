@@ -24,7 +24,7 @@ changelog_title = "Reverts"
 
 [changelog]
 path = "CHANGELOG.md"
-template = "full_hash"
+template = "remote"
 remote = "github.com"
 owner = "aacebedo"
 repository = "devcontainer-base"
