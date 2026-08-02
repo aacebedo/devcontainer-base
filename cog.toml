@@ -4,12 +4,13 @@ branch_whitelist = ["main"]
 post_bump_hooks = [
   "git push",
   "git push origin {{version_tag}}",
-  "podman tag ${IMAGE_NAME}:latest ${IMAGE_NAME}:{{version}}",
-  "podman push ${IMAGE_NAME}:latest",
-  "podman push ${IMAGE_NAME}:{{version}}",
   "cog changelog --at {{version_tag}} --template full_hash > /tmp/cog-release-notes-{{version}}.md",
   "gh release create {{version_tag}} --title {{version_tag}} --notes-file /tmp/cog-release-notes-{{version}}.md",
   "rm -f /tmp/cog-release-notes-{{version}}.md",
+  "podman tag ${IMAGE_NAME}:${COMMIT_SHA} ${IMAGE_NAME}:latest",
+  "podman tag ${IMAGE_NAME}:${COMMIT_SHA} ${IMAGE_NAME}:{{version}}",
+  "podman push ${IMAGE_NAME}:latest",
+  "podman push ${IMAGE_NAME}:{{version}}",
 ]
 
 [commit_types.perf]

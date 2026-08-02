@@ -2,11 +2,13 @@
 
 #MISE description = "Publish a release"
 #MISE depends = ["lint", "test", "security-scan"]
+#MISE env = { REGISTRY_USERNAME = { required = true } }
+#MISE env = { REGISTRY_PASSWORD = { required = true, redact = true } }
 #MISE env = { GITHUB_TOKEN = { required = true, redact = true } }
-#MISE env = { GITHUB_USERNAME = { required = true, redact = true } }
 #MISE env = { IMAGE_NAME = "{{vars.image_name}}" }
 #MISE env = { REPO_OWNER = "{{vars.repo_owner}}" }
 #MISE env = { REPO_NAME = "{{vars.repo_name}}" }
+#MISE env = { COMMIT_SHA = "{{vars.commit_sha}}" }
 
 set -euo pipefail
 
@@ -15,5 +17,5 @@ if [ -z "${MISE_TASK_NAME:-}" ]; then
 	exit 1
 fi
 
-podman login ghcr.io -u "${GITHUB_USERNAME}" -p "${GITHUB_TOKEN}"
+podman login ghcr.io -u "${REGISTRY_USERNAME}" -p "${REGISTRY_PASSWORD}"
 cog bump --auto --skip-ci

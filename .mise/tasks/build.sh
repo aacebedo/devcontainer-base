@@ -5,6 +5,7 @@
 #MISE env = { REPO_NAME = "{{vars.repo_name}}" }
 #MISE env = { REPO_OWNER = "{{vars.repo_owner}}" }
 #MISE env = { IMAGE_NAME = "{{vars.image_name}}" }
+#MISE env = { COMMIT_SHA = "{{vars.commit_sha}}" }
 
 set -euo pipefail
 
@@ -13,7 +14,7 @@ if [ -z "${MISE_TASK_NAME:-}" ]; then
 	exit 1
 fi
 
-podman build --format=docker -t "${IMAGE_NAME}:latest" \
+podman build --format=docker -t "${IMAGE_NAME}:${COMMIT_SHA}" \
 	--label "org.opencontainers.image.source=${REPO_URL}" \
 	--label "org.opencontainers.image.description=Development container base" \
 	--label "org.opencontainers.image.licenses=MIT" \

@@ -32,6 +32,7 @@ repo_owner = '''{{ exec(command="git remote get-url origin | awk -F'[/:]' '{prin
 repo_name = '''{{ exec(command="git remote get-url origin | xargs basename -s .git") | trim }}'''
 repo_url = "https://github.com/{{vars.repo_owner}}/{{vars.repo_name}}"
 image_name = "ghcr.io/{{vars.repo_owner}}/{{vars.repo_name}}"
+commit_sha = '''{{ exec(command="git rev-parse HEAD") | trim }}'''
 
 [bootstrap.packages]
 "apt:bash" = "latest"

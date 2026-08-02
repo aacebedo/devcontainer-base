@@ -3,6 +3,7 @@
 #MISE description = "Run Trivy security scan on the built image"
 #MISE depends = ["build"]
 #MISE env = { IMAGE_NAME = "{{vars.image_name}}" }
+#MISE env = { COMMIT_SHA = "{{vars.commit_sha}}" }
 
 set -euo pipefail
 
@@ -13,6 +14,5 @@ fi
 
 TEMP_DIR=$(mktemp -d)
 trap 'rm -rf "${TEMP_DIR}"' EXIT
-podman save "${IMAGE_NAME}:latest" | gzip >"${TEMP_DIR}/image.tar.gz"
-trivy image --input "${TEMP_DIR}/image.tar.gz" --format sarif \
+trivy image "${IMAGE_NAME}:${COMMIT_SHA}" --format sarif \
 	--skip-version-check --output /tmp/trivy-results.sarif

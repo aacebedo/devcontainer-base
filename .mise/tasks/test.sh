@@ -3,6 +3,7 @@
 #MISE description = "Build and run the container image"
 #MISE depends = ["build"]
 #MISE env = { IMAGE_NAME = "{{vars.image_name}}" }
+#MISE env = { COMMIT_SHA = "{{vars.commit_sha}}" }
 
 set -euo pipefail
 
@@ -11,4 +12,4 @@ if [ -z "${MISE_TASK_NAME:-}" ]; then
 	exit 1
 fi
 
-podman run --rm "${IMAGE_NAME}:latest"
+podman run --rm "${IMAGE_NAME}:${COMMIT_SHA}"
