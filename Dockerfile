@@ -61,6 +61,7 @@ update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
 rm -rf /var/lib/apt/lists/*
 EOF
 
+# hadolint ignore=DL3064
 ENV DEVCONTAINER_USERNAME=devcontaineruser \
     DEVCONTAINER_UID=1000 \
     DEVCONTAINER_GID=1000 \
@@ -137,6 +138,7 @@ EOF
 
 WORKDIR /home/${DEVCONTAINER_USERNAME}
 
+# hadolint ignore=DL3066
 USER ${DEVCONTAINER_USERNAME}
 
 # editorconfig-checker-disable

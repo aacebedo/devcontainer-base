@@ -17,10 +17,12 @@ jobs:
       contents: read
       packages: read
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v7
       - name: Setup
         uses: ./.github/actions/setup
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          actor: ${{ github.actor }}
+          repository: ${{ github.repository }}
       - name: Lint
         run: |
           mise lint
