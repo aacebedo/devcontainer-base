@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.18.3](https://github.com/${REPO_OWNER}/${REPO_NAME}/compare/2eb112b082019b44c19f1e2c36fec84849e609b1..v1.18.3) - 2026-08-02
+#### Bug Fixes
+- make cog ignore the merge commits - ([2eb112b](https://github.com/${REPO_OWNER}/${REPO_NAME}/commit/2eb112b082019b44c19f1e2c36fec84849e609b1)) - Alexandre ACEBEDO
+
+- - -
+
 ## [v1.18.2](https://github.com/${REPO_OWNER}/${REPO_NAME}/compare/7091e29d8e3d6af0e719c563718a9aa921888837..v1.18.2) - 2026-08-02
 #### Bug Fixes
 - (**deps**) update dependency npm:renovate to v44 - ([ccffc39](https://github.com/${REPO_OWNER}/${REPO_NAME}/commit/ccffc39393b19bbf735b491f00b70af13676e377)) - renovate[bot]
