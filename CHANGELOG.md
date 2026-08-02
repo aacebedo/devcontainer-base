@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.18.2](https://github.com/${REPO_OWNER}/${REPO_NAME}/compare/7091e29d8e3d6af0e719c563718a9aa921888837..v1.18.2) - 2026-08-02
+#### Bug Fixes
+- (**deps**) update dependency npm:renovate to v44 - ([ccffc39](https://github.com/${REPO_OWNER}/${REPO_NAME}/commit/ccffc39393b19bbf735b491f00b70af13676e377)) - renovate[bot]
+- (**deps**) update dependency atuinsh/atuin to v18.18.1 - ([7091e29](https://github.com/${REPO_OWNER}/${REPO_NAME}/commit/7091e29d8e3d6af0e719c563718a9aa921888837)) - renovate[bot]
+
+- - -
+
 ## [v1.18.1](https://github.com/${REPO_OWNER}/${REPO_NAME}/compare/18229d8f8f83fe1bdad562eaae8b8cb8f78f8179..v1.18.1) - 2026-08-02
 #### Bug Fixes
 - (**deps**) update dependency vale to v3.17.0 - ([fb10342](https://github.com/${REPO_OWNER}/${REPO_NAME}/commit/fb10342267f33de5c2d5022000b43c9e761db80b)) - renovate[bot]
