@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v1.18.4 - 2026-08-02
+#### Bug Fixes
+- fixed CHANGELOG template - (7e14a2b) - Alexandre ACEBEDO
+
+- - -
+
 ## [v1.18.3](https://github.com/${REPO_OWNER}/${REPO_NAME}/compare/2eb112b082019b44c19f1e2c36fec84849e609b1..v1.18.3) - 2026-08-02
 #### Bug Fixes
 - make cog ignore the merge commits - ([2eb112b](https://github.com/${REPO_OWNER}/${REPO_NAME}/commit/2eb112b082019b44c19f1e2c36fec84849e609b1)) - Alexandre ACEBEDO
