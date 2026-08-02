@@ -12,7 +12,5 @@ if [ -z "${MISE_TASK_NAME:-}" ]; then
 	exit 1
 fi
 
-TEMP_DIR=$(mktemp -d)
-trap 'rm -rf "${TEMP_DIR}"' EXIT
 trivy image "${IMAGE_NAME}:${COMMIT_SHA}" --format sarif \
 	--skip-version-check --output /tmp/trivy-results.sarif
