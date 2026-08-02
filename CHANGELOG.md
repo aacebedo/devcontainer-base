@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+#### Bug Fixes
+- 5d3519552edaadbdc716c085e789faf430b8bc05 - (**deps**) update dependency hadolint to v2.15.1 - renovate[bot]
+- 225b44f83223fb131e55f32c3e710dff8768ab7e - fix missing token for setup action - Alexandre ACEBEDO
+
+- 3fadd4a2a02790400076c598e5b64663800d3000 - remove hadolint warnings - Alexandre ACEBEDO
+
+
+- - -
+
 ## v1.18.4 - 2026-08-02
 #### Bug Fixes
 - fixed CHANGELOG template - (7e14a2b) - Alexandre ACEBEDO
