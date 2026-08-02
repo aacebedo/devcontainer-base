@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.18.6](https://github.com/aacebedo/devcontainer-base/compare/f6525be43d649b41144e7581833b33c41e64788b..v1.18.6) - 2026-08-02
+#### Bug Fixes
+- switch back to the remote template for changelog - ([f6525be](https://github.com/aacebedo/devcontainer-base/commit/f6525be43d649b41144e7581833b33c41e64788b)) - Alexandre ACEBEDO
+
+- - -
+
 #### Bug Fixes
 - 5d3519552edaadbdc716c085e789faf430b8bc05 - (**deps**) update dependency hadolint to v2.15.1 - renovate[bot]
 - 225b44f83223fb131e55f32c3e710dff8768ab7e - fix missing token for setup action - Alexandre ACEBEDO
