@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 #MISE description = "Run Trivy security scan on the built image"
+
 #MISE depends = ["build"]
+
 #MISE env = { IMAGE_NAME = "{{vars.image_name}}" }
 #MISE env = { COMMIT_SHA = "{{vars.commit_sha}}" }
 
@@ -13,4 +15,6 @@ if [ -z "${MISE_TASK_NAME:-}" ]; then
 fi
 
 trivy image "${IMAGE_NAME}:${COMMIT_SHA}" --format sarif \
+	--podman-host "$(podman info --format '{{.Host.RemoteSocket.Path}}')" \
+	--image-src podman \
 	--skip-version-check --output /tmp/trivy-results.sarif

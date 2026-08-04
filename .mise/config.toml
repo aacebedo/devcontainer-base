@@ -20,7 +20,7 @@ shfmt = "3.13.0"
 shellcheck = "0.11.0"
 dprint = "0.55.2"
 "pipx:checkov" = "3.3.1"
-cocogitto = "7.0.0"
+"github:cocogitto/cocogitto" = "7.0.0"
 gh = "2.97.0"
 
 [tools."npm:renovate"]
@@ -28,11 +28,14 @@ version = "44.17.1"
 trust_policy_excludes = ["@yarnpkg/libzip"]
 
 [vars]
-repo_owner = '''{{ exec(command="git remote get-url origin | awk -F'[/:]' '{print $(NF-1)}'") | trim }}'''
-repo_name = '''{{ exec(command="git remote get-url origin | xargs basename -s .git") | trim }}'''
-repo_url = "https://github.com/{{vars.repo_owner}}/{{vars.repo_name}}"
+# editorconfig-checker-disable
+repo_host = '''{{ exec(command="git remote get-url origin 2>/dev/null | sed 's/[.]git$//' | awk -F'[/:]' '{print $(NF-2)}' | sed 's/.*@//' || echo ''") | trim }}'''
+repo_owner = '''{{ exec(command="git remote get-url origin 2>/dev/null | sed 's/[.]git$//' | awk -F'[/:]' '{print $(NF-1)}' || echo ''") | trim }}'''
+repo_name = '''{{ exec(command="git remote get-url origin 2>/dev/null | sed 's/[.]git$//' | awk -F'[/:]' '{print $NF}' || echo ''") | trim }}'''
+# editorconfig-checker-enable
+repo_url = "https://{{vars.repo_host}}/{{vars.repo_owner}}/{{vars.repo_name}}"
 image_name = "ghcr.io/{{vars.repo_owner}}/{{vars.repo_name}}"
-commit_sha = '''{{ exec(command="git rev-parse HEAD") | trim }}'''
+commit_sha = '''{{ exec(command="git rev-parse HEAD 2>/dev/null || echo ''") | trim }}'''
 
 [bootstrap.packages]
 "apt:bash" = "latest"
