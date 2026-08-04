@@ -1,9 +1,6 @@
 [settings]
 experimental = true
 
-[env]
-MISE_GITHUB_TOKEN = { required = true, redact = true }
-
 [tools]
 uv = "0.12.1"
 node = "24.19.0"
