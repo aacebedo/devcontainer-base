@@ -1,6 +1,10 @@
 {
-  "json": {
-    "lineWidth": 120
+  "useTabs": false,
+  "lineWidth": 120,
+  "indentWidth": 2,
+  "newLineKind": "lf",
+  "yaml": {
+    "printWidth": 120
   },
   "markdown": {
     "lineWidth": 120,
