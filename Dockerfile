@@ -96,6 +96,42 @@ mv /usr/local/bin/jjui-${JJUI_VERSION}-linux-amd64 /usr/local/bin/jjui
 wget -nv -O /usr/local/bin/mise \
     "https://github.com/jdx/mise/releases/download/v${MISE_VERSION}/mise-v${MISE_VERSION}-linux-x64"
 chmod +x /usr/local/bin/mise
+RUN <<'EOF'
+mkdir -p /etc/mise/conf.d
+cat > /etc/mise/conf.d/001_common_config.toml <<'TOML'
+[hooks]
+cd = [
+    "/usr/local/bin/mise-check-bootstrap",
+    "/usr/local/bin/mise-check-install",
+]
+TOML
+
+cat > /usr/local/bin/mise-check-bootstrap <<'SH'
+#!/usr/bin/env bash
+set -euo pipefail
+
+[ -z "${MISE_PROJECT_ROOT:-}" ] && exit 0
+[ "${MISE_SILENCE_STATUS_CHECKS:-0}" = "1" ] && exit 0
+
+if ! mise bootstrap status --missing >/dev/null 2>&1; then
+  printf '\033[33m[mise] Bootstrap not complete. Run: mise bootstrap\033[0m\n' >&2
+fi
+SH
+
+cat > /usr/local/bin/mise-check-install <<'SH'
+#!/usr/bin/env bash
+set -euo pipefail
+
+[ -z "${MISE_PROJECT_ROOT:-}" ] && exit 0
+[ "${MISE_SILENCE_STATUS_CHECKS:-0}" = "1" ] && exit 0
+
+if ! mise install --dry-run-code >/dev/null 2>&1; then
+  printf '\033[33m[mise] Some tools not installed. Run: mise install\033[0m\n' >&2
+fi
+SH
+
+chmod 0755 /usr/local/bin/mise-check-bootstrap /usr/local/bin/mise-check-install
+EOF
 EOF
 
 # Create/configure non-root user and bootstrap mise
