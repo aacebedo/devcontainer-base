@@ -13,4 +13,6 @@ if [ -z "${MISE_TASK_NAME:-}" ]; then
 fi
 
 trivy image "${IMAGE_NAME}:${COMMIT_SHA}" --format sarif \
+	--podman-host "$(podman info --format '{{.Host.RemoteSocket.Path}}')" \
+	--image-src podman \
 	--skip-version-check --output /tmp/trivy-results.sarif
