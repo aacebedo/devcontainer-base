@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.18.9](https://github.com/aacebedo/devcontainer-base/compare/c95bcf203fc60976678cb0481324b6179784ed00..v1.18.9) - 2026-08-05
+#### Bug Fixes
+- (**deps**) update dependency npm:renovate to v44.13.2 - ([cc02314](https://github.com/aacebedo/devcontainer-base/commit/cc02314191305997215692cab4d8ae5e82b137f9)) - renovate[bot]
+- (**deps**) update dependency atuinsh/atuin to v18.19.0 - ([0b2b290](https://github.com/aacebedo/devcontainer-base/commit/0b2b2900aabaecaf41b664c0319b2e439deb8777)) - renovate[bot]
+- (**deps**) update node.js to v24.19.0 - ([3275b87](https://github.com/aacebedo/devcontainer-base/commit/3275b87ba1314f3962aa1ef13a7d30715b7c9a6b)) - renovate[bot]
+- (**deps**) update dependency trivy to v0.73.0 - ([c95bcf2](https://github.com/aacebedo/devcontainer-base/commit/c95bcf203fc60976678cb0481324b6179784ed00)) - renovate[bot]
+
+- - -
+
 ## [v1.18.8](https://github.com/aacebedo/devcontainer-base/compare/f286e5afd9554381b96a5afa58dc1c63e8621b32..v1.18.8) - 2026-08-02
 #### Bug Fixes
 - fix release creation - ([f286e5a](https://github.com/aacebedo/devcontainer-base/commit/f286e5afd9554381b96a5afa58dc1c63e8621b32)) - Alexandre ACEBEDO
