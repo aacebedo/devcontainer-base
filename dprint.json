@@ -1,15 +1,14 @@
 {
-  "json": {
-    "lineWidth": 120
+  "useTabs": false,
+  "lineWidth": 120,
+  "indentWidth": 2,
+  "newLineKind": "lf",
+  "yaml": {
+    "printWidth": 120
   },
   "markdown": {
-    "lineWidth": 120,
     "textWrap": "always"
   },
-  "toml": {
-    "indentWidth": 2
-  },
-  "dockerfile": {},
   "plugins": [
     "https://plugins.dprint.dev/json-0.23.0.wasm",
     "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.6.0.wasm",
@@ -23,12 +22,8 @@
     "**/*.dockerfile"
   ],
   "excludes": [
-    ".mise/node_modules/**",
-    ".vale/**",
+    ".vale/Google/**",
     "dist/**",
-    ".semrel/registry-cache/**",
-    ".semrel/linux_amd64/**",
-    ".semrel/plugins/**",
     "CHANGELOG.md"
   ]
 }
