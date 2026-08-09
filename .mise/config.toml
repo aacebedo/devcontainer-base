@@ -24,7 +24,7 @@ cocogitto = "7.0.0"
 gh = "2.97.0"
 
 [tools."npm:renovate"]
-version = "44.13.2"
+version = "44.17.1"
 trust_policy_excludes = ["@yarnpkg/libzip"]
 
 [vars]
