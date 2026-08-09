@@ -11,7 +11,7 @@ ARG ZOXIDE_VERSION=0.10.0
 # renovate: datasource=github-releases depName=atuinsh/atuin
 ARG ATUIN_VERSION=18.19.0
 # renovate: datasource=github-releases depName=jj-vcs/jj
-ARG JUJUTSU_VERSION=0.43.0
+ARG JUJUTSU_VERSION=0.44.0
 # renovate: datasource=github-releases depName=idursun/jjui
 ARG JJUI_VERSION=0.10.8
 # renovate: datasource=github-releases depName=BurntSushi/ripgrep
