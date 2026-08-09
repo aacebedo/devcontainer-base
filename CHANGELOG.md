@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.18.10](https://github.com/aacebedo/devcontainer-base/compare/5cadc4104e058251802b24bcebfa23c7dfb4dd33..v1.18.10) - 2026-08-09
+#### Bug Fixes
+- (**deps**) update dependency npm:renovate to v44.17.1 - ([280eb77](https://github.com/aacebedo/devcontainer-base/commit/280eb7768d5d9060d627fafbf251c0aedafc1a16)) - renovate[bot]
+- (**deps**) update dependency editorconfig-checker to v3.11.1 - ([4fa0c82](https://github.com/aacebedo/devcontainer-base/commit/4fa0c82df9192b32ca8f3a26c4430fa31c4aa9a3)) - renovate[bot]
+- (**deps**) update dependency jj-vcs/jj to v0.44.0 - ([5cadc41](https://github.com/aacebedo/devcontainer-base/commit/5cadc4104e058251802b24bcebfa23c7dfb4dd33)) - renovate[bot]
+
+- - -
+
 ## [v1.18.9](https://github.com/aacebedo/devcontainer-base/compare/c95bcf203fc60976678cb0481324b6179784ed00..v1.18.9) - 2026-08-05
 #### Bug Fixes
 - (**deps**) update dependency npm:renovate to v44.13.2 - ([cc02314](https://github.com/aacebedo/devcontainer-base/commit/cc02314191305997215692cab4d8ae5e82b137f9)) - renovate[bot]
