@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.18.11](https://github.com/aacebedo/devcontainer-base/compare/e72b61d0a9a7c8889526e7eab81337ce4d4d37a3..v1.18.11) - 2026-08-10
+#### Bug Fixes
+- added run-container task and small fixes - ([c57097e](https://github.com/aacebedo/devcontainer-base/commit/c57097e3409e0744f6de267873f96bdd21cb72db)) - Alexandre ACEBEDO
+- added cd script for mise - ([bf74c28](https://github.com/aacebedo/devcontainer-base/commit/bf74c28b0b96af43e8fe95dbf254d44d98080b38)) - Alexandre ACEBEDO
+- format changes - ([14b50d6](https://github.com/aacebedo/devcontainer-base/commit/14b50d688b7408cffb6a2eea3e4b959ed9d4bc2a)) - Alexandre ACEBEDO
+- clean format styles - ([e72b61d](https://github.com/aacebedo/devcontainer-base/commit/e72b61d0a9a7c8889526e7eab81337ce4d4d37a3)) - Alexandre ACEBEDO
+
+- - -
+
 ## [v1.18.10](https://github.com/aacebedo/devcontainer-base/compare/5cadc4104e058251802b24bcebfa23c7dfb4dd33..v1.18.10) - 2026-08-09
 #### Bug Fixes
 - (**deps**) update dependency npm:renovate to v44.17.1 - ([280eb77](https://github.com/aacebedo/devcontainer-base/commit/280eb7768d5d9060d627fafbf251c0aedafc1a16)) - renovate[bot]
