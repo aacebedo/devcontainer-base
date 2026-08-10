@@ -9,16 +9,12 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 max_line_length = 120
 
-[*.{yaml,yml,json,jsonc}]
+[*.{yaml,yml,json,jsonc,toml,ini}]
 indent_style = space
-indent_size = 2
 
 [*.md]
 indent_style = space
-
-[*.toml]
-indent_style = space
+indent_size = 1
 
 [Dockerfile]
 indent_style = space
-indent_size = 4

@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 #MISE description = "Build and run the container image"
+
 #MISE depends = ["build"]
+
 #MISE env = { IMAGE_NAME = "{{vars.image_name}}" }
 #MISE env = { COMMIT_SHA = "{{vars.commit_sha}}" }
 

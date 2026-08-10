@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-#MISE description = "Run Trivy security scan on the built image"
+#MISE description = "Start an interactive container from the built image"
+#MISE interactive = true
+#MISE quiet = true
 
 #MISE depends = ["build"]
 
@@ -14,7 +16,4 @@ if [ -z "${MISE_TASK_NAME:-}" ]; then
 	exit 1
 fi
 
-trivy image "${IMAGE_NAME}:${COMMIT_SHA}" --format sarif \
-	--podman-host "$(podman info --format '{{.Host.RemoteSocket.Path}}')" \
-	--image-src podman \
-	--skip-version-check --output /tmp/trivy-results.sarif
+podman run -it --rm --privileged "${IMAGE_NAME}:${COMMIT_SHA}" "$@"
