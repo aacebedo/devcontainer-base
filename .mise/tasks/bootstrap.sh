@@ -9,4 +9,10 @@ if [ -z "${MISE_TASK_NAME:-}" ]; then
 	exit 1
 fi
 
-systemctl --user enable --now podman.socket
+if systemctl --user is-system-running >/dev/null 2>&1; then
+	systemctl --user enable --now podman.socket
+else
+	socket_path="$(podman info --format '{{.Host.RemoteSocket.Path}}')"
+	mkdir -p "$(dirname "${socket_path}")"
+	nohup podman system service --time=0 "unix://${socket_path}" >/dev/null 2>&1 &
+fi

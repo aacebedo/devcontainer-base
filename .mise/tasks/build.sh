@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 #MISE description = "Build the container image"
+
 #MISE env = { REPO_URL = "{{vars.repo_url}}" }
 #MISE env = { REPO_NAME = "{{vars.repo_name}}" }
 #MISE env = { REPO_OWNER = "{{vars.repo_owner}}" }

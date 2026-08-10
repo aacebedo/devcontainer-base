@@ -30,11 +30,8 @@ jobs:
           actor: ${{ github.repository_owner }}
           repository: ${{ github.repository }}
       - name: Lint
-        run: |
-          mise lint
+        run: mise lint
       - name: Test
-        run: |
-          mise test
+        run: mise test
       - name: Run security scan
-        run: |
-          mise security-scan
+        run: mise security-scan
