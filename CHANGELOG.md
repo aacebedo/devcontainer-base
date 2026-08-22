@@ -2,6 +2,16 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.18.12](https://github.com/aacebedo/devcontainer-base/compare/201d25d449b45e6bb089e31393f7ecc03486539b..v1.18.12) - 2026-08-22
+#### Bug Fixes
+- (**deps**) update dependency vale to v3.18.0 - ([8fb2279](https://github.com/aacebedo/devcontainer-base/commit/8fb227980c56dd94a73f5328ab9e4333793b9bf3)) - renovate[bot]
+- (**deps**) update dependency npm:renovate to v44.39.2 - ([849920e](https://github.com/aacebedo/devcontainer-base/commit/849920e37ec3f1c946f36f6b20bf9740db28fb3f)) - renovate[bot]
+- (**deps**) update dependency dprint to v0.56.1 - ([f3ec69f](https://github.com/aacebedo/devcontainer-base/commit/f3ec69f4999c1e090af4b0c98f33cdcb515afca0)) - renovate[bot]
+- (**deps**) update dependency gh to v2.98.0 - ([9faa404](https://github.com/aacebedo/devcontainer-base/commit/9faa404fbe4aa70f548aa1bf288975162ada9bdb)) - renovate[bot]
+- (**deps**) update dependency trivy to v0.74.0 - ([201d25d](https://github.com/aacebedo/devcontainer-base/commit/201d25d449b45e6bb089e31393f7ecc03486539b)) - renovate[bot]
+
+- - -
+
 ## [v1.18.11](https://github.com/aacebedo/devcontainer-base/compare/e72b61d0a9a7c8889526e7eab81337ce4d4d37a3..v1.18.11) - 2026-08-10
 #### Bug Fixes
 - added run-container task and small fixes - ([c57097e](https://github.com/aacebedo/devcontainer-base/commit/c57097e3409e0744f6de267873f96bdd21cb72db)) - Alexandre ACEBEDO
