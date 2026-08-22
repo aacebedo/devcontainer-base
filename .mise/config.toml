@@ -21,7 +21,7 @@ dprint = "0.55.2"
 gh = "2.97.0"
 
 [tools."npm:renovate"]
-version = "44.17.1"
+version = "44.39.2"
 trust_policy_excludes = ["@yarnpkg/libzip"]
 
 [vars]
