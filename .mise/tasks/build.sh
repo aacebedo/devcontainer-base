@@ -20,4 +20,4 @@ podman build --format=docker -t "${IMAGE_NAME}:${COMMIT_SHA}" \
 	--label "org.opencontainers.image.description=Development container base" \
 	--label "org.opencontainers.image.licenses=MIT" \
 	--label "org.opencontainers.image.title=${REPO_NAME}" \
-	--label "org.opencontainers.image.vendor=${REPO_OWNER}" .
+	--label "org.opencontainers.image.vendor=${REPO_OWNER}" ./src/

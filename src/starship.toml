@@ -1,0 +1,65 @@
+add_newline = false
+command_timeout = 5000
+# editorconfig-checker-disable
+format = """
+[ $os$hostname ](bg:014 fg:235 bold)[ $username ](bg:239 fg:254 bold)[ $directory ](bg:blue fg:black bold)$fill(([ $git_branch ($git_commit )](bg:yellow fg:240 bold))[( $git_status )($git_metrics )](bg:239 bold))([ $nix_shell ](bold bg:032))([ $python ](bold bg:029))[](fg:239)[ $time](bg:239 fg:254 bold)
+$character"""
+# editorconfig-checker-enable
+
+[directory]
+fish_style_pwd_dir_length = 3
+format = "󰉋 $path"
+home_symbol = "󰋜 ~"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[fill]
+style = "fg:240"
+symbol = "-"
+
+[git_branch]
+format = "($symbol $branch)"
+symbol = ""
+
+[git_commit]
+format = '(\($hash$tag\))'
+only_detached = false
+tag_disabled = false
+
+[git_metrics]
+added_style = "fg:green bg:239 bold"
+deleted_style = "fg:red bg:239 bold"
+disabled = false
+format = "([[+$added]($added_style) [-$deleted]($deleted_style)](bg:239 bold))"
+ignore_submodules = true
+
+[git_status]
+format = '(\[$all_status$ahead_behind\])'
+ignore_submodules = true
+
+[hostname]
+format = "($ssh_symbol$hostname)"
+ssh_only = false
+
+[os]
+disabled = false
+format = "$symbol"
+
+[os.symbols]
+Ubuntu = " "
+
+[python]
+detect_extensions = []
+detect_files = []
+format = "$symbol$virtualenv $version"
+symbol = "󰌠 "
+
+[time]
+disabled = false
+format = " $time "
+style = "bg:239 fg:254"
+time_format = "%R"
+
+[username]
+format = "( $user)"
+show_always = true
