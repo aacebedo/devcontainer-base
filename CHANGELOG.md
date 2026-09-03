@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.19.2](https://github.com/aacebedo/devcontainer-base/compare/09207f3ce55e06ada02b1c8b4ea258a797943382..v1.19.2) - 2026-09-03
+#### Bug Fixes
+- (**deps**) update dependency github:rtk-ai/rtk to v0.47.0 - ([afbcd23](https://github.com/aacebedo/devcontainer-base/commit/afbcd23875a2b8c168ef1c71ebea837d4b629dd0)) - renovate[bot]
+- (**deps**) update dependency shfmt to v3.14.0 - ([22c848b](https://github.com/aacebedo/devcontainer-base/commit/22c848b25dc34d403b18147a841aff1abf47792f)) - renovate[bot]
+- (**deps**) update dependency jj-vcs/jj to v0.45.1 - ([f527fb7](https://github.com/aacebedo/devcontainer-base/commit/f527fb793476de865e0c7136ede2fbf87a63cad1)) - renovate[bot]
+- (**deps**) update node.js to v24.20.0 - ([08e7bf0](https://github.com/aacebedo/devcontainer-base/commit/08e7bf0406e7f4268226698090537db144c002be)) - renovate[bot]
+- (**deps**) update dependency sharkdp/fd to v10.5.0 - ([46753d9](https://github.com/aacebedo/devcontainer-base/commit/46753d91604d567e49829c3adf047cc3115b5bb4)) - renovate[bot]
+- (**deps**) update dependency npm:renovate to v44.61.4 - ([09207f3](https://github.com/aacebedo/devcontainer-base/commit/09207f3ce55e06ada02b1c8b4ea258a797943382)) - renovate[bot]
+
+- - -
+
 ## [v1.19.1](https://github.com/aacebedo/devcontainer-base/compare/acab6edd75cc0d0d4492663820abe45063e340c4..v1.19.1) - 2026-09-03
 #### Bug Fixes
 - (**deps**) update dependency gh to v2.100.0 - ([0ae8eaf](https://github.com/aacebedo/devcontainer-base/commit/0ae8eafbc0172e4aaaa569b9ae528e234ccc8c78)) - renovate[bot]
