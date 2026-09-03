@@ -23,7 +23,7 @@ dprint = "0.57.1"
 gh = "2.100.0"
 markdownlint-cli2 = "0.23.0"
 "npm:renovate" = "44.61.4"
-"github:rtk-ai/rtk" = "0.46.0"
+"github:rtk-ai/rtk" = "v0.47.0"
 
 [vars]
 # editorconfig-checker-disable
