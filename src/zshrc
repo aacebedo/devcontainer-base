@@ -1,0 +1,34 @@
+source /usr/local/share/zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
+source <(fzf --zsh)
+eval "$(mise activate zsh)"
+eval "$(starship init zsh)"
+eval "$(atuin init zsh)"
+eval "$(zoxide init zsh)"
+source /usr/local/share/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
+source /usr/local/share/zsh/plugins/zsh-extract/extract.plugin.zsh
+
+alias -- eza='eza --icons auto --git'
+alias -- cat='bat'
+alias -- ls='eza'
+alias -- less='eza'
+alias -- j='jj'
+alias -- jbc='jj b create'
+alias -- jbm='jj b move'
+alias -- jd='jj describe'
+alias -- je='jj edit'
+alias -- jf='jj git fetch'
+alias -- jl='jj log -r ::'
+alias -- jp='jj git push'
+alias -- jr='jj rebase'
+alias -- js='jj split'
+alias -- l='eza'
+alias -- la='eza -a'
+alias -- ll='eza -l'
+alias -- lla='eza -la'
+alias -- ls=eza
+alias -- lt='eza --tree'
+alias -- lzt=lazygit
+alias -- rm='gtrash put --home-fallback'
+
+bindkey '^[[1;5D' backward-word    # Ctrl+Left
+bindkey '^[[1;5C' forward-word     # Ctrl+Right
