@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.19.0](https://github.com/aacebedo/devcontainer-base/compare/8987dca420184eff7064010870f9eb9a3ec59de8..v1.19.0) - 2026-09-03
+#### Features
+- split files in dockerfile - ([8987dca](https://github.com/aacebedo/devcontainer-base/commit/8987dca420184eff7064010870f9eb9a3ec59de8)) - Alexandre ACEBEDO
+
+- - -
+
 ## [v1.18.12](https://github.com/aacebedo/devcontainer-base/compare/201d25d449b45e6bb089e31393f7ecc03486539b..v1.18.12) - 2026-08-22
 #### Bug Fixes
 - (**deps**) update dependency vale to v3.18.0 - ([8fb2279](https://github.com/aacebedo/devcontainer-base/commit/8fb227980c56dd94a73f5328ab9e4333793b9bf3)) - renovate[bot]
