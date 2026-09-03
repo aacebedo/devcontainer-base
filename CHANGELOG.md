@@ -2,6 +2,16 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.19.1](https://github.com/aacebedo/devcontainer-base/compare/acab6edd75cc0d0d4492663820abe45063e340c4..v1.19.1) - 2026-09-03
+#### Bug Fixes
+- (**deps**) update dependency gh to v2.100.0 - ([0ae8eaf](https://github.com/aacebedo/devcontainer-base/commit/0ae8eafbc0172e4aaaa569b9ae528e234ccc8c78)) - renovate[bot]
+- (**deps**) update dependency atuinsh/atuin to v18.21.0 - ([c3f35c9](https://github.com/aacebedo/devcontainer-base/commit/c3f35c98c12772b2487412013c68d3be7ebba37c)) - renovate[bot]
+- (**deps**) update dependency dprint to v0.57.1 - ([b4ded39](https://github.com/aacebedo/devcontainer-base/commit/b4ded39880a8da34651064925b53c221cbb73a96)) - renovate[bot]
+- (**deps**) update dependency vale to v3.20.0 - ([58f01d7](https://github.com/aacebedo/devcontainer-base/commit/58f01d75451853bb3df65ed95e1577c0e8d8fb52)) - renovate[bot]
+- (**deps**) update dependency prek to v0.5.2 - ([acab6ed](https://github.com/aacebedo/devcontainer-base/commit/acab6edd75cc0d0d4492663820abe45063e340c4)) - renovate[bot]
+
+- - -
+
 ## [v1.19.0](https://github.com/aacebedo/devcontainer-base/compare/8987dca420184eff7064010870f9eb9a3ec59de8..v1.19.0) - 2026-09-03
 #### Features
 - split files in dockerfile - ([8987dca](https://github.com/aacebedo/devcontainer-base/commit/8987dca420184eff7064010870f9eb9a3ec59de8)) - Alexandre ACEBEDO
