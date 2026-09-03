@@ -1,7 +1,7 @@
 # renovate: datasource=docker depName=ubuntu versioning=docker
 ARG UBUNTU_VERSION=resolute
 # renovate: datasource=github-releases depName=jdx/mise
-ARG MISE_VERSION=2026.8.0
+ARG MISE_VERSION=2026.9.1
 # renovate: datasource=github-releases depName=helix-editor/helix versioning=calendar
 ARG HELIX_VERSION=25.07.1
 # renovate: datasource=github-releases depName=starship/starship
@@ -39,8 +39,8 @@ ARG EZA_VERSION
 ARG GTRASH_VERSION
 ARG BAT_VERSION
 
-# Install base packages and generate locale before switching shell or setting LC_ALL,
-# so bash never starts with a locale env var that points to non-existent locale files.
+COPY --chmod=0644 99_apt_no_recommends /etc/apt/apt.conf.d/99_apt_no_recommends
+
 # checkov:skip=CKV2_DOCKER_1: sudo is installed as a package for the passwordless-sudo dev user, not invoked
 # hadolint ignore=DL3008
 RUN <<EOF
@@ -107,112 +107,10 @@ mkdir -p /usr/local/share/zsh/plugins
 git clone --depth 1 https://github.com/Aloxaf/fzf-tab.git /usr/local/share/zsh/plugins/fzf-tab
 git clone --depth 1 https://github.com/zsh-users/zsh-completions.git /usr/local/share/zsh/plugins/zsh-completions
 git clone --depth 1 https://github.com/le0me55i/zsh-extract.git /usr/local/share/zsh/plugins/zsh-extract
-EOF
-
-RUN <<'EOF'
 mkdir -p /etc/mise/conf.d
-cat > /etc/mise/conf.d/001_common_config.toml <<'TOML'
-[hooks]
-cd = [
-    "/usr/local/bin/mise-check-bootstrap",
-    "/usr/local/bin/mise-check-install",
-]
-TOML
-
-cat > /usr/local/bin/mise-check-bootstrap <<'SH'
-#!/usr/bin/env bash
-set -euo pipefail
-
-[ -z "${MISE_PROJECT_ROOT:-}" ] && exit 0
-[ "${MISE_SILENCE_STATUS_CHECKS:-0}" = "1" ] && exit 0
-
-if ! mise bootstrap status --missing >/dev/null 2>&1; then
-  printf '\033[33m[mise] Bootstrap not complete. Run: mise bootstrap\033[0m\n' >&2
-fi
-SH
-
-cat > /usr/local/bin/mise-check-install <<'SH'
-#!/usr/bin/env bash
-set -euo pipefail
-
-[ -z "${MISE_PROJECT_ROOT:-}" ] && exit 0
-[ "${MISE_SILENCE_STATUS_CHECKS:-0}" = "1" ] && exit 0
-
-if ! mise install --dry-run-code >/dev/null 2>&1; then
-  printf '\033[33m[mise] Some tools not installed. Run: mise install\033[0m\n' >&2
-fi
-SH
-
-chmod 0755 /usr/local/bin/mise-check-bootstrap /usr/local/bin/mise-check-install
 EOF
 
-COPY <<"EOF" /etc/starship.toml
-add_newline = false
-command_timeout = 5000
-# editorconfig-checker-disable
-format = """
-[ $os$hostname ](bg:014 fg:235 bold)[ $username ](bg:239 fg:254 bold)[ $directory ](bg:blue fg:black bold)$fill(([ $git_branch ($git_commit )](bg:yellow fg:240 bold))[( $git_status )($git_metrics )](bg:239 bold))([ $nix_shell ](bold bg:032))([ $python ](bold bg:029))[](fg:239)[ $time](bg:239 fg:254 bold)
-$character"""
-# editorconfig-checker-enable
-
-[directory]
-fish_style_pwd_dir_length = 3
-format = "󰉋 $path"
-home_symbol = "󰋜 ~"
-truncation_length = 3
-truncation_symbol = "…/"
-
-[fill]
-style = "fg:240"
-symbol = "-"
-
-[git_branch]
-format = "($symbol $branch)"
-symbol = ""
-
-[git_commit]
-format = '(\($hash$tag\))'
-only_detached = false
-tag_disabled = false
-
-[git_metrics]
-added_style = "fg:green bg:239 bold"
-deleted_style = "fg:red bg:239 bold"
-disabled = false
-format = "([[+$added]($added_style) [-$deleted]($deleted_style)](bg:239 bold))"
-ignore_submodules = true
-
-[git_status]
-format = '(\[$all_status$ahead_behind\])'
-ignore_submodules = true
-
-[hostname]
-format = "($ssh_symbol$hostname)"
-ssh_only = false
-
-[os]
-disabled = false
-format = "$symbol"
-
-[os.symbols]
-Ubuntu = " "
-
-[python]
-detect_extensions = []
-detect_files = []
-format = "$symbol$virtualenv $version"
-symbol = "󰌠 "
-
-[time]
-disabled = false
-format = " $time "
-style = "bg:239 fg:254"
-time_format = "%R"
-
-[username]
-format = "( $user)"
-show_always = true
-EOF
+COPY --chmod=644 starship.toml /etc/starship.toml
 
 # Create/configure non-root user and bootstrap mise
 # hadolint ignore=SC2016
@@ -223,49 +121,13 @@ groupmod -n "${DEVCONTAINER_USERNAME}" ubuntu
 usermod -l "${DEVCONTAINER_USERNAME}" -d "/home/${DEVCONTAINER_USERNAME}" -m -s /bin/zsh ubuntu
 echo "${DEVCONTAINER_USERNAME} ALL=(ALL) NOPASSWD:ALL" > "/etc/sudoers.d/${DEVCONTAINER_USERNAME}"
 chmod 0440 "/etc/sudoers.d/${DEVCONTAINER_USERNAME}"
-echo "${DEVCONTAINER_USERNAME}:100000:65536" >> /etc/subuid
-echo "${DEVCONTAINER_USERNAME}:100000:65536" >> /etc/subgid
+sed -i 's/^ubuntu:/'"${DEVCONTAINER_USERNAME}"':/g' /etc/subuid /etc/subgid
 
 touch "/root/.zshrc"
-
-cat >> /etc/zsh/zshrc <<'ZSHRC'
-source /usr/local/share/zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
-source <(fzf --zsh)
-eval "$(mise activate zsh)"
-eval "$(starship init zsh)"
-eval "$(atuin init zsh)"
-eval "$(zoxide init zsh)"
-source /usr/local/share/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
-source /usr/local/share/zsh/plugins/zsh-extract/extract.plugin.zsh
-
-alias -- eza='eza --icons auto --git'
-alias -- cat='bat'
-alias -- ls='eza'
-alias -- less='eza'
-alias -- j='jj'
-alias -- jbc='jj b create'
-alias -- jbm='jj b move'
-alias -- jd='jj describe'
-alias -- je='jj edit'
-alias -- jf='jj git fetch'
-alias -- jl='jj log -r ::'
-alias -- jp='jj git push'
-alias -- jr='jj rebase'
-alias -- js='jj split'
-alias -- la='eza -a'
-alias -- ll='eza -l'
-alias -- lla='eza -la'
-alias -- ls=eza
-alias -- lt='eza --tree'
-alias -- lzt=lazygit
-alias -- rm='gtrash put --home-fallback'
-
-bindkey '^[[1;5D' backward-word    # Ctrl+Left
-bindkey '^[[1;5C' forward-word     # Ctrl+Right
-ZSHRC
-
 touch "/home/${DEVCONTAINER_USERNAME}/.zshrc"
 EOF
+
+COPY --chmod=644 zshrc /etc/zsh/zshrc
 
 WORKDIR /home/${DEVCONTAINER_USERNAME}
 
@@ -274,12 +136,13 @@ USER ${DEVCONTAINER_USERNAME}
 
 # editorconfig-checker-disable
 # hadolint ignore=SC2155
-ONBUILD RUN --mount=type=secret,id=MISE_GITHUB_TOKEN,uid=${DEVCONTAINER_UID} \
-    --mount=type=bind,source=.,target=/workspace \
+ONBUILD RUN --mount=type=secret,id=MISE_GITHUB_TOKEN \
+    --mount=type=bind,source=.,target=/workspaces/project \
     export MISE_GITHUB_TOKEN="$(cat /run/secrets/MISE_GITHUB_TOKEN)" && \
-    export MISE_TRUSTED_CONFIG_PATHS="/workspace" && \
-    cd /workspace && \
-    mise bootstrap
+    export MISE_TRUSTED_CONFIG_PATHS="/workspaces/project" && \
+    cd /workspaces/project && \
+    eval "$(mise env --shell zsh)" && \
+    mise bootstrap -y --skip tools
 # editorconfig-checker-enable
 
 HEALTHCHECK NONE

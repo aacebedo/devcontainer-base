@@ -27,7 +27,7 @@ jobs:
       - name: Setup
         uses: ./.github/actions/setup
         with:
-          actor: ${{ github.repository_owner }}
+          repo_owner: ${{ github.repository_owner }}
           repository: ${{ github.repository }}
       - name: Lint
         run: mise lint

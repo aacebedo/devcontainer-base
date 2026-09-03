@@ -67,7 +67,7 @@ id = "dprint"
 name = "dprint check"
 entry = "dprint check"
 language = "system"
-files = '\.(json|jsonc|ya?ml|md|toml)$|^Dockerfile$|\.dockerfile$'
+files = '\.(json|jsonc|ya?ml|md|toml)$|(^|/)Dockerfile$|\.dockerfile$'
 
 [[repos]]
 repo = "local"
@@ -100,7 +100,7 @@ rev = "3.2.528"
 
 [[repos.hooks]]
 id = "checkov"
-files = 'Dockerfile'
+files = 'src/Dockerfile'
 
 [[repos]]
 repo = "local"

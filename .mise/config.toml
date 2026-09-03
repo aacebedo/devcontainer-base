@@ -1,10 +1,12 @@
 [settings]
 experimental = true
 
+[env]
+AUBE_TRUST_POLICY = "off"
+
 [tools]
 uv = "0.12.1"
 node = "24.19.0"
-markdownlint-cli2 = "0.23.0"
 editorconfig-checker = "3.11.1"
 hadolint = "2.15.1"
 trivy = "0.74.0"
@@ -19,10 +21,9 @@ dprint = "0.56.1"
 "pipx:checkov" = "3.3.1"
 "github:cocogitto/cocogitto" = "7.0.0"
 gh = "2.98.0"
-
-[tools."npm:renovate"]
-version = "44.39.2"
-trust_policy_excludes = ["@yarnpkg/libzip"]
+markdownlint-cli2 = "0.23.0"
+"npm:renovate" = "44.39.2"
+"github:rtk-ai/rtk" = "0.46.0"
 
 [vars]
 # editorconfig-checker-disable
