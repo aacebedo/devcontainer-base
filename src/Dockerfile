@@ -17,7 +17,7 @@ ARG JJUI_VERSION=0.10.8
 # renovate: datasource=github-releases depName=BurntSushi/ripgrep
 ARG RIPGREP_VERSION=15.2.0
 # renovate: datasource=github-releases depName=sharkdp/fd
-ARG FD_VERSION=10.4.2
+ARG FD_VERSION=10.5.0
 # renovate: datasource=github-releases depName=eza-community/eza
 ARG EZA_VERSION=0.23.5
 # renovate: datasource=github-releases depName=umlx5h/gtrash
