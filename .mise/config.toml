@@ -22,7 +22,7 @@ dprint = "0.57.1"
 "github:cocogitto/cocogitto" = "7.0.0"
 gh = "2.100.0"
 markdownlint-cli2 = "0.23.0"
-"npm:renovate" = "44.61.4"
+"npm:renovate" = "44.64.1"
 "github:rtk-ai/rtk" = "v0.47.0"
 
 [vars]
