@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.19.5](https://github.com/aacebedo/devcontainer-base/compare/bd704b2202e586cb20766013549a0d953030e3aa..v1.19.5) - 2026-09-04
+#### Bug Fixes
+- (**deps**) update dependency npm:renovate to v44.65.0 - ([bd704b2](https://github.com/aacebedo/devcontainer-base/commit/bd704b2202e586cb20766013549a0d953030e3aa)) - renovate[bot]
+
+- - -
+
 ## [v1.19.4](https://github.com/aacebedo/devcontainer-base/compare/3c0953e6dbc92a56aa90c6c43d74f41c4de643c1..v1.19.4) - 2026-09-04
 #### Bug Fixes
 - (**deps**) update dependency github:rtk-ai/rtk to v0.48.0 - ([3c0953e](https://github.com/aacebedo/devcontainer-base/commit/3c0953e6dbc92a56aa90c6c43d74f41c4de643c1)) - renovate[bot]
