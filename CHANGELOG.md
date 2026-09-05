@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.19.6](https://github.com/aacebedo/devcontainer-base/compare/bb2f2d6d58910d17a4915e557be647bb7effd53c..v1.19.6) - 2026-09-05
+#### Bug Fixes
+- fix missing mise file and completion - ([bb2f2d6](https://github.com/aacebedo/devcontainer-base/commit/bb2f2d6d58910d17a4915e557be647bb7effd53c)) - Alexandre ACEBEDO
+
+- - -
+
 ## [v1.19.5](https://github.com/aacebedo/devcontainer-base/compare/bd704b2202e586cb20766013549a0d953030e3aa..v1.19.5) - 2026-09-04
 #### Bug Fixes
 - (**deps**) update dependency npm:renovate to v44.65.0 - ([bd704b2](https://github.com/aacebedo/devcontainer-base/commit/bd704b2202e586cb20766013549a0d953030e3aa)) - renovate[bot]
