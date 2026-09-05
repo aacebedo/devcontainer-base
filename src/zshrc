@@ -1,9 +1,20 @@
+# zsh-completions only extends $fpath, so it must be sourced before compinit.
 source /usr/local/share/zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
+
+# Initialise the completion system; without this nothing (not even `cd <tab>`)
+# completes, and fzf-tab has no completion widget to hook into.
+ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump-${ZSH_VERSION}"
+mkdir -p "${ZSH_COMPDUMP:h}"
+autoload -Uz compinit
+compinit -d "$ZSH_COMPDUMP"
+
 source <(fzf --zsh)
 eval "$(mise activate zsh)"
 eval "$(starship init zsh)"
 eval "$(atuin init zsh)"
 eval "$(zoxide init zsh)"
+# fzf-tab must come after compinit and after anything else that binds ^I.
+zstyle ':completion:*' menu no
 source /usr/local/share/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
 source /usr/local/share/zsh/plugins/zsh-extract/extract.plugin.zsh
 
@@ -29,6 +40,7 @@ alias -- ls=eza
 alias -- lt='eza --tree'
 alias -- lzt=lazygit
 alias -- rm='gtrash put --home-fallback'
+alias -- m='mise'
 
 bindkey '^[[1;5D' backward-word    # Ctrl+Left
 bindkey '^[[1;5C' forward-word     # Ctrl+Right

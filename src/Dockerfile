@@ -48,6 +48,7 @@ apt-get update
 apt-get install -y --no-install-recommends \
     bash \
     ca-certificates \
+    curl \
     git \
     gpg \
     gpg-agent \
@@ -111,6 +112,8 @@ mkdir -p /etc/mise/conf.d
 EOF
 
 COPY --chmod=644 starship.toml /etc/starship.toml
+COPY --chmod=644 001_common_config.toml /etc/mise/conf.d/001_common_config.toml
+COPY --chmod=644 zshrc /etc/zsh/zshrc
 
 # Create/configure non-root user and bootstrap mise
 # hadolint ignore=SC2016
@@ -126,8 +129,6 @@ sed -i 's/^ubuntu:/'"${DEVCONTAINER_USERNAME}"':/g' /etc/subuid /etc/subgid
 touch "/root/.zshrc"
 touch "/home/${DEVCONTAINER_USERNAME}/.zshrc"
 EOF
-
-COPY --chmod=644 zshrc /etc/zsh/zshrc
 
 WORKDIR /home/${DEVCONTAINER_USERNAME}
 
@@ -147,4 +148,4 @@ ONBUILD RUN --mount=type=secret,id=MISE_GITHUB_TOKEN \
 
 HEALTHCHECK NONE
 
-CMD ["/bin/zsh"]
+CMD ["/bin/zsh", "-l"]
