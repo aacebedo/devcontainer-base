@@ -15,18 +15,6 @@ run = '''
 set -eu
 
 [ -z "${MISE_PROJECT_ROOT:-}" ] && exit 0
-[ "${MISE_SILENCE_STATUS_CHECKS:-0}" = "1" ] && exit 0
-
-if ! mise install --dry-run-code >/dev/null 2>&1; then
-  printf '\033[33m[mise] Some tools not installed. Run: mise install\033[0m\n' >&2
-fi
-'''
-
-[[hooks.cd]]
-run = '''
-set -eu
-
-[ -z "${MISE_PROJECT_ROOT:-}" ] && exit 0
 [ -d /etc/mise/bootstrap_scripts ] || exit 0
 
 for script in /etc/mise/bootstrap_scripts/*; do
