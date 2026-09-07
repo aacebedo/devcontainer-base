@@ -37,6 +37,3 @@ commit_sha = '''{{ exec(command="git rev-parse HEAD 2>/dev/null || echo ''") | t
 [bootstrap.packages]
 "apt:bash" = "latest"
 "apt:podman" = "latest"
-"apt:fuse-overlayfs" = "latest"
-"apt:iptables" = "latest"
-"apt:build-essential" = "latest"
