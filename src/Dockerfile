@@ -1,43 +1,4 @@
-# renovate: datasource=docker depName=ubuntu versioning=docker
-ARG UBUNTU_VERSION=resolute
-# renovate: datasource=github-releases depName=jdx/mise
-ARG MISE_VERSION=2026.9.1
-# renovate: datasource=github-releases depName=helix-editor/helix versioning=calendar
-ARG HELIX_VERSION=25.07.1
-# renovate: datasource=github-releases depName=starship/starship
-ARG STARSHIP_VERSION=1.26.0
-# renovate: datasource=github-releases depName=ajeetdsouza/zoxide
-ARG ZOXIDE_VERSION=0.10.0
-# renovate: datasource=github-releases depName=atuinsh/atuin
-ARG ATUIN_VERSION=18.21.0
-# renovate: datasource=github-releases depName=jj-vcs/jj
-ARG JUJUTSU_VERSION=0.45.1
-# renovate: datasource=github-releases depName=idursun/jjui
-ARG JJUI_VERSION=0.10.8
-# renovate: datasource=github-releases depName=BurntSushi/ripgrep
-ARG RIPGREP_VERSION=15.2.0
-# renovate: datasource=github-releases depName=sharkdp/fd
-ARG FD_VERSION=10.5.0
-# renovate: datasource=github-releases depName=eza-community/eza
-ARG EZA_VERSION=0.23.5
-# renovate: datasource=github-releases depName=umlx5h/gtrash
-ARG GTRASH_VERSION=0.0.6
-# renovate: datasource=github-releases depName=sharkdp/bat
-ARG BAT_VERSION=0.26.1
-
-FROM ubuntu:${UBUNTU_VERSION}
-ARG MISE_VERSION
-ARG HELIX_VERSION
-ARG STARSHIP_VERSION
-ARG ZOXIDE_VERSION
-ARG ATUIN_VERSION
-ARG JUJUTSU_VERSION
-ARG JJUI_VERSION
-ARG RIPGREP_VERSION
-ARG FD_VERSION
-ARG EZA_VERSION
-ARG GTRASH_VERSION
-ARG BAT_VERSION
+FROM ubuntu:26.04
 
 COPY --chmod=0644 99_apt_no_recommends /etc/apt/apt.conf.d/99_apt_no_recommends
 
@@ -82,6 +43,19 @@ SHELL ["/bin/bash", "-eux", "-o", "pipefail", "-c"]
 RUN <<EOF
 # Install tools not available in Ubuntu repos
 # editorconfig-checker-disable
+HELIX_VERSION=25.07.1
+STARSHIP_VERSION=1.26.0
+ZOXIDE_VERSION=0.10.0
+ATUIN_VERSION=18.21.0
+JUJUTSU_VERSION=0.45.1
+JJUI_VERSION=0.10.8
+RIPGREP_VERSION=15.2.0
+FD_VERSION=10.5.0
+EZA_VERSION=0.23.5
+GTRASH_VERSION=0.0.6
+BAT_VERSION=0.26.1
+MISE_VERSION=2026.9.1
+
 wget -qO- "https://github.com/helix-editor/helix/releases/download/${HELIX_VERSION}/helix-${HELIX_VERSION}-x86_64-linux.tar.xz" | tar xJf - -C /usr/local/bin --strip-components=1 --wildcards "*/hx"
 wget -qO- "https://github.com/starship/starship/releases/download/v${STARSHIP_VERSION}/starship-x86_64-unknown-linux-gnu.tar.gz" | tar xzf - -C /usr/local/bin
 wget -qO- "https://github.com/ajeetdsouza/zoxide/releases/download/v${ZOXIDE_VERSION}/zoxide-${ZOXIDE_VERSION}-x86_64-unknown-linux-musl.tar.gz" | tar xzf - -C /usr/local/bin
