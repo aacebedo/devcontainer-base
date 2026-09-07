@@ -19,6 +19,7 @@ runs:
       env:
         AUBE_TRUST_POLICY: "off"
       with:
+        version: 2026.9.2
         bootstrap: true
         bootstrap_args: "--update"
     - name: Configure git safe directory

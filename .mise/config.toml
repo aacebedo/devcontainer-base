@@ -21,17 +21,22 @@ tombi = "1.5.2"
 "github:cocogitto/cocogitto" = "7.0.0"
 gh = "2.100.0"
 markdownlint-cli2 = "0.23.0"
-"npm:renovate" = "44.65.0"
+updatecli = "0.120.1"
 "github:rtk-ai/rtk" = "v0.48.0"
 biome = "2.5.12"
 "github:blopker/codebook" = "0.3.42"
 
 [vars]
-# editorconfig-checker-disable
-repo_host = '''{{ exec(command="git remote get-url origin 2>/dev/null | sed 's/[.]git$//' | awk -F'[/:]' '{print $(NF-2)}' | sed 's/.*@//' || echo ''") | trim }}'''
-repo_owner = '''{{ exec(command="git remote get-url origin 2>/dev/null | sed 's/[.]git$//' | awk -F'[/:]' '{print $(NF-1)}' || echo ''") | trim }}'''
-repo_name = '''{{ exec(command="git remote get-url origin 2>/dev/null | sed 's/[.]git$//' | awk -F'[/:]' '{print $NF}' || echo ''") | trim }}'''
-# editorconfig-checker-enable
+repo_host = '''{{ exec(command="git remote get-url origin 2>/dev/null |
+  sed 's/[.]git$//' |
+  awk -F'[/:]' '{print $(NF-2)}' |
+  sed 's/.*@//' || echo ''") | trim }}'''
+repo_owner = '''{{ exec(command="git remote get-url origin 2>/dev/null |
+  sed 's/[.]git$//' |
+  awk -F'[/:]' '{print $(NF-1)}' || echo ''") | trim }}'''
+repo_name = '''{{ exec(command="git remote get-url origin 2>/dev/null |
+  sed 's/[.]git$//' |
+  awk -F'[/:]' '{print $NF}' || echo ''") | trim }}'''
 repo_url = "https://{{vars.repo_host}}/{{vars.repo_owner}}/{{vars.repo_name}}"
 image_name = "ghcr.io/{{vars.repo_owner}}/{{vars.repo_name}}"
 commit_sha = '''{{ exec(command="git rev-parse HEAD 2>/dev/null || echo ''") | trim }}'''
