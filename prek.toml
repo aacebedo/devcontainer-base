@@ -90,11 +90,23 @@ files = '\.(md|toml|ya?ml|json|jsonc|sh)$|(^|/)Dockerfile$|\.dockerfile$'
 repo = "local"
 
 [[repos.hooks]]
-id = "renovate-config-validator"
-name = "Validate Renovate Config"
-entry = "renovate-config-validator"
+id = "updatecli-manifest-validate"
+name = "Validate Updatecli manifests"
+entry = "env"
+args = [
+  "UPDATECLI_GITHUB_TOKEN=validate-only",
+  "updatecli",
+  "manifest",
+  "validate",
+  "--experimental",
+  "--config",
+  ".updatecli/manifests",
+  "--values",
+  ".updatecli/values.yaml",
+]
 language = "system"
-files = '(^|/).?renovate(?:rc)?(?:\.json5?)?$'
+files = '^\.updatecli/(manifests/.*\.ya?ml|values\.yaml)$'
+pass_filenames = false
 
 [[repos]]
 repo = "https://github.com/DavidAnson/markdownlint-cli2"
