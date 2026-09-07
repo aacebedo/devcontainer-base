@@ -32,6 +32,6 @@ jobs:
       - name: Lint
         run: mise lint
       - name: Test
-        run: mise test
+        run: mise run:tests
       - name: Run security scan
-        run: mise security-scan
+        run: mise run:security-scan
