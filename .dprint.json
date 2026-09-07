@@ -18,8 +18,7 @@
   ],
   "includes": [
     "**/*.{json,jsonc,yaml,yml,md,toml}",
-    "**/Dockerfile",
-    "**/*.dockerfile"
+    "**/Dockerfile"
   ],
   "excludes": [
     ".vale/Google/**",

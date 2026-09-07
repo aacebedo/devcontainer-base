@@ -70,6 +70,23 @@ language = "system"
 files = '\.(json|jsonc|ya?ml|md|toml)$|(^|/)Dockerfile$|\.dockerfile$'
 
 [[repos]]
+repo = "https://github.com/tombi-toml/tombi-pre-commit"
+rev = "v0.9.6"
+hooks = [
+  { id = "tombi-lint", args = ["--offline"] },
+]
+
+[[repos]]
+repo = "local"
+
+[[repos.hooks]]
+id = "codebook"
+name = "codebook spell check"
+entry = "codebook-lsp lint"
+language = "system"
+files = '\.(md|toml|ya?ml|json|jsonc|sh)$|(^|/)Dockerfile$|\.dockerfile$'
+
+[[repos]]
 repo = "local"
 
 [[repos.hooks]]
@@ -113,3 +130,8 @@ args = ["check", "--from-latest-tag"]
 language = "system"
 pass_filenames = false
 stages = ["pre-push"]
+
+[[repos]]
+repo = "https://github.com/biomejs/pre-commit"
+rev = "v2.5.12"
+hooks = [{ id = "biome-lint" }]
