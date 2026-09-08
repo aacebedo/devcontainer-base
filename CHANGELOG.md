@@ -2,6 +2,41 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.20.0](https://github.com/aacebedo/devcontainer-base/compare/8e126c56748bf59905df8a70278d4cf32c41d828..v1.20.0) - 2026-09-08
+#### Features
+- remode now useless nodejs - ([a0c160e](https://github.com/aacebedo/devcontainer-base/commit/a0c160e05294e6f7e08d2677dd539f3191af1ac0)) - Alexandre ACEBEDO
+- switch from renovate to updatecli - ([4752006](https://github.com/aacebedo/devcontainer-base/commit/4752006c631b888148d5f2c7c1b87fe0288bc354)) - Alexandre ACEBEDO
+- moved mise tasks - ([147df54](https://github.com/aacebedo/devcontainer-base/commit/147df54d99c75c6f6f0fd6cbba3ec80693e7228e)) - Alexandre ACEBEDO
+- change formatting tooling - ([0b927bd](https://github.com/aacebedo/devcontainer-base/commit/0b927bd17b7fea16625e378e0004e56ef8c07d6b)) - Alexandre ACEBEDO
+#### Bug Fixes
+- sign automatic commits so they show as verified - ([4cb9c7a](https://github.com/aacebedo/devcontainer-base/commit/4cb9c7ac352b9fdc7579f6dba317ac2078586aff)) - Alexandre Acebedo
+- fix actions - ([20085ff](https://github.com/aacebedo/devcontainer-base/commit/20085fff9265ff0b61a1673ac2b74dd6fbfe6866)) - Alexandre ACEBEDO
+- change update-deps workflow to run on the host directly - ([3dbb24b](https://github.com/aacebedo/devcontainer-base/commit/3dbb24bea4c0b4184cfbfa900b1ef9404d5832c2)) - Alexandre ACEBEDO
+- fix release workflow - ([2f117fc](https://github.com/aacebedo/devcontainer-base/commit/2f117fccbfaad277015dc87818b89f83d1b79a3f)) - Alexandre ACEBEDO
+- remove copilot instruction files - ([09753bf](https://github.com/aacebedo/devcontainer-base/commit/09753bf4ccf1441d0c45131795af4e7ed226ad39)) - Alexandre ACEBEDO
+- remove useless podman related packages - ([aad12eb](https://github.com/aacebedo/devcontainer-base/commit/aad12eb7907f937bddc09b4760c262b470aff295)) - Alexandre ACEBEDO
+- switch to tombi - ([04f77cc](https://github.com/aacebedo/devcontainer-base/commit/04f77cc1fe18d1aa7330e9f9934140e2184775c6)) - Alexandre ACEBEDO
+- update editorconfig-checker to github instead of aqua - ([8e126c5](https://github.com/aacebedo/devcontainer-base/commit/8e126c56748bf59905df8a70278d4cf32c41d828)) - Alexandre ACEBEDO
+#### Miscellaneous Chores
+- deps(github): bump Action tag for actions/checkout from v7 to ... - ([4dcbb0e](https://github.com/aacebedo/devcontainer-base/commit/4dcbb0eb289948fc640be867efab155918d4b763)) - github-actions[bot]
+- deps: update Docker image "ubuntu" to "26.10" - ([65770c1](https://github.com/aacebedo/devcontainer-base/commit/65770c17133373ce0dff008b829f330aec4fac4f)) - github-actions[bot]
+- deps(github): bump Action tag for actions/create-github-app-to... - ([12bf19f](https://github.com/aacebedo/devcontainer-base/commit/12bf19f2601fe45b1c5345eb9dc9edaa9dd951d5)) - github-actions[bot]
+- deps(github): bump Action tag for github/codeql-action/upload-... - ([58e8b0f](https://github.com/aacebedo/devcontainer-base/commit/58e8b0f0c03f0bcd731a8e032e1019211a73a7b4)) - github-actions[bot]
+- deps(github): bump Action tag for actions/checkout from v7 to ... - ([ac85fbd](https://github.com/aacebedo/devcontainer-base/commit/ac85fbd12ca1bc3100674add3600ebb5e6d5dc7b)) - github-actions[bot]
+- deps(github): bump Action tag for actions/create-github-app-to... - ([17c86c3](https://github.com/aacebedo/devcontainer-base/commit/17c86c385a560273eb98de16d8a24b0dd3c7b251)) - github-actions[bot]
+- deps(github): bump Action tag for actions/checkout from v7 to ... - ([937d0a0](https://github.com/aacebedo/devcontainer-base/commit/937d0a01398f55923ca7d524cffa37694e335f20)) - github-actions[bot]
+- deps(github): bump Action tag for jdx/mise-action from v4 to v... - ([02ef497](https://github.com/aacebedo/devcontainer-base/commit/02ef497e02ad1bcbab561dddc9ba1f03de92372e)) - github-actions[bot]
+- Update markdownlint-cli2 in .mise/config.toml - ([230166e](https://github.com/aacebedo/devcontainer-base/commit/230166e7637226f19266ec7fd0018c3f59692759)) - github-actions[bot]
+- Update checkov in .mise/config.toml - ([d1997e5](https://github.com/aacebedo/devcontainer-base/commit/d1997e5401411d7483c801b5bcda5acee8cd73ba)) - github-actions[bot]
+- Update dprint in .mise/config.toml - ([72a58c4](https://github.com/aacebedo/devcontainer-base/commit/72a58c4c2b58942543e777c83cf8d1c5abaea2d5)) - github-actions[bot]
+- Update shfmt in .mise/config.toml - ([531c23b](https://github.com/aacebedo/devcontainer-base/commit/531c23b559d787041a43d198c19ae3817afa96c5)) - github-actions[bot]
+- Update uv in .mise/config.toml - ([310fc51](https://github.com/aacebedo/devcontainer-base/commit/310fc518a20f156c8a5ceaf2f647981b6325c1d8)) - github-actions[bot]
+- Update JJUI_VERSION in src/Dockerfile - ([91a923b](https://github.com/aacebedo/devcontainer-base/commit/91a923b420fa83db48f1209556f2f65753c7c8b0)) - github-actions[bot]
+- Update mise version in .github/actions/setup/action.yml - ([3a0e321](https://github.com/aacebedo/devcontainer-base/commit/3a0e321b9448e0844c771895f60f237b8cf5a384)) - github-actions[bot]
+- Update MISE_VERSION in src/Dockerfile - ([4119f73](https://github.com/aacebedo/devcontainer-base/commit/4119f73fc8f5d47b1838177426d21d9f9da7ead1)) - github-actions[bot]
+
+- - -
+
 ## [v1.19.6](https://github.com/aacebedo/devcontainer-base/compare/bb2f2d6d58910d17a4915e557be647bb7effd53c..v1.19.6) - 2026-09-05
 #### Bug Fixes
 - fix missing mise file and completion - ([bb2f2d6](https://github.com/aacebedo/devcontainer-base/commit/bb2f2d6d58910d17a4915e557be647bb7effd53c)) - Alexandre ACEBEDO
