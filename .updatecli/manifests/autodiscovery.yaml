@@ -26,6 +26,7 @@ autodiscovery:
           kind: github
           token: '{{ requiredEnv "UPDATECLI_GITHUB_TOKEN" }}'
     dockerfile:
+      digest: false
       filematch:
         - "Dockerfile"
 
