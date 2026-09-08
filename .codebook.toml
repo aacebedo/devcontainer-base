@@ -43,6 +43,7 @@ words = [
   "fpath",
   "fzf",
   "githubrelease",
+  "groupby",
   "groupmod",
   "gtrash",
   "hadolint",
