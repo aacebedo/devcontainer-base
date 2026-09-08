@@ -1,16 +1,6 @@
 ---
 name: Setup
 description: Sets up mise and configures git
-inputs:
-  token:
-    description: GitHub token for setting the remote URL
-    required: false
-  repo_owner:
-    description: GitHub repo owner
-    required: false
-  repository:
-    description: GitHub repository in format owner/repo
-    required: false
 runs:
   using: composite
   steps:
@@ -23,11 +13,3 @@ runs:
       shell: bash
       run: |
         git config --global --add safe.directory '*'
-    - name: Configure git remote and user info
-      if: ${{ inputs.token && inputs.repo_owner && inputs.repository }}
-      shell: bash
-      run: |
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git config --global user.name "github-actions[bot]"
-        git remote set-url origin \
-          https://${{ inputs.repo_owner }}:${{ inputs.token }}@github.com/${{ inputs.repository }}.git
