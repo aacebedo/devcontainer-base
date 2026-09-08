@@ -1,0 +1,183 @@
+github:
+  user: "github-actions[bot]"
+  email: "41898282+github-actions[bot]@users.noreply.github.com"
+  username: "github-actions[bot]"
+  owner: aacebedo
+  repository: devcontainer-base
+  branch: main
+
+dockerfileDeps:
+  - slug: mise
+    arg: MISE_VERSION
+    owner: jdx
+    repo: mise
+    trimPrefix: true
+  - slug: helix
+    arg: HELIX_VERSION
+    owner: helix-editor
+    repo: helix
+    trimPrefix: false
+  - slug: starship
+    arg: STARSHIP_VERSION
+    owner: starship
+    repo: starship
+    trimPrefix: true
+  - slug: zoxide
+    arg: ZOXIDE_VERSION
+    owner: ajeetdsouza
+    repo: zoxide
+    trimPrefix: true
+  - slug: atuin
+    arg: ATUIN_VERSION
+    owner: atuinsh
+    repo: atuin
+    trimPrefix: true
+  - slug: jujutsu
+    arg: JUJUTSU_VERSION
+    owner: jj-vcs
+    repo: jj
+    trimPrefix: true
+  - slug: jjui
+    arg: JJUI_VERSION
+    owner: idursun
+    repo: jjui
+    trimPrefix: true
+  - slug: ripgrep
+    arg: RIPGREP_VERSION
+    owner: BurntSushi
+    repo: ripgrep
+    trimPrefix: false
+  - slug: fd
+    arg: FD_VERSION
+    owner: sharkdp
+    repo: fd
+    trimPrefix: true
+  - slug: eza
+    arg: EZA_VERSION
+    owner: eza-community
+    repo: eza
+    trimPrefix: true
+  - slug: gtrash
+    arg: GTRASH_VERSION
+    owner: umlx5h
+    repo: gtrash
+    trimPrefix: true
+  - slug: bat
+    arg: BAT_VERSION
+    owner: sharkdp
+    repo: bat
+    trimPrefix: true
+
+miseDeps:
+  - slug: uv
+    daselKey: tools.uv
+    kind: githubrelease
+    owner: astral-sh
+    repo: uv
+    trimPrefix: true
+  - slug: node
+    daselKey: tools.node
+    kind: githubrelease
+    owner: nodejs
+    repo: node
+    trimPrefix: true
+  - slug: editorconfig-checker
+    daselKey: 'tools["github:editorconfig-checker/editorconfig-checker"]'
+    kind: githubrelease
+    owner: editorconfig-checker
+    repo: editorconfig-checker
+    trimPrefix: true
+  - slug: hadolint
+    daselKey: tools.hadolint
+    kind: githubrelease
+    owner: hadolint
+    repo: hadolint
+    trimPrefix: true
+  - slug: trivy
+    daselKey: tools.trivy
+    kind: githubrelease
+    owner: aquasecurity
+    repo: trivy
+    trimPrefix: true
+  - slug: vale
+    daselKey: tools.vale
+    kind: githubrelease
+    owner: errata-ai
+    repo: vale
+    trimPrefix: true
+  - slug: yamllint
+    daselKey: tools.yamllint
+    kind: pypi
+    name: yamllint
+    trimPrefix: false
+  - slug: prek
+    daselKey: tools.prek
+    kind: githubrelease
+    owner: j178
+    repo: prek
+    trimPrefix: true
+  - slug: shfmt
+    daselKey: tools.shfmt
+    kind: githubrelease
+    owner: mvdan
+    repo: sh
+    trimPrefix: true
+  - slug: shellcheck
+    daselKey: tools.shellcheck
+    kind: githubrelease
+    owner: koalaman
+    repo: shellcheck
+    trimPrefix: true
+  - slug: dprint
+    daselKey: tools.dprint
+    kind: githubrelease
+    owner: dprint
+    repo: dprint
+    trimPrefix: true
+  - slug: tombi
+    daselKey: tools.tombi
+    kind: githubrelease
+    owner: tombi-toml
+    repo: tombi
+    trimPrefix: true
+  - slug: checkov
+    daselKey: 'tools["pipx:checkov"]'
+    kind: pypi
+    name: checkov
+    trimPrefix: false
+  - slug: cocogitto
+    daselKey: 'tools["github:cocogitto/cocogitto"]'
+    kind: githubrelease
+    owner: cocogitto
+    repo: cocogitto
+    trimPrefix: true
+  - slug: gh
+    daselKey: tools.gh
+    kind: githubrelease
+    owner: cli
+    repo: cli
+    trimPrefix: true
+  - slug: markdownlint-cli2
+    daselKey: tools.markdownlint-cli2
+    kind: npm
+    name: markdownlint-cli2
+    trimPrefix: false
+  - slug: rtk
+    daselKey: 'tools["github:rtk-ai/rtk"]'
+    kind: githubrelease
+    owner: rtk-ai
+    repo: rtk
+    trimPrefix: false
+  - slug: codebook
+    daselKey: 'tools["github:blopker/codebook"]'
+    kind: githubrelease
+    owner: blopker
+    repo: codebook
+    trimPrefix: true
+  - slug: biome
+    daselKey: tools.biome
+    kind: githubrelease
+    owner: biomejs
+    repo: biome
+    trimPrefix: false
+    versionfilterRegex: '@biomejs/biome@(\d+\.\d+\.\d+)'
