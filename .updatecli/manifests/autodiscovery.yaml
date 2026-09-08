@@ -16,6 +16,7 @@ scms:
 autodiscovery:
   scmid: default
   actionid: default
+  groupby: individual
   crawlers:
     github/action:
       rootdir: ".github"
@@ -25,6 +26,7 @@ autodiscovery:
           kind: github
           token: '{{ requiredEnv "UPDATECLI_GITHUB_TOKEN" }}'
     dockerfile:
+      digest: false
       filematch:
         - "Dockerfile"
 
@@ -32,7 +34,6 @@ actions:
   default:
     kind: github/pullrequest
     scmid: default
-    title: "chore(deps): autodiscovered dependency update"
     spec:
       labels:
         - dependencies

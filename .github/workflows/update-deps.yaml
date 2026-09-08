@@ -6,7 +6,9 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 6 * * 1"
+
 permissions: {}
+
 jobs:
   update-deps:
     runs-on: ubuntu-26.04
@@ -18,8 +20,8 @@ jobs:
         id: generate-token
         uses: actions/create-github-app-token@v3
         with:
-          client-id: ${{ vars.APP_CLIENT_ID }}
-          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          client-id: ${{ secrets.CI_ACTIONS_DEP_UPDATER_CLIENT_ID }}
+          private-key: ${{ secrets.CI_ACTIONS_DEP_UPDATER_PRIVATE_KEY }}
       - name: Checkout repository
         uses: actions/checkout@v7
         with:
