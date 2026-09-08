@@ -57,13 +57,13 @@ sources:
 targets:
   {{ $dep.slug }}:
     name: "Update {{ $dep.slug }} in .mise/config.toml"
-    kind: toml
+    kind: file
     scmid: default
     sourceid: {{ $dep.slug }}
     spec:
       file: .mise/config.toml
-      engine: dasel/v3
-      key: {{ $dep.daselKey }}
+      matchpattern: '(?m)^{{ $dep.tomlKey }} = ".*"$'
+      replacepattern: '{{ $dep.tomlKey }} = "{{ "{{" }} source "{{ $dep.slug }}" {{ "}}" }}"'
 
 actions:
   default:

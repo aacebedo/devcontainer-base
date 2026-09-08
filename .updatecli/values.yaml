@@ -70,106 +70,106 @@ dockerfileDeps:
 
 miseDeps:
   - slug: uv
-    daselKey: tools.uv
+    tomlKey: uv
     kind: githubrelease
     owner: astral-sh
     repo: uv
     trimPrefix: true
   - slug: editorconfig-checker
-    daselKey: 'tools["github:editorconfig-checker/editorconfig-checker"]'
+    tomlKey: '"github:editorconfig-checker/editorconfig-checker"'
     kind: githubrelease
     owner: editorconfig-checker
     repo: editorconfig-checker
     trimPrefix: true
   - slug: hadolint
-    daselKey: tools.hadolint
+    tomlKey: hadolint
     kind: githubrelease
     owner: hadolint
     repo: hadolint
     trimPrefix: true
   - slug: trivy
-    daselKey: tools.trivy
+    tomlKey: trivy
     kind: githubrelease
     owner: aquasecurity
     repo: trivy
     trimPrefix: true
   - slug: vale
-    daselKey: tools.vale
+    tomlKey: vale
     kind: githubrelease
     owner: errata-ai
     repo: vale
     trimPrefix: true
   - slug: yamllint
-    daselKey: tools.yamllint
+    tomlKey: yamllint
     kind: pypi
     name: yamllint
     trimPrefix: false
   - slug: prek
-    daselKey: tools.prek
+    tomlKey: prek
     kind: githubrelease
     owner: j178
     repo: prek
     trimPrefix: true
   - slug: shfmt
-    daselKey: tools.shfmt
+    tomlKey: shfmt
     kind: githubrelease
     owner: mvdan
     repo: sh
     trimPrefix: true
   - slug: shellcheck
-    daselKey: tools.shellcheck
+    tomlKey: shellcheck
     kind: githubrelease
     owner: koalaman
     repo: shellcheck
     trimPrefix: true
   - slug: dprint
-    daselKey: tools.dprint
+    tomlKey: dprint
     kind: githubrelease
     owner: dprint
     repo: dprint
     trimPrefix: true
   - slug: tombi
-    daselKey: 'tools["github:tombi-toml/tombi"]'
+    tomlKey: '"github:tombi-toml/tombi"'
     kind: githubrelease
     owner: tombi-toml
     repo: tombi
     trimPrefix: true
   - slug: checkov
-    daselKey: 'tools["pipx:checkov"]'
+    tomlKey: '"pipx:checkov"'
     kind: pypi
     name: checkov
     trimPrefix: false
   - slug: cocogitto
-    daselKey: 'tools["github:cocogitto/cocogitto"]'
+    tomlKey: '"github:cocogitto/cocogitto"'
     kind: githubrelease
     owner: cocogitto
     repo: cocogitto
     trimPrefix: true
   - slug: gh
-    daselKey: tools.gh
+    tomlKey: gh
     kind: githubrelease
     owner: cli
     repo: cli
     trimPrefix: true
   - slug: markdownlint-cli2
-    daselKey: 'tools["markdownlint-cli2"]'
+    tomlKey: markdownlint-cli2
     kind: npm
     name: markdownlint-cli2
     trimPrefix: false
   - slug: rtk
-    daselKey: 'tools["github:rtk-ai/rtk"]'
+    tomlKey: '"github:rtk-ai/rtk"'
     kind: githubrelease
     owner: rtk-ai
     repo: rtk
     trimPrefix: false
   - slug: codebook
-    daselKey: 'tools["github:blopker/codebook"]'
+    tomlKey: '"github:blopker/codebook"'
     kind: githubrelease
     owner: blopker
     repo: codebook
     trimPrefix: true
   - slug: biome
-    daselKey: tools.biome
+    tomlKey: biome
     kind: githubrelease
     owner: biomejs
     repo: biome

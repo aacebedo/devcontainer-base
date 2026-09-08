@@ -4,8 +4,8 @@
 
 #MISE depends = ["lint", "run:tests", "run:security-scan"]
 
-#MISE env = { REGISTRY_USERNAME = { required = true } }
-#MISE env = { REGISTRY_PASSWORD = { required = true, redact = true } }
+#MISE env = { CONTAINER_REGISTRY_USERNAME = { required = true } }
+#MISE env = { CONTAINER_REGISTRY_PASSWORD = { required = true, redact = true } }
 #MISE env = { GITHUB_TOKEN = { required = true, redact = true } }
 #MISE env = { IMAGE_NAME = "{{vars.image_name}}" }
 #MISE env = { REPO_OWNER = "{{vars.repo_owner}}" }
@@ -19,5 +19,5 @@ if [ -z "${MISE_TASK_NAME:-}" ]; then
 	exit 1
 fi
 
-podman login ghcr.io -u "${REGISTRY_USERNAME}" -p "${REGISTRY_PASSWORD}"
+podman login ghcr.io -u "${CONTAINER_REGISTRY_USERNAME}" -p "${CONTAINER_REGISTRY_PASSWORD}"
 cog bump --auto --skip-ci

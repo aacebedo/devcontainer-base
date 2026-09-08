@@ -22,8 +22,8 @@ jobs:
         id: generate-token
         uses: actions/create-github-app-token@v3
         with:
-          client-id: ${{ vars.APP_CLIENT_ID }}
-          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          client-id: ${{ secrets.CI_ACTIONS_RELEASER_CLIENT_ID }}
+          private-key: ${{ secrets.CI_ACTIONS_RELEASER_PRIVATE_KEY }}
       - name: Checkout repository
         uses: actions/checkout@v7
         with:
@@ -44,8 +44,8 @@ jobs:
           echo "sarif=/tmp/trivy-results.sarif" >> $GITHUB_OUTPUT
         env:
           GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
-          REGISTRY_USERNAME: ${{ github.repository_owner }}
-          REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+          CONTAINER_REGISTRY_USERNAME: ${{ github.repository_owner }}
+          CONTAINER_REGISTRY_PASSWORD: ${{ steps.generate-token.outputs.token }}
       - name: Upload Anchore Scan SARIF Report
         uses: github/codeql-action/upload-sarif@v4
         with:
