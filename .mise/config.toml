@@ -1,12 +1,8 @@
 [settings]
 experimental = true
 
-[env]
-AUBE_TRUST_POLICY = "off"
-
 [tools]
 uv = "0.12.1"
-node = "24.20.0"
 "github:editorconfig-checker/editorconfig-checker" = "4.0.1"
 hadolint = "2.15.1"
 trivy = "0.74.0"

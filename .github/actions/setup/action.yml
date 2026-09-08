@@ -16,8 +16,6 @@ runs:
   steps:
     - name: Setup mise
       uses: jdx/mise-action@v4
-      env:
-        AUBE_TRUST_POLICY: "off"
       with:
         version: 2026.9.2
         bootstrap: true
