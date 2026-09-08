@@ -18,12 +18,13 @@
   ],
   "includes": [
     "**/*.{json,jsonc,yaml,yml,md,toml}",
-    "**/Dockerfile",
-    "**/*.dockerfile"
+    "**/Dockerfile"
   ],
   "excludes": [
     ".vale/Google/**",
     "dist/**",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    ".updatecli/manifests/dockerfile.yaml",
+    ".updatecli/manifests/mise.yaml"
   ]
 }

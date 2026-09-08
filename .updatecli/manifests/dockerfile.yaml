@@ -1,0 +1,53 @@
+---
+name: "Bump versions in src/Dockerfile"
+
+scms:
+  default:
+    kind: github
+    spec:
+      user: "{{ .github.user }}"
+      email: "{{ .github.email }}"
+      owner: "{{ .github.owner }}"
+      repository: "{{ .github.repository }}"
+      token: '{{ requiredEnv "UPDATECLI_GITHUB_TOKEN" }}'
+      username: "{{ .github.username }}"
+      branch: "{{ .github.branch }}"
+
+sources:
+{{- range $dep := .dockerfileDeps }}
+  {{ $dep.slug }}:
+    name: "Get latest {{ $dep.owner }}/{{ $dep.repo }} release"
+    kind: githubrelease
+    spec:
+      owner: {{ $dep.owner }}
+      repository: {{ $dep.repo }}
+      token: '{{ requiredEnv "UPDATECLI_GITHUB_TOKEN" }}'
+      versionfilter:
+        kind: semver
+  {{- if $dep.trimPrefix }}
+    transformers:
+      - trimprefix: "v"
+  {{- end }}
+{{- end }}
+
+targets:
+{{- range $dep := .dockerfileDeps }}
+  {{ $dep.slug }}:
+    name: "Update {{ $dep.arg }} in src/Dockerfile"
+    kind: file
+    scmid: default
+    sourceid: {{ $dep.slug }}
+    spec:
+      file: src/Dockerfile
+      matchpattern: '(?m)^{{ $dep.arg }}=.*$'
+      replacepattern: '{{ $dep.arg }}={{ "{{" }} source "{{ $dep.slug }}" {{ "}}" }}'
+{{- end }}
+
+actions:
+  default:
+    kind: github/pullrequest
+    scmid: default
+    title: "chore(deps): bump src/Dockerfile versions"
+    spec:
+      labels:
+        - dependencies
