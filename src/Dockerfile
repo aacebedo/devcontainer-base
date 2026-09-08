@@ -54,7 +54,7 @@ FD_VERSION=10.5.0
 EZA_VERSION=0.23.5
 GTRASH_VERSION=0.0.6
 BAT_VERSION=0.26.1
-MISE_VERSION=2026.9.2
+MISE_VERSION=2026.9.3
 
 wget -qO- "https://github.com/helix-editor/helix/releases/download/${HELIX_VERSION}/helix-${HELIX_VERSION}-x86_64-linux.tar.xz" | tar xJf - -C /usr/local/bin --strip-components=1 --wildcards "*/hx"
 wget -qO- "https://github.com/starship/starship/releases/download/v${STARSHIP_VERSION}/starship-x86_64-unknown-linux-gnu.tar.gz" | tar xzf - -C /usr/local/bin
