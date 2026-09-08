@@ -1,4 +1,4 @@
-FROM ubuntu:26.04
+FROM ubuntu:26.10@sha256:694b773ee7e0d0b55ca74c095ac3309055589e7cbfaf3100f0b226c38c6936fa
 
 COPY --chmod=0644 99_apt_no_recommends /etc/apt/apt.conf.d/99_apt_no_recommends
 
