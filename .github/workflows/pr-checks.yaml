@@ -1,15 +1,12 @@
 ---
 name: PR checks
-
 # yamllint disable-line rule:truthy
 on:
   workflow_dispatch:
   pull_request:
     branches:
       - main
-
 permissions: {}
-
 jobs:
   pr-checks:
     runs-on: ubuntu-26.04
@@ -18,7 +15,7 @@ jobs:
       packages: read
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
           token: ${{ secrets.GITHUB_TOKEN }}
