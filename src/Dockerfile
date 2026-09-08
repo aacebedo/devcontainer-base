@@ -1,4 +1,4 @@
-FROM ubuntu:26.04
+FROM ubuntu:26.10
 
 COPY --chmod=0644 99_apt_no_recommends /etc/apt/apt.conf.d/99_apt_no_recommends
 
