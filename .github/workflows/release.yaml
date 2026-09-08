@@ -44,6 +44,6 @@ jobs:
           REGISTRY_USERNAME: ${{ github.repository_owner }}
           REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload Anchore Scan SARIF Report
-        uses: github/codeql-action/upload-sarif@v4
+        uses: github/codeql-action/upload-sarif@v4.37.9
         with:
           sarif_file: ${{ steps.release.outputs.sarif }}
