@@ -1,7 +1,6 @@
 ---
 ignore: |
   .vale/Google
-  .mise/node_modules/
   .updatecli/manifests/dockerfile.yaml
   .updatecli/manifests/mise.yaml
 
