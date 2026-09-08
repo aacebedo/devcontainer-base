@@ -1,24 +1,20 @@
 ---
 name: Update dependencies
-
 # yamllint disable-line rule:truthy
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 6 * * 1"
-
 permissions: {}
-
 jobs:
   update-deps:
     runs-on: ubuntu-26.04
     permissions:
       contents: read
-
     steps:
       - name: Generate a token
         id: generate-token
-        uses: actions/create-github-app-token@v3
+        uses: actions/create-github-app-token@v3.2.0
         with:
           client-id: ${{ secrets.CI_ACTIONS_DEP_UPDATER_CLIENT_ID }}
           private-key: ${{ secrets.CI_ACTIONS_DEP_UPDATER_PRIVATE_KEY }}
