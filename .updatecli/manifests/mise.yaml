@@ -29,6 +29,7 @@ sources:
     {{- if $dep.versionfilterRegex }}
         kind: regex/semver
         regex: '{{ $dep.versionfilterRegex }}'
+        pattern: '*'
     {{- else }}
         kind: semver
     {{- end }}

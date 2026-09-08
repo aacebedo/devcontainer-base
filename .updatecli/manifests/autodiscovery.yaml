@@ -19,7 +19,7 @@ autodiscovery:
   crawlers:
     github/action:
       rootdir: ".github"
-      digest: true
+      digest: false
       credentials:
         "github.com":
           kind: github

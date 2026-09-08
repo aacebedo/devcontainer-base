@@ -75,12 +75,6 @@ miseDeps:
     owner: astral-sh
     repo: uv
     trimPrefix: true
-  - slug: node
-    daselKey: tools.node
-    kind: githubrelease
-    owner: nodejs
-    repo: node
-    trimPrefix: true
   - slug: editorconfig-checker
     daselKey: 'tools["github:editorconfig-checker/editorconfig-checker"]'
     kind: githubrelease
@@ -135,7 +129,7 @@ miseDeps:
     repo: dprint
     trimPrefix: true
   - slug: tombi
-    daselKey: tools.tombi
+    daselKey: 'tools["github:tombi-toml/tombi"]'
     kind: githubrelease
     owner: tombi-toml
     repo: tombi
@@ -158,7 +152,7 @@ miseDeps:
     repo: cli
     trimPrefix: true
   - slug: markdownlint-cli2
-    daselKey: tools.markdownlint-cli2
+    daselKey: 'tools["markdownlint-cli2"]'
     kind: npm
     name: markdownlint-cli2
     trimPrefix: false

@@ -18,4 +18,4 @@ if [ "${usage_apply:-false}" = "true" ]; then
 	command=apply
 fi
 
-updatecli "${command}" --config .updatecli/manifests --values .updatecli/values.yaml
+updatecli pipeline "${command}" --config .updatecli/manifests --values .updatecli/values.yaml
