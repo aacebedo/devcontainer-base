@@ -70,14 +70,43 @@ language = "system"
 files = '\.(json|jsonc|ya?ml|md|toml)$|(^|/)Dockerfile$|\.dockerfile$'
 
 [[repos]]
+repo = "https://github.com/tombi-toml/tombi-pre-commit"
+rev = "v0.9.6"
+hooks = [
+  { id = "tombi-lint", args = ["--offline"] },
+]
+
+[[repos]]
 repo = "local"
 
 [[repos.hooks]]
-id = "renovate-config-validator"
-name = "Validate Renovate Config"
-entry = "renovate-config-validator"
+id = "codebook"
+name = "codebook spell check"
+entry = "codebook-lsp lint"
 language = "system"
-files = '(^|/).?renovate(?:rc)?(?:\.json5?)?$'
+files = '\.(md|toml|ya?ml|json|jsonc|sh)$|(^|/)Dockerfile$|\.dockerfile$'
+
+[[repos]]
+repo = "local"
+
+[[repos.hooks]]
+id = "updatecli-manifest-validate"
+name = "Validate Updatecli manifests"
+entry = "env"
+args = [
+  "UPDATECLI_GITHUB_TOKEN=validate-only",
+  "updatecli",
+  "manifest",
+  "validate",
+  "--experimental",
+  "--config",
+  ".updatecli/manifests",
+  "--values",
+  ".updatecli/values.yaml",
+]
+language = "system"
+files = '^\.updatecli/(manifests/.*\.ya?ml|values\.yaml)$'
+pass_filenames = false
 
 [[repos]]
 repo = "https://github.com/DavidAnson/markdownlint-cli2"
@@ -113,3 +142,8 @@ args = ["check", "--from-latest-tag"]
 language = "system"
 pass_filenames = false
 stages = ["pre-push"]
+
+[[repos]]
+repo = "https://github.com/biomejs/pre-commit"
+rev = "v2.5.12"
+hooks = [{ id = "biome-lint" }]
