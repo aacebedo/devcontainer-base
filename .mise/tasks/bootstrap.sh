@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#MISE description = "Bootsrap mise install"
+#MISE description = "Bootstrap mise install"
 
 set -euo pipefail
 
