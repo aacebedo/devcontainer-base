@@ -1,20 +1,16 @@
 ---
 name: Update dependencies
-
 # yamllint disable-line rule:truthy
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 6 * * 1"
-
 permissions: {}
-
 jobs:
   update-deps:
     runs-on: ubuntu-26.04
     permissions:
       contents: read
-
     steps:
       - name: Generate a token
         id: generate-token
@@ -23,7 +19,7 @@ jobs:
           client-id: ${{ secrets.CI_ACTIONS_DEP_UPDATER_CLIENT_ID }}
           private-key: ${{ secrets.CI_ACTIONS_DEP_UPDATER_PRIVATE_KEY }}
       - name: Checkout repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
           token: ${{ steps.generate-token.outputs.token }}
