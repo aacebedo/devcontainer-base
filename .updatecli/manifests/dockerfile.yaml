@@ -35,13 +35,14 @@ sources:
 targets:
   {{ $dep.slug }}:
     name: "Update {{ $dep.arg }} in src/Dockerfile"
-    kind: file
+    kind: dockerfile
     scmid: default
     sourceid: {{ $dep.slug }}
     spec:
       file: src/Dockerfile
-      matchpattern: '(?m)^{{ $dep.arg }}=.*$'
-      replacepattern: '{{ $dep.arg }}={{ "{{" }} source "{{ $dep.slug }}" {{ "}}" }}'
+      instruction:
+        keyword: ARG
+        matcher: {{ $dep.arg }}
   {{- if eq $dep.slug "mise" }}
   mise_setup_action:
     name: "Update mise version in .github/actions/setup/action.yml"

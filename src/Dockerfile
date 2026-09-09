@@ -1,5 +1,18 @@
 FROM ubuntu:26.10
 
+ARG HELIX_VERSION=25.07.1
+ARG STARSHIP_VERSION=1.26.0
+ARG ZOXIDE_VERSION=0.10.0
+ARG ATUIN_VERSION=18.21.0
+ARG JUJUTSU_VERSION=0.45.1
+ARG JJUI_VERSION=0.10.9
+ARG RIPGREP_VERSION=15.2.0
+ARG FD_VERSION=10.5.0
+ARG EZA_VERSION=0.23.5
+ARG GTRASH_VERSION=0.0.6
+ARG BAT_VERSION=0.26.1
+ARG MISE_VERSION=2026.9.3
+
 COPY --chmod=0644 99_apt_no_recommends /etc/apt/apt.conf.d/99_apt_no_recommends
 
 # checkov:skip=CKV2_DOCKER_1: sudo is installed as a package for the passwordless-sudo dev user, not invoked
@@ -38,24 +51,10 @@ ENV DEVCONTAINER_USERNAME=devcontaineruser \
 
 SHELL ["/bin/bash", "-eux", "-o", "pipefail", "-c"]
 
-# Install binary without apt
 # hadolint ignore=SC1127
 RUN <<EOF
 # Install tools not available in Ubuntu repos
 # editorconfig-checker-disable
-HELIX_VERSION=25.07.1
-STARSHIP_VERSION=1.26.0
-ZOXIDE_VERSION=0.10.0
-ATUIN_VERSION=18.21.0
-JUJUTSU_VERSION=0.45.1
-JJUI_VERSION=0.10.9
-RIPGREP_VERSION=15.2.0
-FD_VERSION=10.5.0
-EZA_VERSION=0.23.5
-GTRASH_VERSION=0.0.6
-BAT_VERSION=0.26.1
-MISE_VERSION=2026.9.3
-
 wget -qO- "https://github.com/helix-editor/helix/releases/download/${HELIX_VERSION}/helix-${HELIX_VERSION}-x86_64-linux.tar.xz" | tar xJf - -C /usr/local/bin --strip-components=1 --wildcards "*/hx"
 wget -qO- "https://github.com/starship/starship/releases/download/v${STARSHIP_VERSION}/starship-x86_64-unknown-linux-gnu.tar.gz" | tar xzf - -C /usr/local/bin
 wget -qO- "https://github.com/ajeetdsouza/zoxide/releases/download/v${ZOXIDE_VERSION}/zoxide-${ZOXIDE_VERSION}-x86_64-unknown-linux-musl.tar.gz" | tar xzf - -C /usr/local/bin
