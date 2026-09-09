@@ -44,3 +44,4 @@ alias -- m='mise'
 
 bindkey '^[[1;5D' backward-word    # Ctrl+Left
 bindkey '^[[1;5C' forward-word     # Ctrl+Right
+bindkey '^[[3~' delete-char				 # Del
