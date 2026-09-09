@@ -48,7 +48,7 @@ actions:
   default:
     kind: github/pullrequest
     scmid: default
-    title: 'chore(deps): bump {{ $dep.slug }} to {{ "{{" }} source "{{ $dep.slug }}" {{ "}}" }}'
+    title: 'fix(deps): bump {{ $dep.slug }} to {{ "{{" }} source "{{ $dep.slug }}" {{ "}}" }}'
     spec:
       labels:
         - dependencies
