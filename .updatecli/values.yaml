@@ -151,11 +151,12 @@ miseDeps:
     owner: cli
     repo: cli
     trimPrefix: true
-  - slug: markdownlint-cli2
-    tomlKey: markdownlint-cli2
-    kind: npm
-    name: markdownlint-cli2
-    trimPrefix: false
+  - slug: rumdl
+    tomlKey: rumdl
+    kind: githubrelease
+    owner: rvben
+    repo: rumdl
+    trimPrefix: true
   - slug: rtk
     tomlKey: '"github:rtk-ai/rtk"'
     kind: githubrelease
