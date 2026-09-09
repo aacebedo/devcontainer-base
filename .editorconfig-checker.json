@@ -9,8 +9,7 @@
   "Exclude": [
     "CHANGELOG\\.md",
     "\\.mergify\\.yaml",
-    ".vale/Google/*",
-    ".mise/node_modules/*"
+    ".vale/Google/*"
   ],
   "AllowedContentTypes": [],
   "PassedFiles": [],

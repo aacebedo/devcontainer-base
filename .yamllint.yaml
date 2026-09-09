@@ -1,9 +1,10 @@
 ---
 ignore: |
   .vale/Google
-  .mise/node_modules/
   .updatecli/manifests/dockerfile.yaml
   .updatecli/manifests/mise.yaml
+  .updatecli/manifests/dprint.yaml
+  .updatecli/manifests/prek.yaml
 
 rules:
   line-length:
