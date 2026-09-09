@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.21.1](https://github.com/aacebedo/devcontainer-base/compare/026a0cf18fbc3afde227805b3962a8f3eff499fa..v1.21.1) - 2026-09-09
+#### Bug Fixes
+- removed podman socket usage to build and test - ([02fee0b](https://github.com/aacebedo/devcontainer-base/commit/02fee0bde26bb6732fae2a233a15f5719e3a6bf3)) - Alexandre ACEBEDO
+- fix dep bumping - ([8510a4d](https://github.com/aacebedo/devcontainer-base/commit/8510a4d83f48b48c990c2f29aeb7bad2f84f550d)) - Alexandre ACEBEDO
+#### Miscellaneous Chores
+- Update tombi in .mise/config.toml - ([026a0cf](https://github.com/aacebedo/devcontainer-base/commit/026a0cf18fbc3afde227805b3962a8f3eff499fa)) - github-actions[bot]
+
+- - -
+
 ## [v1.21.0](https://github.com/aacebedo/devcontainer-base/compare/8db8d582b0907349cf270a644b86de6531b6975c..v1.21.0) - 2026-09-09
 #### Features
 - replace markdownlint-cli2 with rumdl - ([d176d95](https://github.com/aacebedo/devcontainer-base/commit/d176d951da9f44da92c8e12ebfefc4c4b950ab92)) - Alexandre ACEBEDO
