@@ -2,6 +2,20 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.21.0](https://github.com/aacebedo/devcontainer-base/compare/8db8d582b0907349cf270a644b86de6531b6975c..v1.21.0) - 2026-09-09
+#### Features
+- replace markdownlint-cli2 with rumdl - ([d176d95](https://github.com/aacebedo/devcontainer-base/commit/d176d951da9f44da92c8e12ebfefc4c4b950ab92)) - Alexandre ACEBEDO
+- add missing updatecli files - ([6c62691](https://github.com/aacebedo/devcontainer-base/commit/6c62691ddeafce868cf2968fc661ddf46fd541f5)) - Alexandre ACEBEDO
+- add trivy config files - ([1772e59](https://github.com/aacebedo/devcontainer-base/commit/1772e590ba28be78f399167389684802cef1a540)) - Alexandre ACEBEDO
+- readd args to dockerfile - ([36a3c76](https://github.com/aacebedo/devcontainer-base/commit/36a3c76926f9374b03cee5a796dc58dcdebb8673)) - Alexandre ACEBEDO
+#### Bug Fixes
+- fix del key handling - ([5623f48](https://github.com/aacebedo/devcontainer-base/commit/5623f48943f88d97c8a33b1b0063c6a0ce72bbc3)) - Alexandre ACEBEDO
+- fix trivy scan - ([08ffa30](https://github.com/aacebedo/devcontainer-base/commit/08ffa30b563070357d63be8624022891b5583542)) - Alexandre ACEBEDO
+- make biome cli called in prek - ([7ed42bc](https://github.com/aacebedo/devcontainer-base/commit/7ed42bc29d211723a3b1d78b5b02adfddb1e196a)) - Alexandre ACEBEDO
+- fixes small errors - ([8db8d58](https://github.com/aacebedo/devcontainer-base/commit/8db8d582b0907349cf270a644b86de6531b6975c)) - Alexandre ACEBEDO
+
+- - -
+
 ## [v1.20.0](https://github.com/aacebedo/devcontainer-base/compare/8e126c56748bf59905df8a70278d4cf32c41d828..v1.20.0) - 2026-09-08
 #### Features
 - remode now useless nodejs - ([a0c160e](https://github.com/aacebedo/devcontainer-base/commit/a0c160e05294e6f7e08d2677dd539f3191af1ac0)) - Alexandre ACEBEDO
