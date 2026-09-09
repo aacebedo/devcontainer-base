@@ -1,8 +1,8 @@
-{{- range $i, $dep := .dockerfileDeps }}
+{{- range $i, $dep := .prekHooks }}
 {{- if $i }}
 ---
 {{- end }}
-name: "Bump {{ $dep.slug }} version in src/Dockerfile"
+name: "Bump {{ $dep.slug }} rev in prek.toml"
 
 scms:
   default:
@@ -26,34 +26,23 @@ sources:
       repository: {{ $dep.repo }}
       token: '{{ requiredEnv "UPDATECLI_GITHUB_TOKEN" }}'
       versionfilter:
+  {{- if $dep.versionfilterKind }}
+        kind: {{ $dep.versionfilterKind }}
+        pattern: '{{ $dep.versionfilterPattern }}'
+  {{- else }}
         kind: semver
-  {{- if $dep.trimPrefix }}
-    transformers:
-      - trimprefix: "v"
   {{- end }}
 
 targets:
   {{ $dep.slug }}:
-    name: "Update {{ $dep.arg }} in src/Dockerfile"
-    kind: dockerfile
+    name: "Update {{ $dep.slug }} rev in prek.toml"
+    kind: file
     scmid: default
     sourceid: {{ $dep.slug }}
     spec:
-      file: src/Dockerfile
-      instruction:
-        keyword: ARG
-        matcher: {{ $dep.arg }}
-  {{- if eq $dep.slug "mise" }}
-  mise_setup_action:
-    name: "Update mise version in .github/actions/setup/action.yml"
-    kind: file
-    scmid: default
-    sourceid: mise
-    spec:
-      file: .github/actions/setup/action.yml
-      matchpattern: '(?m)^(\s*version:\s*).*$'
-      replacepattern: '${1}{{ "{{" }} source "mise" {{ "}}" }}'
-  {{- end }}
+      file: prek.toml
+      matchpattern: '(repo = "{{ $dep.repoUrlPattern }}"\nrev = )"[^"]+"'
+      replacepattern: '${1}"{{ "{{" }} source "{{ $dep.slug }}" {{ "}}" }}"'
 
 actions:
   default:
