@@ -1,0 +1,55 @@
+{{- range $i, $dep := .prekHooks }}
+{{- if $i }}
+---
+{{- end }}
+name: "Bump {{ $dep.slug }} rev in prek.toml"
+
+scms:
+  default:
+    kind: github
+    spec:
+      user: "{{ $.github.user }}"
+      email: "{{ $.github.email }}"
+      owner: "{{ $.github.owner }}"
+      repository: "{{ $.github.repository }}"
+      token: '{{ requiredEnv "UPDATECLI_GITHUB_TOKEN" }}'
+      username: "{{ $.github.username }}"
+      branch: "{{ $.github.branch }}"
+      commitusingapi: true
+
+sources:
+  {{ $dep.slug }}:
+    name: "Get latest {{ $dep.owner }}/{{ $dep.repo }} release"
+    kind: githubrelease
+    spec:
+      owner: {{ $dep.owner }}
+      repository: {{ $dep.repo }}
+      token: '{{ requiredEnv "UPDATECLI_GITHUB_TOKEN" }}'
+      versionfilter:
+  {{- if $dep.versionfilterKind }}
+        kind: {{ $dep.versionfilterKind }}
+        pattern: '{{ $dep.versionfilterPattern }}'
+  {{- else }}
+        kind: semver
+  {{- end }}
+
+targets:
+  {{ $dep.slug }}:
+    name: "Update {{ $dep.slug }} rev in prek.toml"
+    kind: file
+    scmid: default
+    sourceid: {{ $dep.slug }}
+    spec:
+      file: prek.toml
+      matchpattern: '(repo = "{{ $dep.repoUrlPattern }}"\nrev = )"[^"]+"'
+      replacepattern: '${1}"{{ "{{" }} source "{{ $dep.slug }}" {{ "}}" }}"'
+
+actions:
+  default:
+    kind: github/pullrequest
+    scmid: default
+    title: 'chore(deps): bump {{ $dep.slug }} to {{ "{{" }} source "{{ $dep.slug }}" {{ "}}" }}'
+    spec:
+      labels:
+        - dependencies
+{{- end }}

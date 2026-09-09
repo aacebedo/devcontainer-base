@@ -175,3 +175,73 @@ miseDeps:
     repo: biome
     trimPrefix: false
     versionfilterRegex: '@biomejs/biome@(\d+\.\d+\.\d+)'
+
+dprintPlugins:
+  - slug: json
+    urlPath: json-
+    owner: dprint
+    repo: dprint-plugin-json
+  - slug: markdown
+    urlPath: markdown-
+    owner: dprint
+    repo: dprint-plugin-markdown
+  - slug: toml
+    urlPath: toml-
+    owner: dprint
+    repo: dprint-plugin-toml
+  - slug: dockerfile
+    urlPath: dockerfile-
+    owner: dprint
+    repo: dprint-plugin-dockerfile
+  - slug: prettyYaml
+    urlPath: g-plane/pretty_yaml-
+    owner: g-plane
+    repo: pretty_yaml
+
+prekHooks:
+  - slug: hadolint
+    repoUrlPattern: 'https://github\.com/hadolint/hadolint'
+    owner: hadolint
+    repo: hadolint
+  - slug: yamllint
+    repoUrlPattern: 'https://github\.com/adrienverge/yamllint'
+    owner: adrienverge
+    repo: yamllint
+  - slug: editorconfigChecker
+    repoUrlPattern: 'https://github\.com/editorconfig-checker/editorconfig-checker'
+    owner: editorconfig-checker
+    repo: editorconfig-checker
+  - slug: commitizen
+    repoUrlPattern: 'https://github\.com/commitizen-tools/commitizen'
+    owner: commitizen-tools
+    repo: commitizen
+  - slug: vale
+    repoUrlPattern: 'https://github\.com/errata-ai/vale'
+    owner: errata-ai
+    repo: vale
+  - slug: tombiPreCommit
+    repoUrlPattern: 'https://github\.com/tombi-toml/tombi-pre-commit'
+    owner: tombi-toml
+    repo: tombi-pre-commit
+  - slug: rumdlPreCommit
+    repoUrlPattern: 'https://github\.com/rvben/rumdl-pre-commit'
+    owner: rvben
+    repo: rumdl-pre-commit
+  - slug: shellcheckPy
+    repoUrlPattern: 'https://github\.com/shellcheck-py/shellcheck-py'
+    owner: shellcheck-py
+    repo: shellcheck-py
+    versionfilterKind: regex
+    versionfilterPattern: '^v\d+\.\d+\.\d+\.\d+$'
+    comment: shellcheck-py tags as "vMAJOR.MINOR.PATCH.WRAPPER", a 4 component scheme plain semver can't parse.
+  - slug: shfmt
+    repoUrlPattern: 'https://github\.com/scop/pre-commit-shfmt'
+    owner: scop
+    repo: pre-commit-shfmt
+    versionfilterKind: semver
+    versionfilterPattern: ">=0.0.0-0"
+    comment: Masterminds semver treats the suffix as a pre-release; opt back in explicitly.
+  - slug: checkov
+    repoUrlPattern: 'https://github\.com/bridgecrewio/checkov\.git'
+    owner: bridgecrewio
+    repo: checkov

@@ -3,6 +3,8 @@ ignore: |
   .vale/Google
   .updatecli/manifests/dockerfile.yaml
   .updatecli/manifests/mise.yaml
+  .updatecli/manifests/dprint.yaml
+  .updatecli/manifests/prek.yaml
 
 rules:
   line-length:
