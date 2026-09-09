@@ -68,6 +68,7 @@ name = "dprint check"
 entry = "dprint check"
 language = "system"
 files = '\.(json|jsonc|ya?ml|md|toml)$|(^|/)Dockerfile$|\.dockerfile$'
+pass_filenames = false
 
 [[repos]]
 repo = "https://github.com/tombi-toml/tombi-pre-commit"
@@ -144,6 +145,11 @@ pass_filenames = false
 stages = ["pre-push"]
 
 [[repos]]
-repo = "https://github.com/biomejs/pre-commit"
-rev = "v2.5.12"
-hooks = [{ id = "biome-lint" }]
+repo = "local"
+
+[[repos.hooks]]
+id = "biome-lint"
+name = "biome lint"
+entry = "biome lint --write --files-ignore-unknown=true --no-errors-on-unmatched"
+language = "system"
+files = '\.(js|jsx|mjs|cjs|ts|tsx|json|jsonc|css|html)$'
