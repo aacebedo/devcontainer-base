@@ -10,7 +10,8 @@ if ! mise bootstrap status --missing >/dev/null 2>&1; then
 fi
 '''
 
-[[hooks.cd]]
+[tasks.bootstrap]
+hide = true
 run = '''
 set -eu
 
