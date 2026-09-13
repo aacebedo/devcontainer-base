@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.22.0](https://github.com/aacebedo/devcontainer-base/compare/17c2c0b9c6de45d4f2f9befb93fe2c9bcf38c017..v1.22.0) - 2026-09-13
+#### Features
+- add rtk - ([df0fc65](https://github.com/aacebedo/devcontainer-base/commit/df0fc653884869fd02afd659d8bed96d2bbdf50a)) - Alexandre ACEBEDO
+#### Miscellaneous Chores
+- (**ci**) switch back to rebase for mergify [skip ci] - ([17c2c0b](https://github.com/aacebedo/devcontainer-base/commit/17c2c0b9c6de45d4f2f9befb93fe2c9bcf38c017)) - Alexandre ACEBEDO
+
+- - -
+
 ## [v1.21.1](https://github.com/aacebedo/devcontainer-base/compare/026a0cf18fbc3afde227805b3962a8f3eff499fa..v1.21.1) - 2026-09-09
 #### Bug Fixes
 - removed podman socket usage to build and test - ([02fee0b](https://github.com/aacebedo/devcontainer-base/commit/02fee0bde26bb6732fae2a233a15f5719e3a6bf3)) - Alexandre ACEBEDO
