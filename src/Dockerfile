@@ -12,6 +12,7 @@ ARG EZA_VERSION=0.23.5
 ARG GTRASH_VERSION=0.0.6
 ARG BAT_VERSION=0.26.1
 ARG MISE_VERSION=2026.9.3
+ARG RTK_VERSION=0.49.0
 
 COPY --chmod=0644 99_apt_no_recommends /etc/apt/apt.conf.d/99_apt_no_recommends
 
@@ -65,6 +66,7 @@ wget -qO- "https://github.com/sharkdp/fd/releases/download/v${FD_VERSION}/fd-v${
 wget -qO- "https://github.com/eza-community/eza/releases/download/v${EZA_VERSION}/eza_x86_64-unknown-linux-gnu.tar.gz" | tar xzf - -C /usr/local/bin
 wget -qO- "https://github.com/umlx5h/gtrash/releases/download/v${GTRASH_VERSION}/gtrash_Linux_x86_64.tar.gz" | tar xzf - -C /usr/local/bin
 wget -qO- "https://github.com/sharkdp/bat/releases/download/v${BAT_VERSION}/bat-v${BAT_VERSION}-x86_64-unknown-linux-musl.tar.gz" | tar xzf - -C /usr/local/bin --strip-components=1 --wildcards "*/bat"
+wget -qO- "https://github.com/rtk-ai/rtk/releases/download/v${RTK_VERSION}/rtk-x86_64-unknown-linux-musl.tar.gz" | tar xzf - -C /usr/local/bin
 
 wget -nv -O /usr/local/bin/mise "https://github.com/jdx/mise/releases/download/v${MISE_VERSION}/mise-v${MISE_VERSION}-linux-x64"
 chmod +x /usr/local/bin/mise
