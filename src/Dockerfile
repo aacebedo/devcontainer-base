@@ -15,6 +15,10 @@ ARG MISE_VERSION=2026.9.3
 ARG RTK_VERSION=0.49.0
 
 COPY --chmod=0644 99_apt_no_recommends /etc/apt/apt.conf.d/99_apt_no_recommends
+COPY --chmod=644 starship.toml /etc/starship.toml
+COPY --chmod=644 001_common_config.toml /etc/mise/conf.d/001_common_config.toml
+
+SHELL ["/bin/bash", "-eux", "-o", "pipefail", "-c"]
 
 # checkov:skip=CKV2_DOCKER_1: sudo is installed as a package for the passwordless-sudo dev user, not invoked
 # hadolint ignore=DL3008
@@ -46,11 +50,26 @@ EOF
 ENV DEVCONTAINER_USERNAME=devcontaineruser \
     DEVCONTAINER_UID=1000 \
     DEVCONTAINER_GID=1000 \
+    STARSHIP_CONFIG=/etc/starship.toml \
     LANG="en_US.UTF-8" \
-    LC_ALL="en_US.UTF-8" \
-    STARSHIP_CONFIG=/etc/starship.toml
+    LC_ALL="en_US.UTF-8"
 
-SHELL ["/bin/bash", "-eux", "-o", "pipefail", "-c"]
+COPY --chmod=644 zshrc /etc/zsh/zshrc
+
+# Create/configure non-root user and bootstrap mise
+# hadolint ignore=SC2016
+RUN <<EOF
+# Ubuntu noble ships with a built-in 'ubuntu' user/group at UID/GID 1000;
+# rename them instead of creating new ones to avoid GID/UID collision.
+groupmod -n "${DEVCONTAINER_USERNAME}" ubuntu
+usermod -l "${DEVCONTAINER_USERNAME}" -d "/home/${DEVCONTAINER_USERNAME}" -m -s /bin/zsh ubuntu
+echo "${DEVCONTAINER_USERNAME} ALL=(ALL) NOPASSWD:ALL" > "/etc/sudoers.d/${DEVCONTAINER_USERNAME}"
+chmod 0440 "/etc/sudoers.d/${DEVCONTAINER_USERNAME}"
+sed -i 's/^ubuntu:/'"${DEVCONTAINER_USERNAME}"':/g' /etc/subuid /etc/subgid
+
+touch "/root/.zshrc"
+touch "/home/${DEVCONTAINER_USERNAME}/.zshrc"
+EOF
 
 # hadolint ignore=SC1127
 RUN <<EOF
@@ -86,25 +105,6 @@ git clone --depth 1 https://github.com/le0me55i/zsh-extract.git /usr/local/share
 mkdir -p /etc/mise/conf.d
 EOF
 
-COPY --chmod=644 starship.toml /etc/starship.toml
-COPY --chmod=644 001_common_config.toml /etc/mise/conf.d/001_common_config.toml
-COPY --chmod=644 zshrc /etc/zsh/zshrc
-
-# Create/configure non-root user and bootstrap mise
-# hadolint ignore=SC2016
-RUN <<EOF
-# Ubuntu noble ships with a built-in 'ubuntu' user/group at UID/GID 1000;
-# rename them instead of creating new ones to avoid GID/UID collision.
-groupmod -n "${DEVCONTAINER_USERNAME}" ubuntu
-usermod -l "${DEVCONTAINER_USERNAME}" -d "/home/${DEVCONTAINER_USERNAME}" -m -s /bin/zsh ubuntu
-echo "${DEVCONTAINER_USERNAME} ALL=(ALL) NOPASSWD:ALL" > "/etc/sudoers.d/${DEVCONTAINER_USERNAME}"
-chmod 0440 "/etc/sudoers.d/${DEVCONTAINER_USERNAME}"
-sed -i 's/^ubuntu:/'"${DEVCONTAINER_USERNAME}"':/g' /etc/subuid /etc/subgid
-
-touch "/root/.zshrc"
-touch "/home/${DEVCONTAINER_USERNAME}/.zshrc"
-EOF
-
 WORKDIR /home/${DEVCONTAINER_USERNAME}
 
 # hadolint ignore=DL3066
@@ -118,9 +118,8 @@ ONBUILD RUN --mount=type=secret,id=MISE_GITHUB_TOKEN \
     export MISE_TRUSTED_CONFIG_PATHS="/workspaces/project" && \
     cd /workspaces/project && \
     eval "$(mise env --shell zsh)" && \
-    mise bootstrap -y --skip tools
+    mise bootstrap -y
 # editorconfig-checker-enable
 
 HEALTHCHECK NONE
-
 CMD ["/bin/zsh", "-l"]
