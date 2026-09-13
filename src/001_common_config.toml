@@ -6,7 +6,7 @@ set -eu
 [ "${MISE_SILENCE_STATUS_CHECKS:-0}" = "1" ] && exit 0
 
 if ! mise bootstrap status --missing >/dev/null 2>&1; then
-  printf '\033[33m[mise] Bootstrap not complete. Run: mise bootstrap\033[0m\n' >&2
+  printf '\e[33m[mise] Bootstrap not complete. Run: mise bootstrap\e[0m\n' >&2
 fi
 '''
 
