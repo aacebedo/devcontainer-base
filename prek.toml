@@ -37,22 +37,17 @@ hooks = [{ id = "commitizen" }]
 repo = "local"
 
 [[repos.hooks]]
-id = "vale sync"
-name = "vale sync"
+id = "vale-sync"
+name = "Vale style sync"
+# Syncs only when no style package is newer than .vale.ini (missing or stale).
 entry = """
 bash -c '
-  lock=.vale/.sync.lock;
-  [ -d .vale/Google ] && exit 0;
-  mkdir -p .vale;
-  (flock -n 200 || exit 0) 200>"$lock";
-  rm -rf .vale/Google 2>/dev/null || true;
-  vale sync;
-  rm -f "$lock"
+  [ -n "$(find .vale -mindepth 2 -maxdepth 2 -name meta.json -newer .vale.ini 2>/dev/null)" ] || vale sync
 '
 """
 language = "system"
 pass_filenames = false
-always_run = true
+files = '(^|/)\.vale\.ini$|\.md$'
 
 [[repos]]
 repo = "https://github.com/errata-ai/vale"

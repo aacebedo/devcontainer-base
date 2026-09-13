@@ -10,3 +10,4 @@ if [ -z "${MISE_TASK_NAME:-}" ]; then
 fi
 
 rm -rf .vale/.vale-config .vale/Google
+rm -rf .rumdl_cache
