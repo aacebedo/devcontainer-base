@@ -30,7 +30,7 @@ pass_filenames = false
 
 [[repos]]
 repo = "https://github.com/commitizen-tools/commitizen"
-rev = "v4.15.1"
+rev = "v4.18.0"
 hooks = [{ id = "commitizen" }]
 
 [[repos]]
