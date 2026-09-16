@@ -2,6 +2,33 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.23.0](https://github.com/aacebedo/devcontainer-base/compare/a97543278516e21ccc47e0089dab2b15b278948d..v1.23.0) - 2026-09-16
+#### Features
+- add jjui zed task - ([54fed08](https://github.com/aacebedo/devcontainer-base/commit/54fed082d550cfc23f32fd686fbe6f7233154d01)) - Alexandre ACEBEDO
+- refactor dockerfile - ([0ae16cd](https://github.com/aacebedo/devcontainer-base/commit/0ae16cdfa6ce598c205444e94beb899c4eefdbdb)) - Alexandre ACEBEDO
+#### Bug Fixes
+- fix vale sync prek hook - ([c342ded](https://github.com/aacebedo/devcontainer-base/commit/c342ded2f33ab9cb0569c4a08e22ff257f7047b7)) - Alexandre ACEBEDO
+- various fixes - ([a8efcd0](https://github.com/aacebedo/devcontainer-base/commit/a8efcd01b6d96518bce072d042bc666617a18e2d)) - Alexandre ACEBEDO
+- change how printf is used in the scripts - ([20566e3](https://github.com/aacebedo/devcontainer-base/commit/20566e3ad95ddd9821775234bf41c01113063117)) - Alexandre ACEBEDO
+#### Miscellaneous Chores
+- Update markdown plugin in .dprint.json - ([f03d5de](https://github.com/aacebedo/devcontainer-base/commit/f03d5de00a184a0fa932979862bb4b07abb77425)) - ci-actions-dep-updater[bot]
+- Update dockerfile plugin in .dprint.json - ([d9820b5](https://github.com/aacebedo/devcontainer-base/commit/d9820b52540fb86505286ca5ef9b7432271f96aa)) - ci-actions-dep-updater[bot]
+- Update vale in .mise/config.toml - ([bcabf8a](https://github.com/aacebedo/devcontainer-base/commit/bcabf8ace8902c5439f8108baf90c72278a2dd64)) - ci-actions-dep-updater[bot]
+- Update prek in .mise/config.toml - ([e7c198b](https://github.com/aacebedo/devcontainer-base/commit/e7c198b273f17d9def238eef98401b95c04fce87)) - ci-actions-dep-updater[bot]
+- Update rumdl in .mise/config.toml - ([f0ac9ff](https://github.com/aacebedo/devcontainer-base/commit/f0ac9ff973efec90073b41982f7bf8ae44a512b7)) - ci-actions-dep-updater[bot]
+- Update biome in .mise/config.toml - ([01a7594](https://github.com/aacebedo/devcontainer-base/commit/01a75942ad947ad08c8e372ec1201c1e8a8521f5)) - ci-actions-dep-updater[bot]
+- Update hadolint rev in prek.toml - ([e9101ae](https://github.com/aacebedo/devcontainer-base/commit/e9101aeee60a6eb052016b23f717ba17b03892b7)) - ci-actions-dep-updater[bot]
+- Update ATUIN_VERSION in src/Dockerfile - ([e8971d6](https://github.com/aacebedo/devcontainer-base/commit/e8971d68c5892372ba4c5fa70b7a71aeb070e239)) - ci-actions-dep-updater[bot]
+- Update commitizen rev in prek.toml - ([df71d97](https://github.com/aacebedo/devcontainer-base/commit/df71d9776cb6486703ef6e76e1701d67f536f474)) - ci-actions-dep-updater[bot]
+- Update vale rev in prek.toml - ([5e89bda](https://github.com/aacebedo/devcontainer-base/commit/5e89bda276fbc67c4c398e05d7ad3b4d74856758)) - ci-actions-dep-updater[bot]
+- Update tombiPreCommit rev in prek.toml - ([4e8ebfd](https://github.com/aacebedo/devcontainer-base/commit/4e8ebfd1c4a6a6b835c2fc45895d8bb2bf463e9c)) - ci-actions-dep-updater[bot]
+- Update rumdlPreCommit rev in prek.toml - ([c2b3cf0](https://github.com/aacebedo/devcontainer-base/commit/c2b3cf083475a8bc93907a44faea3576be73a903)) - ci-actions-dep-updater[bot]
+- Update shellcheckPy rev in prek.toml - ([b5b3684](https://github.com/aacebedo/devcontainer-base/commit/b5b36849ac23872a8a51d104baa47e197b0921b5)) - ci-actions-dep-updater[bot]
+- Update shfmt rev in prek.toml - ([071ac48](https://github.com/aacebedo/devcontainer-base/commit/071ac4869953a5e47c76f49d2e74d845b46e7e07)) - ci-actions-dep-updater[bot]
+- Update checkov rev in prek.toml - ([a975432](https://github.com/aacebedo/devcontainer-base/commit/a97543278516e21ccc47e0089dab2b15b278948d)) - ci-actions-dep-updater[bot]
+
+- - -
+
 ## [v1.22.0](https://github.com/aacebedo/devcontainer-base/compare/17c2c0b9c6de45d4f2f9befb93fe2c9bcf38c017..v1.22.0) - 2026-09-13
 #### Features
 - add rtk - ([df0fc65](https://github.com/aacebedo/devcontainer-base/commit/df0fc653884869fd02afd659d8bed96d2bbdf50a)) - Alexandre ACEBEDO
