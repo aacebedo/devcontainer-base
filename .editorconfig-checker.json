@@ -1,16 +1,11 @@
 {
-  "Version": "v3.6.0",
   "Verbose": false,
   "Format": "",
   "Debug": false,
   "IgnoreDefaults": false,
-  "SpacesAfterTabs": true,
+  "SpacesAfterTabs": false,
   "NoColor": false,
-  "Exclude": [
-    "CHANGELOG\\.md",
-    "\\.mergify\\.yaml",
-    ".vale/Google/*"
-  ],
+  "Exclude": ["CHANGELOG\\.md", "(?i)(^|/)licen[cs]es?(/|\\.|$)"],
   "AllowedContentTypes": [],
   "PassedFiles": [],
   "Disable": {

@@ -20,27 +20,26 @@ COPY --chmod=644 001_common_config.toml /etc/mise/conf.d/001_common_config.toml
 
 SHELL ["/bin/bash", "-eux", "-o", "pipefail", "-c"]
 
-# checkov:skip=CKV2_DOCKER_1: sudo is installed as a package for the passwordless-sudo dev user, not invoked
 # hadolint ignore=DL3008
 RUN <<EOF
 apt-get update
 apt-get install -y --no-install-recommends \
-    bash \
-    ca-certificates \
-    curl \
-    git \
-    gpg \
-    gpg-agent \
-    locales \
-    sudo \
-    wget \
-    xz-utils \
-    neovim \
-    fzf \
-    zsh \
-    ssh \
-    passwd \
-    unzip
+  bash \
+  ca-certificates \
+  curl \
+  git \
+  gpg \
+  gpg-agent \
+  locales \
+  sudo \
+  wget \
+  xz-utils \
+  neovim \
+  fzf \
+  zsh \
+  ssh \
+  passwd \
+  unzip
 locale-gen en_US.UTF-8
 update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
 rm -rf /var/lib/apt/lists/*
@@ -55,6 +54,7 @@ ENV DEVCONTAINER_USERNAME=devcontaineruser \
     LC_ALL="en_US.UTF-8"
 
 COPY --chmod=644 zshrc /etc/zsh/zshrc
+COPY --chmod=755 entrypoint.sh /usr/local/bin/entrypoint.sh
 
 # Create/configure non-root user and bootstrap mise
 # hadolint ignore=SC2016
@@ -122,4 +122,5 @@ ONBUILD RUN --mount=type=secret,id=MISE_GITHUB_TOKEN \
 # editorconfig-checker-enable
 
 HEALTHCHECK NONE
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 CMD ["/bin/zsh", "-l"]

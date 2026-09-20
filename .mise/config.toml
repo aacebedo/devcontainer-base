@@ -1,39 +1,3 @@
-[tools]
-uv = "0.12.10"
-"github:editorconfig-checker/editorconfig-checker" = "4.0.1"
-hadolint = "2.15.1"
-trivy = "0.74.0"
-vale = "3.21.0"
-yamllint = "1.38.0"
-prek = "0.5.3"
-shfmt = "3.14.1"
-shellcheck = "0.11.0"
-dprint = "0.57.4"
-"github:tombi-toml/tombi" = "1.5.3"
-"pipx:checkov" = "3.3.16"
-"github:cocogitto/cocogitto" = "7.0.0"
-gh = "2.100.0"
-rumdl = "0.2.73"
-updatecli = "0.120.1"
-"github:rtk-ai/rtk" = "v0.48.0"
-biome = "2.5.13"
-"github:blopker/codebook" = "0.3.42"
-
-[vars]
-repo_host = '''{{ exec(command="git remote get-url origin 2>/dev/null |
-  sed 's/[.]git$//' |
-  awk -F'[/:]' '{print $(NF-2)}' |
-  sed 's/.*@//' || echo ''") | trim }}'''
-repo_owner = '''{{ exec(command="git remote get-url origin 2>/dev/null |
-  sed 's/[.]git$//' |
-  awk -F'[/:]' '{print $(NF-1)}' || echo ''") | trim }}'''
-repo_name = '''{{ exec(command="git remote get-url origin 2>/dev/null |
-  sed 's/[.]git$//' |
-  awk -F'[/:]' '{print $NF}' || echo ''") | trim }}'''
-repo_url = "https://{{vars.repo_host}}/{{vars.repo_owner}}/{{vars.repo_name}}"
-image_name = "ghcr.io/{{vars.repo_owner}}/{{vars.repo_name}}"
-commit_sha = '''{{ exec(command="git rev-parse HEAD 2>/dev/null || echo ''") | trim }}'''
-
 [bootstrap.packages]
 "apt:bash" = "latest"
 "apt:podman" = "latest"
