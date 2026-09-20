@@ -1,7 +1,6 @@
 # devcontainer-base
 
-Alpine-based Docker image serving as a foundation for development containers. Built with [mise](https://mise.jdx.dev/)
-for tooling management and automated via GitHub Actions.
+Alpine-based Docker image serving as a foundation for development containers
 
 ## Features
 
@@ -9,9 +8,7 @@ for tooling management and automated via GitHub Actions.
 - **Non-root user** (`devcontaineruser`, UID 1000) with passwordless sudo
 - **mise** pre-installed with automatic shell activation
 
-## Quick start
-
-### Using the image
+## Using the image
 
 Pull the latest image from GitHub Container Registry:
 
@@ -25,33 +22,6 @@ Run interactively:
 docker run --rm -it ghcr.io/aacebedo/devcontainer-base:latest
 ```
 
-### Local development
-
-#### Install tooling
-
-```bash
-mise install
-```
-
-#### Build the image
-
-```bash
-mise build
-```
-
-#### Run tests
-
-```bash
-mise test
-```
-
-#### Run all quality checks
-
-```bash
-mise lint
-mise security-scan
-```
-
 ## Image structure
 
 Multi-stage build:
@@ -61,14 +31,21 @@ Multi-stage build:
 
 User `devcontaineruser` sources mise via `/etc/zsh/zshrc`, making all installed tools immediately available.
 
-## Pre-commit hooks
+## Development
 
-Install hooks locally:
+This project uses [mise](https://mise.jdx.dev) to manage tool versions and tasks, and [prek](https://prek.j178.dev) for
+git hooks.
 
 ```bash
-pre-commit install
+mise tasks                  # list all available tasks
+mise run lint               # run all linters via prek
+mise run format             # format the repository
+mise run container:build    # build the container image
+mise run test               # build the image and smoke test it
+mise run update-deps        # diff pinned dependency updates (add --apply to open PRs)
+mise run release            # bump the version with cog and publish a GitHub release
 ```
 
-## License
+### Using the devcontainer
 
-MIT
+Open this project in VS Code and "Reopen in Container" to get a fully configured environment.

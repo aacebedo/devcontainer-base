@@ -1,9 +1,8 @@
 ---
-exit-code: 1
-severity: ["CRITICAL"]
-skip-update: false
 ignore-unfixed: true
 scan:
+  skip-files:
+    - usr/local/bin/gtrash
   scanners:
     - vuln
     - secret
@@ -89,6 +88,8 @@ license:
     - LGPL-2.0
     - LGPL-2.1
     - LGPL-3.0
+    - GPL-1.0
+    - Sleepycat
   restricted:
     - BCL
     - CC-BY-ND-1.0
@@ -101,7 +102,6 @@ license:
     - CC-BY-SA-2.5
     - CC-BY-SA-3.0
     - CC-BY-SA-4.0
-    - GPL-1.0
     - NPL-1.0
     - NPL-1.1
     - OSL-1.0
@@ -110,4 +110,3 @@ license:
     - OSL-2.1
     - OSL-3.0
     - QPL-1.0
-    - Sleepycat

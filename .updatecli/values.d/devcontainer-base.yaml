@@ -1,0 +1,86 @@
+---
+dockerfileDeps:
+  - slug: mise
+    arg: MISE_VERSION
+    file: src/Dockerfile
+    kind: githubrelease
+    owner: jdx
+    repo: mise
+    trimPrefix: true
+  - slug: helix
+    arg: HELIX_VERSION
+    file: src/Dockerfile
+    kind: githubrelease
+    owner: helix-editor
+    repo: helix
+    trimPrefix: false
+  - slug: starship
+    arg: STARSHIP_VERSION
+    file: src/Dockerfile
+    kind: githubrelease
+    owner: starship
+    repo: starship
+    trimPrefix: true
+  - slug: zoxide
+    arg: ZOXIDE_VERSION
+    file: src/Dockerfile
+    kind: githubrelease
+    owner: ajeetdsouza
+    repo: zoxide
+    trimPrefix: true
+  - slug: atuin
+    arg: ATUIN_VERSION
+    file: src/Dockerfile
+    kind: githubrelease
+    owner: atuinsh
+    repo: atuin
+    trimPrefix: true
+  - slug: jujutsu
+    arg: JUJUTSU_VERSION
+    file: src/Dockerfile
+    kind: githubrelease
+    owner: jj-vcs
+    repo: jj
+    trimPrefix: true
+  - slug: jjui
+    arg: JJUI_VERSION
+    file: src/Dockerfile
+    kind: githubrelease
+    owner: idursun
+    repo: jjui
+    trimPrefix: true
+  - slug: ripgrep
+    arg: RIPGREP_VERSION
+    file: src/Dockerfile
+    kind: githubrelease
+    owner: BurntSushi
+    repo: ripgrep
+    trimPrefix: false
+  - slug: fd
+    arg: FD_VERSION
+    file: src/Dockerfile
+    kind: githubrelease
+    owner: sharkdp
+    repo: fd
+    trimPrefix: true
+  - slug: eza
+    arg: EZA_VERSION
+    file: src/Dockerfile
+    kind: githubrelease
+    owner: eza-community
+    repo: eza
+    trimPrefix: true
+  - slug: gtrash
+    arg: GTRASH_VERSION
+    file: src/Dockerfile
+    kind: githubrelease
+    owner: umlx5h
+    repo: gtrash
+    trimPrefix: true
+  - slug: bat
+    arg: BAT_VERSION
+    file: src/Dockerfile
+    kind: githubrelease
+    owner: sharkdp
+    repo: bat
+    trimPrefix: true
