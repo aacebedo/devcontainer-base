@@ -121,7 +121,7 @@ hooks = [{ id = "shfmt" }]
 
 [[repos]]
 repo = "https://github.com/bridgecrewio/checkov.git"
-rev = "3.3.17"
+rev = "3.3.19"
 
 [[repos.hooks]]
 id = "checkov"
