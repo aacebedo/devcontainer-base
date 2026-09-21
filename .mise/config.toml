@@ -1,6 +1,6 @@
 [tools]
 uv = "0.12.10"
-"github:editorconfig-checker/editorconfig-checker" = "4.0.1"
+"github:editorconfig-checker/editorconfig-checker" = "4.0.2"
 hadolint = "2.15.1"
 trivy = "0.74.0"
 vale = "3.21.0"
