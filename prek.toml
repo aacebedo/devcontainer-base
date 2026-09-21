@@ -51,7 +51,7 @@ files = '(^|/)\.vale\.ini$|\.md$'
 
 [[repos]]
 repo = "https://github.com/errata-ai/vale"
-rev = "v3.21.0"
+rev = "v3.22.0"
 hooks = [{ id = "vale" }]
 
 [[repos]]
