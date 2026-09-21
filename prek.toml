@@ -14,7 +14,7 @@ hooks = [{ id = "yamllint" }]
 
 [[repos]]
 repo = "https://github.com/editorconfig-checker/editorconfig-checker"
-rev = "v3.6.0"
+rev = "v4.0.2"
 hooks = [{ id = "editorconfig-checker" }]
 
 [[repos]]
