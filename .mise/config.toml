@@ -15,7 +15,7 @@ dprint = "0.57.4"
 gh = "2.100.0"
 rumdl = "0.2.73"
 updatecli = "0.120.1"
-"github:rtk-ai/rtk" = "v0.48.0"
+"github:rtk-ai/rtk" = "v0.49.0"
 biome = "2.5.13"
 "github:blopker/codebook" = "0.3.42"
 
