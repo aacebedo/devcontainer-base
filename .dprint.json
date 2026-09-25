@@ -12,7 +12,7 @@
     "CHANGELOG.md"
   ],
   "extends": [
-    "https://raw.githubusercontent.com/aacebedo/boilerplate-templates/v0.3.2/static_files/dprint/container.json",
-    "https://raw.githubusercontent.com/aacebedo/boilerplate-templates/v0.3.2/static_files/dprint/base.json"
+    "https://raw.githubusercontent.com/aacebedo/boilerplate-templates/v0.3.3/static_files/dprint/container.json",
+    "https://raw.githubusercontent.com/aacebedo/boilerplate-templates/v0.3.3/static_files/dprint/base.json"
   ]
 }
