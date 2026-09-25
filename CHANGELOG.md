@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.24.0](https://github.com/aacebedo/devcontainer-base/compare/6cd85a69669e45aa5991b486b1f5e3bdd2e8cab2..v1.24.0) - 2026-09-25
+#### Features
+- move to boilerplate template - ([6cd85a6](https://github.com/aacebedo/devcontainer-base/commit/6cd85a69669e45aa5991b486b1f5e3bdd2e8cab2)) - Alexandre ACEBEDO
+
+- - -
+
 ## [v1.23.0](https://github.com/aacebedo/devcontainer-base/compare/a97543278516e21ccc47e0089dab2b15b278948d..v1.23.0) - 2026-09-16
 #### Features
 - add jjui zed task - ([54fed08](https://github.com/aacebedo/devcontainer-base/commit/54fed082d550cfc23f32fd686fbe6f7233154d01)) - Alexandre ACEBEDO
