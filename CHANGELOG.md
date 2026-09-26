@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.24.2](https://github.com/aacebedo/devcontainer-base/compare/2061d8959742200570cd7fa9c61b4ae025aa30f1..v1.24.2) - 2026-09-26
+#### Miscellaneous Chores
+- update templates to v0.4.4 - ([2061d89](https://github.com/aacebedo/devcontainer-base/commit/2061d8959742200570cd7fa9c61b4ae025aa30f1)) - Alexandre ACEBEDO
+
+- - -
+
 ## [v1.24.1](https://github.com/aacebedo/devcontainer-base/compare/77531f9d4ad9fa441b9b4f473aea9e6c9ee8e473..v1.24.1) - 2026-09-25
 #### Miscellaneous Chores
 - update templates to v0.3.3 - ([77531f9](https://github.com/aacebedo/devcontainer-base/commit/77531f9d4ad9fa441b9b4f473aea9e6c9ee8e473)) - Alexandre ACEBEDO
