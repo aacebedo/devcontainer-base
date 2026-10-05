@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.24.5](https://github.com/aacebedo/devcontainer-base/compare/70dde09f1491f03046d2459f86067505539e171e..v1.24.5) - 2026-10-05
+#### Miscellaneous Chores
+- (**deps**) Update MISE_VERSION in src/Dockerfile - ([70dde09](https://github.com/aacebedo/devcontainer-base/commit/70dde09f1491f03046d2459f86067505539e171e)) - ci-actions-dep-updater[bot]
+
+- - -
+
 ## [v1.24.4](https://github.com/aacebedo/devcontainer-base/compare/4199738df7913b33c170a3c1eb8be7675a1218f5..v1.24.4) - 2026-10-05
 #### Miscellaneous Chores
 - (**deps**) Apply the templates at the latest release - ([1e5b889](https://github.com/aacebedo/devcontainer-base/commit/1e5b8896951c7f2e23f3c9d32e8ab0a7b691dbcc)) - ci-actions-dep-updater[bot]
