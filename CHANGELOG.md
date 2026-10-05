@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.24.4](https://github.com/aacebedo/devcontainer-base/compare/4199738df7913b33c170a3c1eb8be7675a1218f5..v1.24.4) - 2026-10-05
+#### Miscellaneous Chores
+- (**deps**) Apply the templates at the latest release - ([1e5b889](https://github.com/aacebedo/devcontainer-base/commit/1e5b8896951c7f2e23f3c9d32e8ab0a7b691dbcc)) - ci-actions-dep-updater[bot]
+- (**deps**) Apply the templates at the latest release - ([3f8ce9e](https://github.com/aacebedo/devcontainer-base/commit/3f8ce9e85758c4fcae7295f34085fbeda98a937f)) - ci-actions-dep-updater[bot]
+- (**deps**) Update ATUIN_VERSION in src/Dockerfile - ([4199738](https://github.com/aacebedo/devcontainer-base/commit/4199738df7913b33c170a3c1eb8be7675a1218f5)) - ci-actions-dep-updater[bot]
+
+- - -
+
 ## [v1.24.3](https://github.com/aacebedo/devcontainer-base/compare/b0331d1c4573daddec53594cb46e4d90791585fb..v1.24.3) - 2026-09-28
 #### Build system
 - apply the templates at v0.5.0 - ([b0331d1](https://github.com/aacebedo/devcontainer-base/commit/b0331d1c4573daddec53594cb46e4d90791585fb)) - Alexandre ACEBEDO
