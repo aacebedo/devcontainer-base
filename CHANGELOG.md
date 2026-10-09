@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.25.0](https://github.com/aacebedo/devcontainer-base/compare/2304d4ee9bff01049ddddc0becc90d3b56c74cc6..v1.25.0) - 2026-10-09
+#### Features
+- update mise - ([2304d4e](https://github.com/aacebedo/devcontainer-base/commit/2304d4ee9bff01049ddddc0becc90d3b56c74cc6)) - Alexandre ACEBEDO
+#### Bug Fixes
+- update .trivyignore - ([754753d](https://github.com/aacebedo/devcontainer-base/commit/754753dc1f227a5620a9bbd52d84ff03ec45e499)) - Alexandre ACEBEDO
+
+- - -
+
 ## [v1.24.5](https://github.com/aacebedo/devcontainer-base/compare/70dde09f1491f03046d2459f86067505539e171e..v1.24.5) - 2026-10-05
 #### Miscellaneous Chores
 - (**deps**) Update MISE_VERSION in src/Dockerfile - ([70dde09](https://github.com/aacebedo/devcontainer-base/commit/70dde09f1491f03046d2459f86067505539e171e)) - ci-actions-dep-updater[bot]
