@@ -2,6 +2,20 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.26.0](https://github.com/aacebedo/devcontainer-base/compare/bdd35bec71a1beda20b1eef0070dae16a0e5c511..v1.26.0) - 2026-10-23
+#### Features
+- apply boilerplate templates v0.9.0 and ignore go stdlib CVEs - ([1d82f23](https://github.com/aacebedo/devcontainer-base/commit/1d82f234ebca7d0eae22a122cd6fb6500a294402)) - Alexandre Acebedo, Claude Opus 5.5
+- apply boilerplate template to 0.7.0 - ([bdd35be](https://github.com/aacebedo/devcontainer-base/commit/bdd35bec71a1beda20b1eef0070dae16a0e5c511)) - Alexandre ACEBEDO
+#### Miscellaneous Chores
+- (**deps**) Update MISE_VERSION in src/Dockerfile - ([65852f9](https://github.com/aacebedo/devcontainer-base/commit/65852f92a9f765c59b9476d5d8587844835016c4)) - ci-actions-dep-updater[bot]
+- (**deps**) Update JJUI_VERSION in src/Dockerfile - ([906eace](https://github.com/aacebedo/devcontainer-base/commit/906eace9d81ca3ba90dbc2063aacf9a8a674d3d7)) - ci-actions-dep-updater[bot]
+- (**deps**) Update ATUIN_VERSION in src/Dockerfile - ([607ae71](https://github.com/aacebedo/devcontainer-base/commit/607ae71d7625774e8bb864264df77a72caa7ec88)) - ci-actions-dep-updater[bot]
+- (**deps**) Update STARSHIP_VERSION in src/Dockerfile - ([336989c](https://github.com/aacebedo/devcontainer-base/commit/336989ce3e308ac641c961224905488efeb41863)) - ci-actions-dep-updater[bot]
+- (**deps**) Update JUJUTSU_VERSION in src/Dockerfile - ([b10dcde](https://github.com/aacebedo/devcontainer-base/commit/b10dcde73cd2064237b170e952666d5572896606)) - ci-actions-dep-updater[bot]
+- (**deps**) Update MISE_VERSION in src/Dockerfile - ([1a7e884](https://github.com/aacebedo/devcontainer-base/commit/1a7e8842200c5fd3587f1b3b8cfff6ad0a53454a)) - ci-actions-dep-updater[bot]
+
+- - -
+
 ## [v1.25.0](https://github.com/aacebedo/devcontainer-base/compare/2304d4ee9bff01049ddddc0becc90d3b56c74cc6..v1.25.0) - 2026-10-09
 #### Features
 - update mise - ([2304d4e](https://github.com/aacebedo/devcontainer-base/commit/2304d4ee9bff01049ddddc0becc90d3b56c74cc6)) - Alexandre ACEBEDO
