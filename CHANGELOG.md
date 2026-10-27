@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.26.1](https://github.com/aacebedo/devcontainer-base/compare/653a8278636304540413c1186b137a9265ed322b..v1.26.1) - 2026-10-26
+#### Miscellaneous Chores
+- (**deps**) Update MISE_VERSION in src/Dockerfile - ([653a827](https://github.com/aacebedo/devcontainer-base/commit/653a8278636304540413c1186b137a9265ed322b)) - ci-actions-dep-updater[bot]
+
+- - -
+
 ## [v1.26.0](https://github.com/aacebedo/devcontainer-base/compare/bdd35bec71a1beda20b1eef0070dae16a0e5c511..v1.26.0) - 2026-10-23
 #### Features
 - apply boilerplate templates v0.9.0 and ignore go stdlib CVEs - ([1d82f23](https://github.com/aacebedo/devcontainer-base/commit/1d82f234ebca7d0eae22a122cd6fb6500a294402)) - Alexandre Acebedo, Claude Opus 5.5
