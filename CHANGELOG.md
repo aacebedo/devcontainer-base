@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.26.2](https://github.com/aacebedo/devcontainer-base/compare/f0029f2cbf9371b8d3561865e6fdf32542088919..v1.26.2) - 2026-11-02
+#### Miscellaneous Chores
+- (**deps**) Update MISE_VERSION in src/Dockerfile - ([b5647a9](https://github.com/aacebedo/devcontainer-base/commit/b5647a94ca848d881439a2f24a1ad08108a456bc)) - ci-actions-dep-updater[bot]
+- (**deps**) Update ATUIN_VERSION in src/Dockerfile - ([f0029f2](https://github.com/aacebedo/devcontainer-base/commit/f0029f2cbf9371b8d3561865e6fdf32542088919)) - ci-actions-dep-updater[bot]
+
+- - -
+
 ## [v1.26.1](https://github.com/aacebedo/devcontainer-base/compare/653a8278636304540413c1186b137a9265ed322b..v1.26.1) - 2026-10-26
 #### Miscellaneous Chores
 - (**deps**) Update MISE_VERSION in src/Dockerfile - ([653a827](https://github.com/aacebedo/devcontainer-base/commit/653a8278636304540413c1186b137a9265ed322b)) - ci-actions-dep-updater[bot]
