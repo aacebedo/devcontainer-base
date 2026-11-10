@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.26.3](https://github.com/aacebedo/devcontainer-base/compare/eaa52d3c008a0e35dc5bec183da3ae8b6f05949a..v1.26.3) - 2026-11-09
+#### Miscellaneous Chores
+- (**deps**) Update ATUIN_VERSION in src/Dockerfile - ([e3a06e9](https://github.com/aacebedo/devcontainer-base/commit/e3a06e9027c7ea03977c7f8daafd8dd408887c2a)) - ci-actions-dep-updater[bot]
+- (**deps**) Update FD_VERSION in src/Dockerfile - ([2be6404](https://github.com/aacebedo/devcontainer-base/commit/2be6404b15c326d270cc30cfc4afa6371a7710c7)) - ci-actions-dep-updater[bot]
+- (**deps**) Update JUJUTSU_VERSION in src/Dockerfile - ([8860838](https://github.com/aacebedo/devcontainer-base/commit/88608380e5e8ba03f5cd03bfa674e1211ed44918)) - ci-actions-dep-updater[bot]
+- (**deps**) Update MISE_VERSION in src/Dockerfile - ([eaa52d3](https://github.com/aacebedo/devcontainer-base/commit/eaa52d3c008a0e35dc5bec183da3ae8b6f05949a)) - ci-actions-dep-updater[bot]
+
+- - -
+
 ## [v1.26.2](https://github.com/aacebedo/devcontainer-base/compare/f0029f2cbf9371b8d3561865e6fdf32542088919..v1.26.2) - 2026-11-02
 #### Miscellaneous Chores
 - (**deps**) Update MISE_VERSION in src/Dockerfile - ([b5647a9](https://github.com/aacebedo/devcontainer-base/commit/b5647a94ca848d881439a2f24a1ad08108a456bc)) - ci-actions-dep-updater[bot]
