@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.26.5](https://github.com/aacebedo/devcontainer-base/compare/c1df3100910d37c6e47eb2b6eda5154cbeaeece1..v1.26.5) - 2026-11-23
+#### Miscellaneous Chores
+- (**deps**) Update ATUIN_VERSION in src/Dockerfile - ([d5f6bea](https://github.com/aacebedo/devcontainer-base/commit/d5f6bea54cd853d978433a9988fa739a0b51f3f5)) - ci-actions-dep-updater[bot]
+- (**deps**) Update MISE_VERSION in src/Dockerfile - ([e454fbd](https://github.com/aacebedo/devcontainer-base/commit/e454fbd1df3b737bdb79216d8019d3c59856e5c8)) - ci-actions-dep-updater[bot]
+- (**deps**) Update RIPGREP_VERSION in src/Dockerfile - ([c1df310](https://github.com/aacebedo/devcontainer-base/commit/c1df3100910d37c6e47eb2b6eda5154cbeaeece1)) - ci-actions-dep-updater[bot]
+
+- - -
+
 ## [v1.26.4](https://github.com/aacebedo/devcontainer-base/compare/1ec114927195b8f49dc898f7c3caf500993bf045..v1.26.4) - 2026-11-16
 #### Miscellaneous Chores
 - (**deps**) Update JJUI_VERSION in src/Dockerfile - ([d2e00b6](https://github.com/aacebedo/devcontainer-base/commit/d2e00b6f948cbcc140b600548aaca3ce33671590)) - ci-actions-dep-updater[bot]
